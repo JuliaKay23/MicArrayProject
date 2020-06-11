@@ -1,6 +1,14 @@
 #include <Audio.h>
 #define MICGAIN 50
 
+// WIRING CONNECTIONS (mic -> Teensy)
+// 3V -> 3.3V
+// GND -> GND
+// SEL -> LEAVE DISCONNECTED
+// CLK -> PIN 9
+// DATA -> PIN 13
+
+
 // GUItool: begin automatically generated code
 AudioInputPDM            mic;            
 AudioOutputAnalogStereo  dacs1;         
