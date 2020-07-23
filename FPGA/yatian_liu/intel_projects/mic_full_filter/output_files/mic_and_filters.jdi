@@ -1,0 +1,27 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="4e0660ed54d092692f19"/>
+  </project>
+  <file_info>
+    <file device="5AGXFB3H4F35C4" path="mic_and_filters_time_limited.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <hub_info hub_ir_width="4" ir_width="2" node_addr_width="1" node_count="1"/>
+  <node_info>
+    <node hpath="pzdyqx:nabboc" instance_id="0" mfg_id="110" node_id="1" sld_node_info="0x86E00" version="0"/>
+  </node_info>
+  <sld_infos>
+    <sld_info hpath="oscillator:osc" name="osc">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME oscillator HAS_SOPCINFO 1 GENERATION_ID 1594225372"/>
+        <assignment_value text="QSYS_NAME oscillator HAS_SOPCINFO 1 GENERATION_ID 1595389648"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+    <sld_info hpath="sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:instrumentation_fabric" library="alt_sld_fab" name="instrumentation_fabric">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME alt_sld_fab HAS_SOPCINFO 1"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

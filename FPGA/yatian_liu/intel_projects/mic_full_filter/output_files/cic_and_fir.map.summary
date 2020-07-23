@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Jul 22 21:56:40 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Standard Edition
+Revision Name : cic_and_fir
+Top-level Entity Name : mic_full_filter_wt
+Family : Arria V
+Logic utilization (in ALMs) : N/A
+Total registers : 1193
+Total pins : 19
+Total virtual pins : 0
+Total block memory bits : 70,628
+Total DSP Blocks : 1
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

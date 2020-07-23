@@ -1,0 +1,995 @@
+# Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do cic_and_fir_run_msim_rtl_verilog.do
+# if ![file isdirectory cic_and_fir_iputf_libs] {
+# 	file mkdir cic_and_fir_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+# vlib cic_and_fir_iputf_libs/int_osc_0
+# ** Warning: (vlib-34) Library already exists at "cic_and_fir_iputf_libs/int_osc_0".
+# vmap int_osc_0 ./cic_and_fir_iputf_libs/int_osc_0
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap int_osc_0 ./cic_and_fir_iputf_libs/int_osc_0 
+# Modifying modelsim.ini
+# vlib cic_and_fir_iputf_libs/cic_ii_0
+# ** Warning: (vlib-34) Library already exists at "cic_and_fir_iputf_libs/cic_ii_0".
+# vmap cic_ii_0 ./cic_and_fir_iputf_libs/cic_ii_0
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap cic_ii_0 ./cic_and_fir_iputf_libs/cic_ii_0 
+# Modifying modelsim.ini
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/oscillator/simulation/submodules/altera_int_osc.v"                                     -work int_osc_0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:03 on Jul 22,2020
+# vlog -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/oscillator/simulation/submodules/altera_int_osc.v -work int_osc_0 
+# -- Compiling module altera_int_osc
+# 
+# Top level modules:
+# 	altera_int_osc
+# End time: 01:29:03 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/oscillator/simulation/oscillator.v"                                                                   
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:03 on Jul 22,2020
+# vlog -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/oscillator/simulation/oscillator.v 
+# -- Compiling module oscillator
+# 
+# Top level modules:
+# 	oscillator
+# End time: 01:29:03 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd"                           -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:03 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg
+# -- Compiling package body auk_dspip_math_pkg
+# -- Loading package auk_dspip_math_pkg
+# End time: 01:29:03 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd"                           -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:03 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_text_pkg
+# -- Compiling package body auk_dspip_text_pkg
+# -- Loading package auk_dspip_text_pkg
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd"                            -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling package auk_dspip_lib_pkg
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd" -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_avalon_streaming_small_fifo
+# -- Compiling architecture arch of auk_dspip_avalon_streaming_small_fifo
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd" -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_controller
+# -- Compiling architecture struct of auk_dspip_avalon_streaming_controller
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd"       -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_sink
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_sink
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd"     -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_source
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_source
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd"                              -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_delay
+# -- Compiling architecture rtl of auk_dspip_delay
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd"                         -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_fastaddsub
+# -- Compiling architecture beh of auk_dspip_fastaddsub
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd"                            -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_fastadd
+# -- Compiling architecture beh of auk_dspip_fastadd
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd"                    -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:04 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_pipelined_adder
+# -- Compiling architecture rtl of auk_dspip_pipelined_adder
+# End time: 01:29:04 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd"                           -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:05 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_roundsat
+# -- Compiling architecture beh of auk_dspip_roundsat
+# End time: 01:29:05 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv"                 -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:05 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv -work cic_ii_0 
+# 
+# Top level modules:
+# 	--none--
+# End time: 01:29:05 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd"                 -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:05 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling package auk_dspip_cic_lib_pkg
+# End time: 01:29:05 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd"              -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:05 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package LPM_COMPONENTS
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_differentiator
+# -- Compiling architecture SYN of auk_dspip_differentiator
+# End time: 01:29:05 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv"                   -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:05 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv -work cic_ii_0 
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# 
+# Top level modules:
+# End time: 01:29:06 on Jul 22,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 10
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd"                  -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:06 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package LPM_COMPONENTS
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_integrator
+# -- Compiling architecture SYN of auk_dspip_integrator
+# End time: 01:29:06 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd"                    -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:06 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_upsample
+# -- Compiling architecture SYN of auk_dspip_upsample
+# End time: 01:29:06 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd"              -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:06 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd -work cic_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_channel_buffer
+# -- Compiling architecture SYN of auk_dspip_channel_buffer
+# End time: 01:29:06 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv"          -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:06 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv -work cic_ii_0 
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# 
+# Top level modules:
+# End time: 01:29:06 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 10
+# vlog     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v"                -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:08 on Jul 22,2020
+# vlog -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:08 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/counter_module.sv"                         -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:08 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/counter_module.sv -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:08 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv"                       -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:08 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:09 on Jul 22,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv"                       -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:09 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:09 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv"                       -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:09 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:09 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv"                       -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:09 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv"                           -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv -work cic_ii_0 
+# 
+# Top level modules:
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv"                       -work cic_ii_0 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vlog -reportprogress 300 -sv D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv -work cic_ii_0 
+# -- Compiling module cic_dec_filter_cic_ii_0
+# 
+# Top level modules:
+# 	cic_dec_filter_cic_ii_0
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/cic_dec_filter.v"                                                           
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vlog -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/cic_dec_filter.v 
+# -- Compiling module cic_dec_filter
+# 
+# Top level modules:
+# 	cic_dec_filter
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/dspba_library_package.vhd"                                                        
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/dspba_library_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package dspba_library_package
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/dspba_library.vhd"                                                                
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/dspba_library.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package dspba_library_package
+# -- Compiling entity dspba_delay
+# -- Compiling architecture delay of dspba_delay
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dspba_sync_reg
+# -- Compiling architecture sync_reg of dspba_sync_reg
+# -- Compiling entity dspba_pipe
+# -- Compiling architecture rtl of dspba_pipe
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_math_pkg_hpfir.vhd"                                                     
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_math_pkg_hpfir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg_hpfir
+# -- Compiling package body auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_math_pkg_hpfir
+# End time: 01:29:10 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_lib_pkg_hpfir.vhd"                                                      
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:10 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_lib_pkg_hpfir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Compiling package auk_dspip_lib_pkg_hpfir
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"                                  
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity auk_dspip_avalon_streaming_controller_hpfir
+# -- Compiling architecture struct of auk_dspip_avalon_streaming_controller_hpfir
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"                                        
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_sink_hpfir
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_sink_hpfir
+# ** Warning: D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(113): Nonresolved signal 'sink_next_state' may have multiple sources.
+#   Drivers:
+#     D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(272):Process sink_comb_update_2
+#        Driven at:
+#           D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(279)
+#     D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(177):Process sink_comb_update_1
+#        Driven at:
+#           D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd(183)
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"                                      
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Compiling entity auk_dspip_avalon_streaming_source_hpfir
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_source_hpfir
+# ** Warning: D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(122): Nonresolved signal 'count_finished' may have multiple sources.
+#   Drivers:
+#     D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(217):Conditional signal assignment line__216
+#     D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(206):Conditional signal assignment line__205
+# ** Warning: D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(123): Nonresolved signal 'count_started' may have multiple sources.
+#   Drivers:
+#     D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(219):Conditional signal assignment line__218
+#     D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_avalon_streaming_source_hpfir.vhd(210):Conditional signal assignment line__209
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_roundsat_hpfir.vhd"                                                     
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/auk_dspip_roundsat_hpfir.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_roundsat_hpfir
+# -- Compiling architecture beh of auk_dspip_roundsat_hpfir
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/altera_avalon_sc_fifo.v"                                                          
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vlog -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/altera_avalon_sc_fifo.v 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter_rtl_core.vhd"                                                     
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter_rtl_core.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package dspba_library_package
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity fir_comp_filter_rtl_core
+# -- Compiling architecture normal of fir_comp_filter_rtl_core
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter_ast.vhd"                                                          
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter_ast.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Compiling entity fir_comp_filter_ast
+# -- Compiling architecture struct of fir_comp_filter_ast
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter.vhd"                                                              
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Compiling entity fir_comp_filter
+# -- Compiling architecture syn of fir_comp_filter
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom     "D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter_tb.vhd"                                                           
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:11 on Jul 22,2020
+# vcom -reportprogress 300 D:/Documents/shared_documents/intelFPGA/mic_full_filter/fir_comp_filter_sim/fir_comp_filter_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity fir_comp_filter_tb
+# -- Compiling architecture rtl of fir_comp_filter_tb
+# -- Loading package auk_dspip_math_pkg_hpfir
+# -- Loading package auk_dspip_lib_pkg_hpfir
+# -- Loading entity fir_comp_filter
+# End time: 01:29:11 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter {D:/Documents/shared_documents/intelFPGA/mic_full_filter/mic_full_filter_wt.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:12 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter" D:/Documents/shared_documents/intelFPGA/mic_full_filter/mic_full_filter_wt.v 
+# -- Compiling module mic_full_filter_wt
+# -- Compiling module mic_full_filter_wt_tb
+# 
+# Top level modules:
+# 	mic_full_filter_wt_tb
+# End time: 01:29:12 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter {D:/Documents/shared_documents/intelFPGA/mic_full_filter/wave_gen_direct_pdm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:12 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter" D:/Documents/shared_documents/intelFPGA/mic_full_filter/wave_gen_direct_pdm.v 
+# -- Compiling module wave_gen
+# -- Compiling module wave_gen_tb
+# 
+# Top level modules:
+# 	wave_gen_tb
+# End time: 01:29:12 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter {D:/Documents/shared_documents/intelFPGA/mic_full_filter/clk_divider_N.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:12 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter" D:/Documents/shared_documents/intelFPGA/mic_full_filter/clk_divider_N.v 
+# -- Compiling module clk_divider_N
+# -- Compiling module My_DFF
+# -- Compiling module clk_divider_N_tb
+# 
+# Top level modules:
+# 	clk_divider_N_tb
+# End time: 01:29:12 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter {D:/Documents/shared_documents/intelFPGA/mic_full_filter/wavetable.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:12 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter" D:/Documents/shared_documents/intelFPGA/mic_full_filter/wavetable.v 
+# -- Compiling module wavetable
+# 
+# Top level modules:
+# 	wavetable
+# End time: 01:29:12 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation {D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/cic_dec_filter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:29:12 on Jul 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation" D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/cic_dec_filter.v 
+# -- Compiling module cic_dec_filter
+# 
+# Top level modules:
+# 	cic_dec_filter
+# End time: 01:29:12 on Jul 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.mic_full_filter_wt_tb -L cic_ii_0 -L int_osc_0 -L altera_mf_ver -L arriav
+# vsim -gui -l msim_transcript work.mic_full_filter_wt_tb -L cic_ii_0 -L int_osc_0 -L altera_mf_ver -L arriav 
+# Start time: 01:29:35 on Jul 22,2020
+# Loading work.mic_full_filter_wt_tb
+# Loading work.mic_full_filter_wt
+# Loading work.oscillator
+# Loading int_osc_0.altera_int_osc
+# Loading work.clk_divider_N
+# Loading work.My_DFF
+# Loading work.wave_gen
+# Loading work.wavetable
+# Loading altera_mf_ver.altsyncram
+# Loading work.cic_dec_filter
+# Loading sv_std.std
+# Loading cic_ii_0.cic_dec_filter_cic_ii_0
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading arriav.arriav_oscillator(behavior)
+# Loading ieee.numeric_std(body)
+# Loading cic_ii_0.auk_dspip_math_pkg(body)
+# Loading cic_ii_0.auk_dspip_lib_pkg
+# Loading altera_mf.altera_mf_components
+# Loading cic_ii_0.auk_dspip_avalon_streaming_sink(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.scfifo(behavior)
+# Loading cic_ii_0.auk_dspip_avalon_streaming_source(rtl)
+# Loading cic_ii_0.auk_dspip_avalon_streaming_controller(struct)
+# Loading cic_ii_0.auk_dspip_avalon_streaming_small_fifo(arch)
+# Loading lpm.lpm_components
+# Loading cic_ii_0.auk_dspip_integrator(syn)
+# Loading cic_ii_0.auk_dspip_delay(rtl)
+# Loading cic_ii_0.auk_dspip_channel_buffer(syn)
+# Loading cic_ii_0.auk_dspip_differentiator(syn)
+# Loading work.auk_dspip_math_pkg_hpfir(body)
+# Loading work.auk_dspip_lib_pkg_hpfir
+# Loading work.fir_comp_filter(syn)
+# Loading work.fir_comp_filter_ast(struct)
+# Loading work.auk_dspip_avalon_streaming_sink_hpfir(rtl)
+# Loading work.auk_dspip_avalon_streaming_source_hpfir(rtl)
+# Loading work.auk_dspip_avalon_streaming_controller_hpfir(struct)
+# Loading ieee.math_real(body)
+# Loading work.dspba_library_package
+# Loading altera_lnsim.altera_lnsim_components
+# Loading work.fir_comp_filter_rtl_core(normal)
+# Loading work.dspba_delay(delay)
+# Loading altera_lnsim.altera_syncram
+# Loading altera_lnsim.ALTERA_LNSIM_MEMORY_INITIALIZATION
+# Loading work.auk_dspip_roundsat_hpfir(beh)
+# ** Warning: (vsim-8822) <protected>(<protected>): [TFMPC] - Missing Verilog connection for formal VHDL port '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected> File: D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd
+# ** Warning: (vsim-8822) <protected>(<protected>): [TFMPC] - Missing Verilog connection for formal VHDL port '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected> File: D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd
+# ** Warning: (vsim-8822) <protected>(<protected>): [TFMPC] - Missing Verilog connection for formal VHDL port '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected> File: D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>/<protected>/<protected>/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>/<protected>/<protected>/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>/<protected>/<protected>/<protected> File: nofile
+# ** Warning: Design size of 13533 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/mic_full_filter_wt_tb/dout
+add wave -position insertpoint  \
+sim:/mic_full_filter_wt_tb/dout
+add wave -position insertpoint  \
+sim:/mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_out_data
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Region: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/gen_outp_blk(0)/outp_blk/remove_msb/sat_msb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Region: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/gen_outp_blk(0)/outp_blk/remove_msb/sat_msb
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/ready_FIFO
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/ready_FIFO
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/ready_FIFO
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Region: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/ready_FIFO/output_gen_showahead
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Protected: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/cic_inst/cic_ii_0/core/<protected>/<protected>
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Region: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/gen_outp_blk(0)/outp_blk/remove_msb/sat_msb
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Region: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/gen_outp_blk(0)/outp_blk/remove_msb/sat_msb
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 32785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 52785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 92785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 112785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 132785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 152785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 172785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 192785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 212785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 232785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 252785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 272785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 292785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 312785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 332785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 352785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 372785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 392785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 412785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 432785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 452785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 472785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 492785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 512785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 532785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 552785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 572785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 592785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 612785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 632785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 652785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 672785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 692785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 712785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 732785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 752785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 772785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 792785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 812785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 832785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 852785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 872785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 892785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 912785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 932785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 952785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 972785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 992785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1012785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1032785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1052785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1072785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1092785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1112785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1132785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1152785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1172785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1192785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1212785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1232785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1252785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1272785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1292785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1312785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1332785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1352785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1372785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1392785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1412785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1432785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1452785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1472785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1492785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1512785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1532785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1552785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1572785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1592785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1612785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1632785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1652785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1672785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1692785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1712785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1732785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1752785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1772785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1792785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1812785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1832785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1852785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1872785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1892785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1912785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1932785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1952785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1972785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1992785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2012785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2032785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2052785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2072785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2092785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2112785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2132785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2152785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2172785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2192785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2212785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2232785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2252785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2272785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2292785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2312785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2332785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2352785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2372785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2392785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2412785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2432785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2452785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2472785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2492785 ns  Iteration: 2  Instance: /mic_full_filter_wt_tb/mic_full_filter_wt_inst/fir_inst/fir_comp_filter_ast_inst/real_passthrough/hpfircore_core
+# End time: 01:32:11 on Jul 22,2020, Elapsed time: 0:02:36
+# Errors: 1, Warnings: 144

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Jul 21 23:50:41 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Standard Edition
+Revision Name : mic_and_filters
+Top-level Entity Name : mic_full_filter
+Family : Arria V
+Device : 5AGXFB3H4F35C4
+Timing Models : Final
+Logic utilization (in ALMs) : 593 / 136,880 ( < 1 % )
+Total registers : 1076
+Total pins : 17 / 656 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 584 / 17,674,240 ( < 1 % )
+Total RAM Blocks : 4 / 1,726 ( < 1 % )
+Total DSP Blocks : 1 / 1,045 ( < 1 % )
+Total HSSI RX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 24 ( 0 % )
+Total HSSI TX PCSs : 0 / 24 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 24 ( 0 % )
+Total PLLs : 0 / 36 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

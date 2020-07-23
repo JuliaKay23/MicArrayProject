@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/auk_dspip_math_pkg.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/auk_dspip_text_pkg.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/auk_dspip_lib_pkg.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_avalon_streaming_small_fifo.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_avalon_streaming_controller.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_avalon_streaming_sink.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_avalon_streaming_source.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/auk_dspip_delay.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/auk_dspip_fastaddsub.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/auk_dspip_fastadd.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/auk_dspip_pipelined_adder.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/auk_dspip_roundsat.vhd"
+   type="VHDL"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/alt_dsp_cic_common_pkg.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_cic_lib_pkg.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_differentiator.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_differentiator.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_downsample.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_downsample.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_integrator.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_integrator.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_upsample.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_upsample.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_channel_buffer.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_channel_buffer.vhd"
+   type="VHDL_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/auk_dspip_variable_downsample.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/auk_dspip_variable_downsample.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/hyper_pipeline_interface.v"
+   type="VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/hyper_pipeline_interface.v"
+   type="VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/counter_module.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/counter_module.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/alt_cic_int_siso.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/alt_cic_int_siso.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/alt_cic_dec_siso.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/alt_cic_dec_siso.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/alt_cic_int_simo.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/alt_cic_int_simo.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/alt_cic_dec_miso.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/alt_cic_dec_miso.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/alt_cic_core.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/alt_cic_core.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="cic_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/alt_cic_core.ocp"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/cic_dec_filter_cic_ii_0.sv"
+   type="SYSTEM_VERILOG"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/CIC.cpp"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/CIC.h"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/Example/cic_c_model_output_ref.txt"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/Example/cic_input.txt"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/Example/cic_output_ref.txt"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/Example/commands.txt"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/compile_mex.sh"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/main.cpp"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/mexCICDirect.cpp"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/mexCICFile.cpp"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file
+   path="simulation/submodules/c_model/mexCICFileIn.cpp"
+   type="OTHER"
+   library="cic_ii_0" />
+ <file path="simulation/cic_dec_filter.v" type="VERILOG" />
+ <topLevel name="cic_dec_filter" />
+ <deviceFamily name="arriav" />
+</simPackage>

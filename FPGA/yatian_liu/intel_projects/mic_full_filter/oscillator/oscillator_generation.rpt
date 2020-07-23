@@ -1,0 +1,65 @@
+Info: Starting: Create simulation model
+Info: qsys-generate D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator\simulation --family="Arria V" --part=5AGXFB3H4F35C4
+Progress: Loading cic_filter/oscillator.qsys
+Progress: Reading input file
+Progress: Adding int_osc_0 [altera_int_osc 19.1]
+Progress: Parameterizing module int_osc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: oscillator: Generating oscillator "oscillator" for SIM_VERILOG
+Info: int_osc_0: Generating top-level entity altera_int_osc.
+Info: int_osc_0: "oscillator" instantiated altera_int_osc "int_osc_0"
+Info: oscillator: Done "oscillator" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator\oscillator.spd --output-directory=D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator\oscillator.spd --output-directory=D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/Documents/shared_documents/intelFPGA/cic_filter/oscillator/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator.qsys --block-symbol-file --output-directory=D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator --family="Arria V" --part=5AGXFB3H4F35C4
+Progress: Loading cic_filter/oscillator.qsys
+Progress: Reading input file
+Progress: Adding int_osc_0 [altera_int_osc 19.1]
+Progress: Parameterizing module int_osc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator.qsys --synthesis=VERILOG --output-directory=D:\Documents\shared_documents\intelFPGA\cic_filter\oscillator\synthesis --family="Arria V" --part=5AGXFB3H4F35C4
+Progress: Loading cic_filter/oscillator.qsys
+Progress: Reading input file
+Progress: Adding int_osc_0 [altera_int_osc 19.1]
+Progress: Parameterizing module int_osc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: oscillator: Generating oscillator "oscillator" for QUARTUS_SYNTH
+Info: int_osc_0: Generating top-level entity altera_int_osc.
+Info: int_osc_0: "oscillator" instantiated altera_int_osc "int_osc_0"
+Info: oscillator: Done "oscillator" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

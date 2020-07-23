@@ -1,0 +1,1010 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Documents/shared_documents/intelFPGA/mic_full_filter/simulation/modelsim
+vM7a+rQm065MBIFgh0qeZWg==
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 DXx4 work 22 alt_dsp_cic_common_pkg 0 22 ;V>W<g[_fmXd8`iZ=o8Kg1
+Z3 !s110 1595395750
+!i10b 0
+!s100 1C0W86n9mb0MSHY63FYHm2
+Ic=5Y7C^bfRV4YKR0Y>mV01
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!i8a 1291470672
+!s105 alt_cic_core_sv_unit
+S1
+R0
+Z5 w1595395750
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv
+Z6 L0 38
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1595395750.000000
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv|-work|cic_ii_0|
+!i113 1
+Z9 o-sv -work cic_ii_0
+Z10 tCvgOpt 0
+n9164315
+vbuDLfZlSrdBuTO4ioJHpzuGYxcUH7hYQnU+K7cSw22o=
+R1
+R2
+R3
+!i10b 0
+!s100 d;OWdZjU@SGEJA?Ua8IO23
+INU>GRno?RBz=:5AF8]aE00
+R4
+!i8a 2066129552
+!s105 alt_cic_dec_miso_sv_unit
+S1
+R0
+R5
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv
+R6
+R7
+r1
+!s85 0
+31
+Z11 !s108 1595395749.000000
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+ne2d369f
+vTicMBCj4PajQvBhO/JkrPyKXvMOsZf1l8nEduFAwpQE=
+R1
+R2
+Z12 !s110 1595395749
+!i10b 0
+!s100 SkIjR=`Z7WSc;F5SL8z`Y3
+IW?TjaC]>73GXSJGP9GZ8Z0
+R4
+!i8a 475885296
+!s105 alt_cic_dec_siso_sv_unit
+S1
+R0
+Z13 w1595395749
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv
+R6
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+ne2f969f
+vVa48INWVcc3DbHWcyVAbQl7lno+ULkRD4cpLhWRR87s=
+R1
+R2
+R12
+!i10b 0
+!s100 0_J1V7OHJi[i1T=^T_8a`1
+I9GmgEVIM]6h??UTg5Jc3?0
+R4
+!i8a 1309243328
+!s105 alt_cic_int_simo_sv_unit
+S1
+R0
+R13
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv
+R6
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+n1f8a5f
+vA0i/0LY7h/6siJDjYwWEqW5BCSZ4WH70Ib3lmFOnBZU=
+R1
+R2
+R12
+!i10b 0
+!s100 ]WZXDm?<9S8iK4a>d7oj`3
+IPR_hB?:1I3c676OE^h2<a2
+R4
+!i8a 896378992
+!s105 alt_cic_int_siso_sv_unit
+S1
+R0
+R13
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv
+R6
+R7
+r1
+!s85 0
+31
+Z14 !s108 1595395748.000000
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+n1f96ff
+XoxaBFdgG+LHNfYPLuldLCahYzLWsgImCAFXyJIf83HM=
+R1
+Z15 !s110 1595395745
+!i10b 0
+!s100 [hHV>Wzoc@>TD0A@11`KK3
+I;V>W<g[_fmXd8`iZ=o8Kg1
+V;V>W<g[_fmXd8`iZ=o8Kg1
+!i8a 1735972800
+S1
+R0
+Z16 w1595395745
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv
+R6
+R7
+r1
+!s85 0
+31
+Z17 !s108 1595395745.000000
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+na2be307
+Eauk_dspip_avalon_streaming_controller
+Z18 w1595394555
+Z19 DPx9 altera_mf 20 altera_mf_components 0 22 @6M>I48X_jBQDo@?W=TN93
+Z20 DPx4 work 18 auk_dspip_math_pkg 0 22 RDB4f:l`0TdYH^?e_g1FD1
+Z21 DPx4 work 17 auk_dspip_lib_pkg 0 22 CEQBjQ4PnJMA_aU`O60HY3
+Z22 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z23 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z24 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z25 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd
+Z26 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd
+l0
+L26
+VjYI5L1M2N]fZ0RJEE4`Tm0
+!s100 0T0Qj^6>_7BhhV;1JFTHg3
+Z27 OV;C;10.5b;63
+32
+Z28 !s110 1595395744
+!i10b 1
+Z29 !s108 1595395744.000000
+Z30 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd|-work|cic_ii_0|
+Z31 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd|
+!i113 1
+Z32 o-work cic_ii_0
+Z33 tExplicit 1 CvgOpt 0
+Astruct
+R19
+R20
+R21
+R22
+R23
+R24
+DEx4 work 37 auk_dspip_avalon_streaming_controller 0 22 jYI5L1M2N]fZ0RJEE4`Tm0
+l108
+L53
+V=HT`LAU`<MLCCN49UWLmT0
+!s100 T58e>OIiPnDLg[Li4Xci01
+R27
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R32
+R33
+Eauk_dspip_avalon_streaming_sink
+R18
+R19
+R20
+R21
+R22
+R23
+R24
+R0
+Z34 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd
+Z35 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd
+l0
+L26
+VXD]M1:3WKM9cMO:0j?0SE3
+!s100 `H:3LBSa]c4TVKnf`aDg62
+R27
+32
+R28
+!i10b 1
+R29
+Z36 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd|-work|cic_ii_0|
+Z37 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd|
+!i113 1
+R32
+R33
+Artl
+R19
+R20
+R21
+R22
+R23
+R24
+DEx4 work 31 auk_dspip_avalon_streaming_sink 0 22 XD]M1:3WKM9cMO:0j?0SE3
+l114
+L64
+VgfG2hHRA8Jd^?]W@f7hD30
+!s100 140gKRBEN1YNFB=BVY_=72
+R27
+32
+R28
+!i10b 1
+R29
+R36
+R37
+!i113 1
+R32
+R33
+Eauk_dspip_avalon_streaming_small_fifo
+R18
+R20
+R21
+R22
+R23
+R24
+R0
+Z38 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd
+Z39 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd
+l0
+L27
+VbRf5g>KL]fCe?4_BKHkOf2
+!s100 KS5@d]>8V[6A3hNJR0dZe0
+R27
+32
+R28
+!i10b 1
+R29
+Z40 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd|-work|cic_ii_0|
+Z41 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd|
+!i113 1
+R32
+R33
+Aarch
+R20
+R21
+R22
+R23
+R24
+DEx4 work 37 auk_dspip_avalon_streaming_small_fifo 0 22 bRf5g>KL]fCe?4_BKHkOf2
+l64
+L50
+VFok3a;3TaU5[_R<B_=<Nd2
+!s100 L?7]Tn;omT<2Xe8T:XF0<3
+R27
+32
+R28
+!i10b 1
+R29
+R40
+R41
+!i113 1
+R32
+R33
+Eauk_dspip_avalon_streaming_source
+R18
+R19
+R20
+R21
+R22
+R23
+R24
+R0
+Z42 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd
+Z43 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd
+l0
+L26
+VNG9Jl]ocUInGDD5^ozD]H1
+!s100 ?lNFOZ9MQ<o7d38mUCY@d1
+R27
+32
+R28
+!i10b 1
+R29
+Z44 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd|-work|cic_ii_0|
+Z45 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd|
+!i113 1
+R32
+R33
+Artl
+R19
+R20
+R21
+R22
+R23
+R24
+DEx4 work 33 auk_dspip_avalon_streaming_source 0 22 NG9Jl]ocUInGDD5^ozD]H1
+l108
+L57
+VbV7dPKEJ[WceN>=b^Zg8d3
+!s100 dWH45L_egEOceY;iC<?C?2
+R27
+32
+R28
+!i10b 1
+R29
+R44
+R45
+!i113 1
+R32
+R33
+Eauk_dspip_channel_buffer
+R18
+R19
+R20
+R21
+R22
+R23
+R24
+R0
+Z46 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd
+Z47 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd
+l0
+L26
+V[R4LeZK;jb4SPW1D6H4aP3
+!s100 5zocDP_8eGn98]b2CzGF83
+R27
+32
+Z48 !s110 1595395746
+!i10b 1
+Z49 !s108 1595395746.000000
+Z50 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd|-work|cic_ii_0|
+Z51 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd|
+!i113 1
+R32
+R33
+Asyn
+R19
+R20
+R21
+R22
+R23
+R24
+DEx4 work 24 auk_dspip_channel_buffer 0 22 [R4LeZK;jb4SPW1D6H4aP3
+l86
+L47
+VT0ZMZmBlSb;`4^bzH6gQR0
+!s100 dH4@mo5KXm=mHoVjKPUb_3
+R27
+32
+R48
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R32
+R33
+Pauk_dspip_cic_lib_pkg
+R20
+R22
+R23
+R24
+R18
+R0
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd
+l0
+L23
+VZzH<2^lE5@gAbIUWm1zQE2
+!s100 7K6W=c9b_Ek^fXBaZmmeY2
+R27
+32
+R15
+!i10b 1
+R17
+!s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd|-work|cic_ii_0|
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd|
+!i113 1
+R32
+R33
+Eauk_dspip_delay
+R18
+R20
+R19
+R22
+R23
+R24
+R0
+Z52 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd
+Z53 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd
+l0
+L52
+VLzTfH<4`zS[4cXUicMcCI1
+!s100 i[<AM6C@E322<ZKjCn^<]2
+R27
+32
+R28
+!i10b 1
+R29
+Z54 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd|-work|cic_ii_0|
+Z55 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd|
+!i113 1
+R32
+R33
+Artl
+R20
+R19
+R22
+R23
+R24
+DEx4 work 15 auk_dspip_delay 0 22 LzTfH<4`zS[4cXUicMcCI1
+l80
+L79
+V8[gPiJPZ<:2EQ6CJ7CS3F3
+!s100 _Mmb<VY5AVaSh8[c8>S6X2
+R27
+32
+R28
+!i10b 1
+R29
+R54
+R55
+!i113 1
+R32
+R33
+Eauk_dspip_differentiator
+R18
+R20
+R21
+Z56 DPx3 lpm 14 lpm_components 0 22 kbQff^T0P6bT[7n>=YCE40
+R19
+R22
+R23
+R24
+R0
+Z57 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd
+Z58 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd
+l0
+L57
+VdG7:dahZ6J=F15_o4KVR03
+!s100 GLd]F@2MORzMDc>Zk4=NZ1
+R27
+32
+R15
+!i10b 1
+R17
+Z59 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd|-work|cic_ii_0|
+Z60 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd|
+!i113 1
+R32
+R33
+Asyn
+R20
+R21
+R56
+R19
+R22
+R23
+R24
+DEx4 work 24 auk_dspip_differentiator 0 22 dG7:dahZ6J=F15_o4KVR03
+l110
+L82
+VYh6bWfl@HWTjLB9JGOP2H3
+!s100 YE@2>>5QE^l><?LF;5Nef3
+R27
+32
+R15
+!i10b 1
+R17
+R59
+R60
+!i113 1
+R32
+R33
+vvC+XRHW2VPbUw4hsL9OGMKv1BWJj8ekM6Kwz3xiVaPs=
+R1
+R2
+R15
+!i10b 0
+!s100 ?e>g;5zF4gTGz8Il@imbd1
+Im=C<dnMh[=@@k8EQY[[Wk0
+R4
+!i8a 1528049280
+!s105 auk_dspip_downsample_sv_unit
+S1
+R0
+R16
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv
+R6
+R7
+r1
+!s85 0
+31
+R17
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+n9c86d15
+Eauk_dspip_fastadd
+R18
+R22
+R23
+R24
+R0
+Z61 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd
+Z62 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd
+l0
+L19
+VZmoi1_;NJV=jb?mzUV?zC3
+!s100 [5]E9T0Cj1m>dM=d:lbV_1
+R27
+32
+R28
+!i10b 1
+R29
+Z63 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd|-work|cic_ii_0|
+Z64 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd|
+!i113 1
+R32
+R33
+Abeh
+R22
+R23
+R24
+DEx4 work 17 auk_dspip_fastadd 0 22 Zmoi1_;NJV=jb?mzUV?zC3
+l58
+L36
+V:Lj=F[K9NOiA6ii2S@TI01
+!s100 4L6d6?NT5RVcA3okPLH_h0
+R27
+32
+R28
+!i10b 1
+R29
+R63
+R64
+!i113 1
+R32
+R33
+Eauk_dspip_fastaddsub
+R18
+R22
+R23
+R24
+R0
+Z65 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd
+Z66 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd
+l0
+L69
+VQIgiDDGe]Ja1S6G6fF?nE2
+!s100 DR3L<TF4H7h;URRDTdRDK3
+R27
+32
+R28
+!i10b 1
+R29
+Z67 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd|-work|cic_ii_0|
+Z68 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd|
+!i113 1
+R32
+R33
+Abeh
+R22
+R23
+R24
+DEx4 work 20 auk_dspip_fastaddsub 0 22 QIgiDDGe]Ja1S6G6fF?nE2
+l114
+L87
+Vi4WamS0RF<@]6m^0g0IHD0
+!s100 kg60zaEKIWXliChKPD02@3
+R27
+32
+R28
+!i10b 1
+R29
+R67
+R68
+!i113 1
+R32
+R33
+Eauk_dspip_integrator
+R18
+R20
+R21
+R56
+R19
+R22
+R23
+R24
+R0
+Z69 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd
+Z70 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd
+l0
+L53
+VZa^QFUlN9FUoU9XojJWGO2
+!s100 ^TBRez:n9MZ][^DVlOP9G3
+R27
+32
+R48
+!i10b 1
+R49
+Z71 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd|-work|cic_ii_0|
+Z72 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd|
+!i113 1
+R32
+R33
+Asyn
+R20
+R21
+R56
+R19
+R22
+R23
+R24
+DEx4 work 20 auk_dspip_integrator 0 22 Za^QFUlN9FUoU9XojJWGO2
+l85
+L74
+V6NCM7PlQQKb8AKG_2A8=R1
+!s100 99QY@`8_e0jgaSWnGNHEO3
+R27
+32
+R48
+!i10b 1
+R49
+R71
+R72
+!i113 1
+R32
+R33
+Pauk_dspip_lib_pkg
+R20
+R22
+R23
+R24
+R18
+R0
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd
+l0
+L28
+VCEQBjQ4PnJMA_aU`O60HY3
+!s100 KcRlL:CTnlUz=1CF=kC_S0
+R27
+32
+R28
+!i10b 1
+R29
+!s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd|-work|cic_ii_0|
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd|
+!i113 1
+R32
+R33
+Pauk_dspip_math_pkg
+R22
+R23
+R24
+R18
+R0
+Z73 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd
+Z74 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd
+l0
+L51
+VRDB4f:l`0TdYH^?e_g1FD1
+!s100 [z_3ODE8b:W7XDJ[_]HTW0
+R27
+32
+b1
+Z75 !s110 1595395743
+!i10b 1
+Z76 !s108 1595395743.000000
+Z77 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd|-work|cic_ii_0|
+Z78 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd|
+!i113 1
+R32
+R33
+Bbody
+R20
+R22
+R23
+R24
+l0
+L128
+VizK32k3^M>dFCCSnc7QUD1
+!s100 `941_Ff6o7=GBNnXYB1eU3
+R27
+32
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R32
+R33
+Eauk_dspip_pipelined_adder
+R18
+R20
+R22
+R23
+R24
+R0
+Z79 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd
+Z80 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd
+l0
+L57
+VOjEbS0Zdd^8::=KL[fRNM1
+!s100 A3m<hV;FoAKjU@IanjQQe0
+R27
+32
+R28
+!i10b 1
+R29
+Z81 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd|-work|cic_ii_0|
+Z82 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd|
+!i113 1
+R32
+R33
+Artl
+R20
+R22
+R23
+R24
+DEx4 work 25 auk_dspip_pipelined_adder 0 22 OjEbS0Zdd^8::=KL[fRNM1
+l145
+L80
+V3HehF@bg`ih=bNb4hdiG=0
+!s100 J6Q0=]bdNoikj1bKf4=@i1
+R27
+32
+R28
+!i10b 1
+R29
+R81
+R82
+!i113 1
+R32
+R33
+Eauk_dspip_roundsat
+R18
+R22
+R23
+R24
+R0
+Z83 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd
+Z84 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd
+l0
+L45
+V6P;ZGT9F`S63P17[:3CkM0
+!s100 :Ro[aE[BH^N6eIGEG[O?N3
+R27
+32
+R15
+!i10b 1
+R17
+Z85 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd|-work|cic_ii_0|
+Z86 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd|
+!i113 1
+R32
+R33
+Abeh
+R22
+R23
+R24
+DEx4 work 18 auk_dspip_roundsat 0 22 6P;ZGT9F`S63P17[:3CkM0
+l63
+L61
+V3LhQBi?:817GM<VXGF]l52
+!s100 ]_3I0;m7RDoiJeFA6M^`A1
+R27
+32
+R15
+!i10b 1
+R17
+R85
+R86
+!i113 1
+R32
+R33
+Pauk_dspip_text_pkg
+R22
+R23
+R24
+R18
+R0
+Z87 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd
+Z88 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd
+l0
+L60
+V:3OQ:K16SII3W`Z78RZ1B1
+!s100 D132L>H75ieXQdW840k7O0
+R27
+32
+b1
+R28
+!i10b 1
+R76
+Z89 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd|-work|cic_ii_0|
+Z90 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd|
+!i113 1
+R32
+R33
+Bbody
+DPx4 work 18 auk_dspip_text_pkg 0 22 :3OQ:K16SII3W`Z78RZ1B1
+R22
+R23
+R24
+l0
+L76
+VBS0HY`>AC=ai_Z8WUj[Yo0
+!s100 8<?]li33IkB>fMMF[SR`S2
+R27
+32
+R28
+!i10b 1
+R76
+R89
+R90
+!i113 1
+R32
+R33
+Eauk_dspip_upsample
+R18
+R22
+R23
+R24
+R0
+Z91 8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd
+Z92 FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd
+l0
+L44
+VJ0Q6`G<8azj>S5R0Td2LW1
+!s100 6LVhkI6HfUaPYaO[NDQcM3
+R27
+32
+R48
+!i10b 1
+R49
+Z93 !s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd|-work|cic_ii_0|
+Z94 !s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd|
+!i113 1
+R32
+R33
+Asyn
+R22
+R23
+R24
+DEx4 work 18 auk_dspip_upsample 0 22 J0Q6`G<8azj>S5R0Td2LW1
+l61
+L59
+VOFIWV=`Oca6>F@lhbM6[i3
+!s100 =njJ342K>=6fX5lK<e:fb3
+R27
+32
+R48
+!i10b 1
+R49
+R93
+R94
+!i113 1
+R32
+R33
+vXjsuWnQkH5+WCyh7TtrYZ51EhPLnAvt+pbffo1x1bGo=
+R1
+R2
+R48
+!i10b 0
+!s100 RF37YGB7AjI8;Zl;1NMfa3
+Ilo7fOn3zNjCH0dk3k>BC80
+R4
+!i8a 1528630112
+!s105 auk_dspip_variable_downsample_sv_unit
+S1
+R0
+w1595395746
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv
+R6
+R7
+r1
+!s85 0
+31
+R49
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+n66e305
+vcic_dec_filter_cic_ii_0
+R1
+R3
+!i10b 1
+!s100 D[cYdQM]G7>j`h02cYE220
+IKfhY8R1U9^KBaSbch;kX02
+R4
+!s105 cic_dec_filter_cic_ii_0_sv_unit
+S1
+R0
+R18
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv
+L0 15
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+v0wBWHPRzM42uPD/q8m6jug==
+R1
+Z95 !s110 1595395748
+!i10b 0
+!s100 :0ZNmNc04DZ]lM9M9zc5?1
+I7EQD`RM2`Z=Ya4EU6]?@71
+R4
+!i8a 116057648
+!s105 counter_module_sv_unit
+S1
+R0
+Z96 w1595395748
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/counter_module.sv
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/counter_module.sv
+R6
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/counter_module.sv|
+!s90 -reportprogress|300|-sv|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/counter_module.sv|-work|cic_ii_0|
+!i113 1
+R9
+R10
+n50012c5
+vaO1F/ElwMmccC+gVr9CEtL0VKLSmj7K/jXmTYuHIJK0=
+R95
+!i10b 0
+!s100 L^@BnRdg_lel_IeL9W?Th1
+IzaL5T7F[OoWl79Dd><_Wn3
+R4
+!i8a 1101477472
+R0
+R96
+8D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v
+FD:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v
+R6
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v|
+!s90 -reportprogress|300|D:/Documents/shared_documents/intelFPGA/mic_full_filter/cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v|-work|cic_ii_0|
+!i113 1
+R32
+R10
+n5f39f65

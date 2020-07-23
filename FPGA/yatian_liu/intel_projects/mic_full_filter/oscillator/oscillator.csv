@@ -1,0 +1,18 @@
+# system info oscillator on 2020.07.08.12:22:48
+system_info:
+name,value
+DEVICE,5AGXFB3H4F35C4
+DEVICE_FAMILY,Arria V
+GENERATION_ID,1594225367
+#
+#
+# Files generated for oscillator on 2020.07.08.12:22:48
+files:
+filepath,kind,attributes,module,is_top
+simulation/oscillator.v,VERILOG,,oscillator,true
+simulation/submodules/altera_int_osc.v,VERILOG,,altera_int_osc,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+oscillator.int_osc_0,altera_int_osc

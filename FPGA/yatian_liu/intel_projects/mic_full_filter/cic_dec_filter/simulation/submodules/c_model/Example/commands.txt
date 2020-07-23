@@ -1,0 +1,4 @@
+./cic i 5 1 32 32 32 16 8 28 NONE cic_input.txt cic_output.txt
+cic_ii_mex_file('i', 5, 1, 32, 32, 32, 16, 8, 28, 'NONE', 'LOAD', 'cic_input.txt', 'cic_output.txt')
+x = cic_ii_mex_file_in('i', 5, 1, 32, 32, 32, 16, 8, 28, 'NONE', 'LOAD', 'cic_input.txt')
+x = cic_ii_mex_direct('i', 5, 1, 32, 32, 32, 16, 8, 28, 'NONE', 'LOAD', {[0 32;0 32; .. ]})   (truncated input array)
