@@ -1,2 +1,0 @@
-int_osc_0
-cic_ii_0
