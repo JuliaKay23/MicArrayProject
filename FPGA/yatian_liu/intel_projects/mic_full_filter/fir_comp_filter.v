@@ -92,9 +92,9 @@ endmodule
 // Retrieval info: 	<generic name="karatsuba" value="false" />
 // Retrieval info: 	<generic name="outType" value="int" />
 // Retrieval info: 	<generic name="outMSBRound" value="sat" />
-// Retrieval info: 	<generic name="outMsbBitRem" value="8" />
+// Retrieval info: 	<generic name="outMsbBitRem" value="7" />
 // Retrieval info: 	<generic name="outLSBRound" value="round" />
-// Retrieval info: 	<generic name="outLsbBitRem" value="7" />
+// Retrieval info: 	<generic name="outLsbBitRem" value="8" />
 // Retrieval info: 	<generic name="bankCount" value="1" />
 // Retrieval info: 	<generic name="bankDisplay" value="0" />
 // Retrieval info: </instance>

@@ -1,5 +1,5 @@
 Fs_pdm = 2e6; %  PDM sampling rate
-duration = 2e-3; % 2 ms duration
+duration = 4e-3; % 2 ms duration
 
 % Generate PDM signal.
 t_pdm = 0:(1/Fs_pdm):duration;
