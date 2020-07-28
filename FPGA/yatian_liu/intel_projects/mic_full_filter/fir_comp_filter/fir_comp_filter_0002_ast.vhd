@@ -11,9 +11,9 @@ entity fir_comp_filter_0002_ast is
         INWIDTH             : integer := 16;
         OUT_WIDTH_UNTRIMMED : integer := 31;
         BANKINWIDTH         : integer := 0;
-        REM_LSB_BIT_g       : integer := 7;
+        REM_LSB_BIT_g       : integer := 8;
         REM_LSB_TYPE_g      : string := "round";
-        REM_MSB_BIT_g       : integer := 8;
+        REM_MSB_BIT_g       : integer := 7;
         REM_MSB_TYPE_g      : string := "sat";
         PHYSCHANIN          : integer := 1;
         PHYSCHANOUT         : integer := 1;

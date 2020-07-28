@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 19.1 670 win32 2020.07.22.01:27:04
+# ACDS 19.1 670 win32 2020.07.27.16:48:57
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 19.1 670 win32 2020.07.22.01:27:04
+# ACDS 19.1 670 win32 2020.07.27.16:48:57
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="fir_comp_filter"

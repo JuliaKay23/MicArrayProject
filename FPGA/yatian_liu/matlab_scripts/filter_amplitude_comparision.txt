@@ -1,0 +1,9 @@
+n=8:
+max amplitude: 0.5 @ 2 kHz (overlayed)
+cic output: -1461 -- 1507
+fir output: -2838 -- 2739
+
+n=4:
+max amplitude: 0.5 @ 2kHz (overlayed)
+cic output: -1700 -- 1629
+fir output: -3894 -- 3799

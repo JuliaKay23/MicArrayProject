@@ -7,7 +7,7 @@ module wave_gen(
 
 reg [13:0] address;
 reg [2:0] bit_address; // We need to output each bit in a word one by one
-localparam max_address = 8750-1; // Size of the wavetable (8750) - 1
+localparam max_address = 1000-1; // Size of the wavetable (1000) - 1
 
 wire [7:0] wt_out;
 
@@ -61,7 +61,7 @@ wave_gen wave_gen_inst(
 // The addr_clock is 2 MHz and the wavetable_clk is 100 MHz.
 localparam addr_period = 0.5;
 localparam wt_period = 0.01;
-localparam wt_size = 8750;
+localparam wt_size = 1000;
 always #(addr_period/2) addr_clk = ~addr_clk;
 always #(wt_period/2) wt_clk = ~wt_clk;
 

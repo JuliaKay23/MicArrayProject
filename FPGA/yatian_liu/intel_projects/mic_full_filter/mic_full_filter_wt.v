@@ -100,7 +100,7 @@ mic_full_filter_wt mic_full_filter_wt_inst(
 
 localparam period = 0.01;
 localparam lf_period = 0.5;
-localparam wt_size = 8750;
+localparam wt_size = 1000;
 
 initial begin
     reset_n = 0;
@@ -112,6 +112,7 @@ initial begin
     reset_n = 1;
     #(lf_period*3);
     in_valid = 1;
+    #(50*lf_period); // Add some extra delay
     #(wt_size*8*lf_period); // Wait for the wavetable's output
     $stop;
 end

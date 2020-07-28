@@ -1,2 +1,0 @@
-set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) oscillator/oscillator.qip]
-set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) cic_dec_filter/cic_dec_filter.qip]
