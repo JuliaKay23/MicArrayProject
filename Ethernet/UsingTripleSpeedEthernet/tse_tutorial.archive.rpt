@@ -1,0 +1,270 @@
+Archive Project report for tse_tutorial
+Mon Aug 10 22:59:57 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon Aug 10 22:59:57 2020 ;
+; Revision Name          ; tse_tutorial                          ;
+; Top-level Entity Name  ; tse_tutorial                          ;
+; Family                 ; Arria V                               ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/julia/Documents/tse_tutorial/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/julia/Documents/tse_tutorial/tse_tutorial.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'tse_tutorial.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/19.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4869 megabytes
+    Info: Processing ended: Mon Aug 10 22:59:57 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++-----------------------------------------------------------------------------------------------------+
+; Files Archived                                                                                      ;
++-----------------------------------------------------------------------------------------------------+
+; File Name                                                                                           ;
++-----------------------------------------------------------------------------------------------------+
+; c:/intelfpga/19.1/quartus/bin64/assignment_defaults.qdf                                             ;
+; my_ddio_out.ppf                                                                                     ;
+; my_ddio_out.qip                                                                                     ;
+; my_ddio_out.v                                                                                       ;
+; my_pll.cmp                                                                                          ;
+; my_pll.qip                                                                                          ;
+; my_pll.sip                                                                                          ;
+; my_pll.spd                                                                                          ;
+; my_pll.v                                                                                            ;
+; my_pll/my_pll_0002.qip                                                                              ;
+; my_pll/my_pll_0002.v                                                                                ;
+; my_pll_sim/my_pll.vo                                                                                ;
+; nios_system/synthesis/../../nios_system.qsys                                                        ;
+; nios_system/synthesis/../../nios_system.sopcinfo                                                    ;
+; nios_system/synthesis/../nios_system.cmp                                                            ;
+; nios_system/synthesis/nios_system.debuginfo                                                         ;
+; nios_system/synthesis/nios_system.qip                                                               ;
+; nios_system/synthesis/nios_system.regmap                                                            ;
+; nios_system/synthesis/nios_system.v                                                                 ;
+; nios_system/synthesis/submodules/altera_avalon_sc_fifo.v                                            ;
+; nios_system/synthesis/submodules/altera_eth_tse_mac.sdc                                             ;
+; nios_system/synthesis/submodules/altera_eth_tse_mac.v                                               ;
+; nios_system/synthesis/submodules/altera_eth_tse_ptp_std_synchronizer.v                              ;
+; nios_system/synthesis/submodules/altera_eth_tse_std_synchronizer.v                                  ;
+; nios_system/synthesis/submodules/altera_eth_tse_std_synchronizer_bundle.v                           ;
+; nios_system/synthesis/submodules/altera_merlin_arbitrator.sv                                        ;
+; nios_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv                                ;
+; nios_system/synthesis/submodules/altera_merlin_master_agent.sv                                      ;
+; nios_system/synthesis/submodules/altera_merlin_master_translator.sv                                 ;
+; nios_system/synthesis/submodules/altera_merlin_slave_agent.sv                                       ;
+; nios_system/synthesis/submodules/altera_merlin_slave_translator.sv                                  ;
+; nios_system/synthesis/submodules/altera_reset_controller.sdc                                        ;
+; nios_system/synthesis/submodules/altera_reset_controller.v                                          ;
+; nios_system/synthesis/submodules/altera_reset_synchronizer.v                                        ;
+; nios_system/synthesis/submodules/altera_std_synchronizer_nocut.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_a_fifo_13.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_a_fifo_24.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_a_fifo_34.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_a_fifo_opt_14_44.v                                      ;
+; nios_system/synthesis/submodules/altera_tse_a_fifo_opt_36_10.v                                      ;
+; nios_system/synthesis/submodules/altera_tse_a_fifo_opt_1246.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_altshifttaps.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_altsyncram_dpm_fifo.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_bin_cnt.v                                               ;
+; nios_system/synthesis/submodules/altera_tse_clk_cntl.v                                              ;
+; nios_system/synthesis/submodules/altera_tse_clock_crosser.v                                         ;
+; nios_system/synthesis/submodules/altera_tse_crc32ctl8.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_crc32galois8.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_crc328checker.v                                         ;
+; nios_system/synthesis/submodules/altera_tse_crc328generator.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_dpram_8x32.v                                            ;
+; nios_system/synthesis/submodules/altera_tse_dpram_16x32.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_dpram_ecc_16x32.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x2.v                                            ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x10.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x14.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x23.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x30.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x36.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_dec_x40.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x2.v                                            ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x2_wrapper.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x10.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x10_wrapper.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x14.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x14_wrapper.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x23.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x23_wrapper.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x30.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x30_wrapper.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x36.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x36_wrapper.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x40.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_ecc_enc_x40_wrapper.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_ecc_status_crosser.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_false_path_marker.v                                     ;
+; nios_system/synthesis/submodules/altera_tse_fifoless_mac_rx.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_fifoless_mac_tx.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_fifoless_retransmit_cntl.v                              ;
+; nios_system/synthesis/submodules/altera_tse_gmii_io.v                                               ;
+; nios_system/synthesis/submodules/altera_tse_gray_cnt.v                                              ;
+; nios_system/synthesis/submodules/altera_tse_hashing.v                                               ;
+; nios_system/synthesis/submodules/altera_tse_host_control.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_host_control_small.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_lb_read_cntl.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_lb_wrt_cntl.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_lfsr_10.v                                               ;
+; nios_system/synthesis/submodules/altera_tse_loopback_ff.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_mac_control.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_mac_rx.v                                                ;
+; nios_system/synthesis/submodules/altera_tse_mac_tx.v                                                ;
+; nios_system/synthesis/submodules/altera_tse_magic_detection.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_mdio.v                                                  ;
+; nios_system/synthesis/submodules/altera_tse_mdio_clk_gen.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_mdio_cntl.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_mii_rx_if.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_mii_tx_if.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_nf_rgmii_module.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_ph_calculator.sv                                        ;
+; nios_system/synthesis/submodules/altera_tse_pipeline_base.v                                         ;
+; nios_system/synthesis/submodules/altera_tse_pipeline_stage.sv                                       ;
+; nios_system/synthesis/submodules/altera_tse_register_map.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_register_map_small.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_reset_synchronizer.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_retransmit_cntl.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_rgmii_in1.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_rgmii_in4.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_rgmii_module.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_rgmii_out1.v                                            ;
+; nios_system/synthesis/submodules/altera_tse_rgmii_out4.v                                            ;
+; nios_system/synthesis/submodules/altera_tse_rx_counter_cntl.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_rx_ff.v                                                 ;
+; nios_system/synthesis/submodules/altera_tse_rx_ff_cntrl.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_rx_ff_cntrl_32.v                                        ;
+; nios_system/synthesis/submodules/altera_tse_rx_ff_cntrl_32_shift16.v                                ;
+; nios_system/synthesis/submodules/altera_tse_rx_ff_length.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_rx_min_ff.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_rx_stat_extract.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_sdpm_altsyncram.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_sdpm_gen.v                                              ;
+; nios_system/synthesis/submodules/altera_tse_shared_mac_control.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_shared_register_map.v                                   ;
+; nios_system/synthesis/submodules/altera_tse_timing_adapter8.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_timing_adapter32.v                                      ;
+; nios_system/synthesis/submodules/altera_tse_timing_adapter_fifo8.v                                  ;
+; nios_system/synthesis/submodules/altera_tse_timing_adapter_fifo32.v                                 ;
+; nios_system/synthesis/submodules/altera_tse_top_1geth.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_top_fifoless_1geth.v                                    ;
+; nios_system/synthesis/submodules/altera_tse_top_gen_host.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_top_mdio.v                                              ;
+; nios_system/synthesis/submodules/altera_tse_top_w_fifo.v                                            ;
+; nios_system/synthesis/submodules/altera_tse_top_w_fifo_10_100_1000.ocp                              ;
+; nios_system/synthesis/submodules/altera_tse_top_w_fifo_10_100_1000.v                                ;
+; nios_system/synthesis/submodules/altera_tse_top_wo_fifo.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_top_wo_fifo_10_100_1000.ocp                             ;
+; nios_system/synthesis/submodules/altera_tse_top_wo_fifo_10_100_1000.v                               ;
+; nios_system/synthesis/submodules/altera_tse_tx_counter_cntl.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_tx_ff.v                                                 ;
+; nios_system/synthesis/submodules/altera_tse_tx_ff_cntrl.v                                           ;
+; nios_system/synthesis/submodules/altera_tse_tx_ff_cntrl_32.v                                        ;
+; nios_system/synthesis/submodules/altera_tse_tx_ff_cntrl_32_shift16.v                                ;
+; nios_system/synthesis/submodules/altera_tse_tx_ff_length.v                                          ;
+; nios_system/synthesis/submodules/altera_tse_tx_ff_read_cntl.v                                       ;
+; nios_system/synthesis/submodules/altera_tse_tx_min_ff.v                                             ;
+; nios_system/synthesis/submodules/altera_tse_tx_stat_extract.v                                       ;
+; nios_system/synthesis/submodules/nios_system_avalon_st_adapter.v                                    ;
+; nios_system/synthesis/submodules/nios_system_avalon_st_adapter_timing_adapter_0.sv                  ;
+; nios_system/synthesis/submodules/nios_system_avalon_st_adapter_timing_adapter_0_fifo.sv             ;
+; nios_system/synthesis/submodules/nios_system_descriptor_memory.hex                                  ;
+; nios_system/synthesis/submodules/nios_system_descriptor_memory.v                                    ;
+; nios_system/synthesis/submodules/nios_system_irq_mapper.sv                                          ;
+; nios_system/synthesis/submodules/nios_system_jtag_uart.v                                            ;
+; nios_system/synthesis/submodules/nios_system_main_memory.hex                                        ;
+; nios_system/synthesis/submodules/nios_system_main_memory.v                                          ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v                                    ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v                  ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux.sv                         ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_001.sv                     ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_005.sv                     ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux.sv                           ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_004.sv                       ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_005.sv                       ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_006.sv                       ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv                            ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_005.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_006.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_008.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_012.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_013.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_014.sv                        ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_005.sv                     ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_006.sv                     ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux.sv                           ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_001.sv                       ;
+; nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_005.sv                       ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0.v                                         ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc                                   ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v                                     ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_sysclk.v                  ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_tck.v                     ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_wrapper.v                 ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_ociram_default_contents.mif           ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_rf_ram_a.mif                          ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_rf_ram_b.mif                          ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_test_bench.v                          ;
+; nios_system/synthesis/submodules/nios_system_sgdma_rx.v                                             ;
+; nios_system/synthesis/submodules/nios_system_sgdma_tx.v                                             ;
+; nios_system/synthesis/submodules/nios_system_tse.v                                                  ;
+; tse_tutorial.qpf                                                                                    ;
+; tse_tutorial.qsf                                                                                    ;
+; tse_tutorial.sdc                                                                                    ;
+; tse_tutorial.v                                                                                      ;
++-----------------------------------------------------------------------------------------------------+
+
+
