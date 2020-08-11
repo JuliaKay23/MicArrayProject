@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="oscillator" kind="oscillator" version="1.0" fabric="QSYS">
  <!-- Format version 19.1 670 (Future versions may contain additional information.) -->
- <!-- 2020.07.27.16:49:58 -->
+ <!-- 2020.07.28.11:36:19 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1595882998</value>
+  <value>1595950579</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>

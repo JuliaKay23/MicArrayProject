@@ -1,0 +1,14 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst pll_clock_generator.pll_0 -pg 1 -lvl 2 -y 30
+preplace inst pll_clock_generator -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst pll_clock_generator.clk_0 -pg 1 -lvl 1 -y 30
+preplace netloc EXPORT<net_container>pll_clock_generator</net_container>(SLAVE)clk_0.clk_in,(SLAVE)pll_clock_generator.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pll_clock_generator</net_container>(SLAVE)pll_clock_generator.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pll_clock_generator</net_container>(MASTER)pll_0.outclk0,(MASTER)pll_clock_generator.clk_20mhz) 1 2 1 NJ
+preplace netloc EXPORT<net_container>pll_clock_generator</net_container>(MASTER)pll_0.outclk3,(MASTER)pll_clock_generator.clk_200khz) 1 2 1 NJ
+preplace netloc POINT_TO_POINT<net_container>pll_clock_generator</net_container>(MASTER)clk_0.clk_reset,(SLAVE)pll_0.reset) 1 1 1 N
+preplace netloc POINT_TO_POINT<net_container>pll_clock_generator</net_container>(MASTER)clk_0.clk,(SLAVE)pll_0.refclk) 1 1 1 N
+preplace netloc EXPORT<net_container>pll_clock_generator</net_container>(MASTER)pll_clock_generator.clk_2mhz,(MASTER)pll_0.outclk1) 1 2 1 NJ
+levelinfo -pg 1 0 50 500
+levelinfo -hier pll_clock_generator 60 90 270 400

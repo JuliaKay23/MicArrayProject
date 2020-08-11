@@ -1,0 +1,122 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 320 232)
+	(text "combined_filter" (rect 115 -1 175 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 216 20 228)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "av_st_in_error[1..0]" (rect 0 0 80 12)(font "Arial" (font_size 8)))
+		(text "av_st_in_error[1..0]" (rect 4 61 124 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 112 72)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "av_st_in_valid" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "av_st_in_valid" (rect 4 77 88 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 112 88)(line_width 1))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "av_st_in_data[1..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "av_st_in_data[1..0]" (rect 4 109 118 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 112 120)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 149 46 160)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 112 160)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 189 82 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 112 200)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "av_st_in_ready" (rect 0 0 64 12)(font "Arial" (font_size 8)))
+		(text "av_st_in_ready" (rect 4 93 88 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 112 104)(line_width 1))
+	)
+	(port
+		(pt 320 72)
+		(output)
+		(text "av_st_out_data[15..0]" (rect 0 0 87 12)(font "Arial" (font_size 8)))
+		(text "av_st_out_data[15..0]" (rect 212 61 338 72)(font "Arial" (font_size 8)))
+		(line (pt 320 72)(pt 192 72)(line_width 3))
+	)
+	(port
+		(pt 320 88)
+		(output)
+		(text "av_st_out_valid" (rect 0 0 64 12)(font "Arial" (font_size 8)))
+		(text "av_st_out_valid" (rect 239 77 329 88)(font "Arial" (font_size 8)))
+		(line (pt 320 88)(pt 192 88)(line_width 1))
+	)
+	(port
+		(pt 320 104)
+		(output)
+		(text "av_st_out_error[1..0]" (rect 0 0 86 12)(font "Arial" (font_size 8)))
+		(text "av_st_out_error[1..0]" (rect 215 93 341 104)(font "Arial" (font_size 8)))
+		(line (pt 320 104)(pt 192 104)(line_width 3))
+	)
+	(drawing
+		(text "av_st_in" (rect 63 43 174 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "error" (rect 117 67 264 144)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 117 83 264 176)(font "Arial" (color 0 0 0)))
+		(text "ready" (rect 117 99 264 208)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 117 115 258 240)(font "Arial" (color 0 0 0)))
+		(text "av_st_out" (rect 193 43 440 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 171 67 366 144)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 169 83 368 176)(font "Arial" (color 0 0 0)))
+		(text "error" (rect 167 99 364 208)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 97 131 212 275)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 117 155 252 320)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 83 171 196 355)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 117 195 276 400)(font "Arial" (color 0 0 0)))
+		(text " combined_filter " (rect 251 216 604 442)(font "Arial" ))
+		(line (pt 112 32)(pt 192 32)(line_width 1))
+		(line (pt 192 32)(pt 192 216)(line_width 1))
+		(line (pt 112 216)(pt 192 216)(line_width 1))
+		(line (pt 112 32)(pt 112 216)(line_width 1))
+		(line (pt 113 52)(pt 113 124)(line_width 1))
+		(line (pt 114 52)(pt 114 124)(line_width 1))
+		(line (pt 191 52)(pt 191 108)(line_width 1))
+		(line (pt 190 52)(pt 190 108)(line_width 1))
+		(line (pt 113 140)(pt 113 164)(line_width 1))
+		(line (pt 114 140)(pt 114 164)(line_width 1))
+		(line (pt 113 180)(pt 113 204)(line_width 1))
+		(line (pt 114 180)(pt 114 204)(line_width 1))
+		(line (pt 0 0)(pt 320 0)(line_width 1))
+		(line (pt 320 0)(pt 320 232)(line_width 1))
+		(line (pt 0 232)(pt 320 232)(line_width 1))
+		(line (pt 0 0)(pt 0 232)(line_width 1))
+	)
+)

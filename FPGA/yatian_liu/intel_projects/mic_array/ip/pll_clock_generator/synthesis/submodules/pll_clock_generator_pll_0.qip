@@ -1,0 +1,1 @@
+set_instance_assignment -name PLL_COMPENSATION_MODE NORMAL -to "*pll_clock_generator_pll_0*|altera_pll:altera_pll_i*|*"

@@ -1,0 +1,10 @@
+	component pll_clock_generator is
+		port (
+			clk_clk        : in  std_logic := 'X'; -- clk
+			clk_20mhz_clk  : out std_logic;        -- clk
+			clk_2mhz_clk   : out std_logic;        -- clk
+			clk_400khz_clk : out std_logic;        -- clk
+			reset_reset_n  : in  std_logic := 'X'  -- reset_n
+		);
+	end component pll_clock_generator;
+

@@ -5,9 +5,12 @@
   <columns>
    <connections preferredWidth="31" />
    <irq preferredWidth="34" />
+   <name preferredWidth="422" />
+   <inputclock preferredWidth="164" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="2560" height="1370" x="0" y="0" />
+ <library
+   expandedCategories="Library/Interface Protocols/Ethernet/Reference Design Components,Library/Interface Protocols,Project,Library/Interface Protocols/Ethernet,Library" />
+ <window width="2584" height="1394" x="2548" y="-12" />
  <generation simulation="VERILOG" />
 </preferences>

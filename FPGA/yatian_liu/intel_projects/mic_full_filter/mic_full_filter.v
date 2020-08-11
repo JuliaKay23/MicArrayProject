@@ -2,7 +2,7 @@ module mic_full_filter(
     input wire reset_btn, // Input reset button, active low
     input wire in_valid_flip_btn, // Input button to flip in_valid, active low
     input wire pdm_mic_input,
-    output wire [7:0] dout,
+    output wire [15:0] dout,
     output wire lf_clk_out, // Output lf_clk to drive the PDM mic
     // The following outputs are for debugging.
     output wire in_valid_led,
@@ -56,9 +56,9 @@ button_debouncer in_valid_flip_btn_db(
     .pb_out(in_valid_flip)
 );
 reg [1:0] in_valid_flip_hist;
-always @(posedge clk) begin
+always @(posedge lf_clk) begin
     in_valid_flip_hist[1:0] <= {in_valid_flip_hist[0], in_valid_flip};
-    if (~clk_reset_n) begin
+    if (~reset_n) begin
         in_valid <= 0;
     end
     else begin
@@ -87,7 +87,7 @@ end
 wire cic_in_ready;
 wire cic_out_valid;
 wire [1:0] cic_out_error;
-wire [11:0] cic_out_data;
+wire [15:0] cic_out_data;
 
 cic_dec_filter cic_inst(
     .clk(lf_clk),
@@ -104,7 +104,7 @@ cic_dec_filter cic_inst(
 
 wire fir_out_valid;
 wire [1:0] fir_out_error;
-wire [7:0] fir_out_data;
+wire [15:0] fir_out_data;
 
 fir_comp_filter fir_inst(
     .clk(lf_clk),
@@ -136,7 +136,7 @@ module mic_full_filter_tb();
 reg reset_btn;
 reg in_valid_flip_btn;
 reg pdm_mic_input;
-wire [7:0] dout;
+wire [15:0] dout;
 wire lf_clk_out;
 wire in_valid_led;
 wire hsmc_rx_led;
