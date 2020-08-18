@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="271" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library,Library/Interface Protocols/Serial,Library/Basic Functions/DMA,Library/Interface Protocols/Ethernet/1G Multi-rate Ethernet,Library/Interface Protocols,Library/Basic Functions,Library/Interface Protocols/Ethernet,Library/Processors and Peripherals/Embedded Processors,Library/Processors and Peripherals,Project,Library/Basic Functions/On Chip Memory" />
+ <window width="1264" height="1047" x="1913" y="0" />
+ <generation block_symbol_file="0" />
+ <hdlexample language="VERILOG" />
+</preferences>
