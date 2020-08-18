@@ -139,10 +139,10 @@ ACDS_VERSION := 18.1
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
 # 
-ELF := C:/Users/julia/Documents/tse_tutorial/app_software/tse_tutorial.elf
+ELF := C:/Users/julia/Documents/MicArrayProject/Ethernet/tse_tutorial/app_software/tse_tutorial.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += C:/Users/julia/Documents/tse_tutorial/app_software/tse_tutorial.c
+C_SRCS += C:/Users/julia/Documents/MicArrayProject/Ethernet/tse_tutorial/app_software/tse_tutorial.c
 CXX_SRCS :=
 ASM_SRCS :=
 

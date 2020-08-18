@@ -77,11 +77,11 @@ int main(void)
 	*(tse + 4) = 0x00000F02; 
 
 	// Specify the addresses of the PHY devices to be accessed through MDIO interface
-	*(tse + 0x0F) = 0x10;
-	*(tse + 0x10) = 0x11;
+	*(tse + 0x0F) = 0x00; //was 0x10
+	*(tse + 0x10) = 0x00; //was 0x11
 	
 	// Write to register 20 of the PHY chip for Ethernet port 0 to set up line loopback
-	*(tse + 0x94) = 0x4000;
+	*(tse + 0x94) = 0x0000; //was 0x4000
 	
 	// Write to register 16 of the PHY chip for Ethernet port 1 to enable automatic crossover for all modes
 	*(tse + 0xB0) = *(tse + 0xB0) | 0x0060;
