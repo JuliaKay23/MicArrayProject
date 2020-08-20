@@ -195,11 +195,11 @@ module nios_system_mm_interconnect_0_router_013
             src_channel = 8'b0001;
         end
 
-        if (destid == 1  && read_transaction) begin
+        if (destid == 7  && read_transaction) begin
             src_channel = 8'b0010;
         end
 
-        if (destid == 7  && read_transaction) begin
+        if (destid == 1  && read_transaction) begin
             src_channel = 8'b0100;
         end
 

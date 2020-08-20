@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces" showResetDomains="0" showClockDomains="0">
+  <columns>
+   <connections preferredWidth="271" />
+   <irq preferredWidth="79" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library,Library/DSP,Library/University Program,Library/Basic Functions/On Chip Memory,Library/Basic Functions,Library/University Program/Audio &amp; Video/Video,Project,Library/University Program/Generic IO,Library/DSP/Video and Image Processing,Library/University Program/Audio &amp; Video" />
+ <window width="1936" height="1056" x="-8" y="-8" />
+ <generation block_symbol_file="0" />
+</preferences>

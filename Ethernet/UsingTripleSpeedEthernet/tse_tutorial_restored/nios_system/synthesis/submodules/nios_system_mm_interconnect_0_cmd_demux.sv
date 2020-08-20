@@ -30,7 +30,7 @@
 //   output_name:         nios_system_mm_interconnect_0_cmd_demux
 //   ST_DATA_W:           108
 //   ST_CHANNEL_W:        8
-//   NUM_OUTPUTS:         7
+//   NUM_OUTPUTS:         8
 //   VALID_WIDTH:         1
 // ------------------------------------------
 
@@ -104,6 +104,13 @@ module nios_system_mm_interconnect_0_cmd_demux
     output reg                      src6_endofpacket,
     input                           src6_ready,
 
+    output reg                      src7_valid,
+    output reg [108-1    : 0] src7_data, // ST_DATA_W=108
+    output reg [8-1 : 0] src7_channel, // ST_CHANNEL_W=8
+    output reg                      src7_startofpacket,
+    output reg                      src7_endofpacket,
+    input                           src7_ready,
+
 
     // -------------------
     // Clock & Reset
@@ -115,7 +122,7 @@ module nios_system_mm_interconnect_0_cmd_demux
 
 );
 
-    localparam NUM_OUTPUTS = 7;
+    localparam NUM_OUTPUTS = 8;
     wire [NUM_OUTPUTS - 1 : 0] ready_vector;
 
     // -------------------
@@ -171,6 +178,13 @@ module nios_system_mm_interconnect_0_cmd_demux
 
         src6_valid         = sink_channel[6] && sink_valid;
 
+        src7_data          = sink_data;
+        src7_startofpacket = sink_startofpacket;
+        src7_endofpacket   = sink_endofpacket;
+        src7_channel       = sink_channel >> NUM_OUTPUTS;
+
+        src7_valid         = sink_channel[7] && sink_valid;
+
     end
 
     // -------------------
@@ -183,8 +197,9 @@ module nios_system_mm_interconnect_0_cmd_demux
     assign ready_vector[4] = src4_ready;
     assign ready_vector[5] = src5_ready;
     assign ready_vector[6] = src6_ready;
+    assign ready_vector[7] = src7_ready;
 
-    assign sink_ready = |(sink_channel & {{1{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+    assign sink_ready = |(sink_channel & ready_vector);
 
 endmodule
 
