@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/nios_system.sopcinfo
  *
- * Generated: Thu Aug 20 14:16:53 EDT 2020
+ * Generated: Tue Sep 22 12:25:02 EDT 2020
  */
 
 /*
@@ -65,14 +65,14 @@
  *
  */
 
-#define DESCRIPTOR_MEMORY_REGION_BASE 0x100000
+#define DESCRIPTOR_MEMORY_REGION_BASE 0x101000
 #define DESCRIPTOR_MEMORY_REGION_SPAN 4096
 #define MAIN_MEMORY_REGION_BASE 0x80020
 #define MAIN_MEMORY_REGION_SPAN 307168
+#define RAM_BLOCK_REGION_BASE 0x100000
+#define RAM_BLOCK_REGION_SPAN 4096
 #define RESET_REGION_BASE 0x80000
 #define RESET_REGION_SPAN 32
-#define ROM_BLOCK_REGION_BASE 0x0
-#define ROM_BLOCK_REGION_SPAN 4096
 
 
 /*

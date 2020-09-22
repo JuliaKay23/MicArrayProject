@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 20, 2020 2:16:50 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1597947410952</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 22, 2020 12:24:59 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1600791899543</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\julia\Documents\MicArrayProject\Ethernet\UsingTripleSpeedEthernet\tse_tutorial_restored\app_software\BSP\</BspGeneratedLocation>
         <BspSettingsFile>C:\Users\julia\Documents\MicArrayProject\Ethernet\UsingTripleSpeedEthernet\tse_tutorial_restored\app_software\BSP\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\julia\Documents\MicArrayProject\Ethernet\UsingTripleSpeedEthernet\tse_tutorial_restored\nios_system.sopcinfo</SopcDesignFile>
@@ -935,44 +935,44 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>ROM_block</slaveDescriptor>
-                <addressRange>0x00000000 - 0x00000FFF</addressRange>
-                <addressSpan>4096</addressSpan>
-                <attributes>memory, non-volatile</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>main_memory</slaveDescriptor>
                 <addressRange>0x00080000 - 0x000CAFFF</addressRange>
                 <addressSpan>307200</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>descriptor_memory</slaveDescriptor>
+                <slaveDescriptor>RAM_block</slaveDescriptor>
                 <addressRange>0x00100000 - 0x00100FFF</addressRange>
                 <addressSpan>4096</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>descriptor_memory</slaveDescriptor>
+                <addressRange>0x00101000 - 0x00101FFF</addressRange>
+                <addressSpan>4096</addressSpan>
+                <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>tse</slaveDescriptor>
-                <addressRange>0x00102000 - 0x001023FF</addressRange>
+                <addressRange>0x00103000 - 0x001033FF</addressRange>
                 <addressSpan>1024</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sgdma_tx</slaveDescriptor>
-                <addressRange>0x00102400 - 0x0010243F</addressRange>
+                <addressRange>0x00103400 - 0x0010343F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sgdma_rx</slaveDescriptor>
-                <addressRange>0x00102440 - 0x0010247F</addressRange>
+                <addressRange>0x00103440 - 0x0010347F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x00102480 - 0x00102487</addressRange>
+                <addressRange>0x00103480 - 0x00103487</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

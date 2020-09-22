@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "en_udp_reference_app", "en_udp_reference_app.csproj", "{3F86197C-B015-45D5-9ED2-2FFB1C9D57BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F86197C-B015-45D5-9ED2-2FFB1C9D57BC}.Debug|x86.ActiveCfg = Release|x86
+		{3F86197C-B015-45D5-9ED2-2FFB1C9D57BC}.Debug|x86.Build.0 = Release|x86
+		{3F86197C-B015-45D5-9ED2-2FFB1C9D57BC}.Release|x86.ActiveCfg = Release|x86
+		{3F86197C-B015-45D5-9ED2-2FFB1C9D57BC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

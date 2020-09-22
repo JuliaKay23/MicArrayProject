@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/nios_system.sopcinfo
  *
- * Generated: Thu Aug 20 14:16:53 EDT 2020
+ * Generated: Tue Sep 22 12:25:02 EDT 2020
  */
 
 /*

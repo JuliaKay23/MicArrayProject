@@ -70,7 +70,7 @@ int main(void)
 	alt_avalon_sgdma_do_async_transfer( sgdma_rx_dev, &rx_descriptor );
 
 	// Triple-speed Ethernet MegaCore base address
-	volatile int * tse = (int *) 0x00102000;	
+	volatile int * tse = (int *) 0x00103000;	
 	
 	// Initialize the MAC address 
 	*(tse + 3) = 0x116E6001;
@@ -100,8 +100,8 @@ int main(void)
 	alt_printf( "send> " );
 	text_length = 0;
 	
-	// ROM_block base address
-	volatile int * rom_block = (int *) 0x00000000;
+	// RAM_block base address
+	volatile int * ram_block = (int *) 0x00100000;
 	
 	while (1) {
 		
@@ -136,7 +136,7 @@ int main(void)
 		// MODIFIED
 		if (alt_getchar() == '\n') {
 			while (text_length < 32) {
-				tx_frame[16 + text_length] = *(rom_block + text_length);
+				tx_frame[16 + text_length] = *(ram_block + text_length);
 				text_length++;
 			}
 			tx_frame[16 + text_length] = '\0';

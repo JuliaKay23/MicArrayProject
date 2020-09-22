@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/nios_system.sopcinfo
  *
- * Generated: Thu Aug 20 14:16:53 EDT 2020
+ * Generated: Tue Sep 22 12:25:02 EDT 2020
  */
 
 /*
@@ -50,16 +50,16 @@
 
 MEMORY
 {
-    ROM_block : ORIGIN = 0x0, LENGTH = 4096
     reset : ORIGIN = 0x80000, LENGTH = 32
     main_memory : ORIGIN = 0x80020, LENGTH = 307168
-    descriptor_memory : ORIGIN = 0x100000, LENGTH = 4096
+    RAM_block : ORIGIN = 0x100000, LENGTH = 4096
+    descriptor_memory : ORIGIN = 0x101000, LENGTH = 4096
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_ROM_block = 0x0;
 __alt_mem_main_memory = 0x80000;
-__alt_mem_descriptor_memory = 0x100000;
+__alt_mem_RAM_block = 0x100000;
+__alt_mem_descriptor_memory = 0x101000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -311,24 +311,7 @@ SECTIONS
      *
      */
 
-    .ROM_block : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
-    {
-        PROVIDE (_alt_partition_ROM_block_start = ABSOLUTE(.));
-        *(.ROM_block .ROM_block. ROM_block.*)
-        . = ALIGN(4);
-        PROVIDE (_alt_partition_ROM_block_end = ABSOLUTE(.));
-    } > ROM_block
-
-    PROVIDE (_alt_partition_ROM_block_load_addr = LOADADDR(.ROM_block));
-
-    /*
-     *
-     * This section's LMA is set to the .text region.
-     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
-     *
-     */
-
-    .main_memory LOADADDR (.ROM_block) + SIZEOF (.ROM_block) : AT ( LOADADDR (.ROM_block) + SIZEOF (.ROM_block) )
+    .main_memory LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
         PROVIDE (_alt_partition_main_memory_start = ABSOLUTE(.));
         *(.main_memory .main_memory. main_memory.*)
@@ -348,7 +331,24 @@ SECTIONS
      *
      */
 
-    .descriptor_memory : AT ( LOADADDR (.main_memory) + SIZEOF (.main_memory) )
+    .RAM_block : AT ( LOADADDR (.main_memory) + SIZEOF (.main_memory) )
+    {
+        PROVIDE (_alt_partition_RAM_block_start = ABSOLUTE(.));
+        *(.RAM_block .RAM_block. RAM_block.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_RAM_block_end = ABSOLUTE(.));
+    } > RAM_block
+
+    PROVIDE (_alt_partition_RAM_block_load_addr = LOADADDR(.RAM_block));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .descriptor_memory : AT ( LOADADDR (.RAM_block) + SIZEOF (.RAM_block) )
     {
         PROVIDE (_alt_partition_descriptor_memory_start = ABSOLUTE(.));
         *(.descriptor_memory .descriptor_memory. descriptor_memory.*)

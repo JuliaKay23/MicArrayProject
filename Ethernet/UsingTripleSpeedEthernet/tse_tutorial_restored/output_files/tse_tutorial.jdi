@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="6fe4b9b6c4cc1568ab68"/>
+    <hash md5_digest_80b="7f2a028d9163084efca9"/>
   </project>
   <file_info>
     <file device="5AGXFB3H4F35C4" path="tse_tutorial_time_limited.sof" usercode="0xFFFFFFFF"/>
@@ -140,7 +140,7 @@
   <sld_infos>
     <sld_info hpath="nios_system:system_inst" name="system_inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1597944733"/>
+        <assignment_value text="QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1600787663"/>
       </assignment_values>
       <parameters/>
     </sld_info>

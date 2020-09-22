@@ -12,7 +12,7 @@
     <program>
         <type>Program with Device Driver Support</type>
         <source_files>
-            <source_file filepath="true">tse_tutorial - Modified.c</source_file>
+            <source_file filepath="true">tse_tutorial.c</source_file>
         </source_files>
         <options>
             <bsp_settings_tcl_script filepath="true"/>

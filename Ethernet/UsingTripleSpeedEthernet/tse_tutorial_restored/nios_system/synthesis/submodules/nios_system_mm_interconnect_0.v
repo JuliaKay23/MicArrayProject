@@ -9,7 +9,7 @@
 module nios_system_mm_interconnect_0 (
 		input  wire        sys_clk_clk_clk,                                //                              sys_clk_clk.clk
 		input  wire        nios2_gen2_0_reset_reset_bridge_in_reset_reset, // nios2_gen2_0_reset_reset_bridge_in_reset.reset
-		input  wire        ROM_block_reset1_reset_bridge_in_reset_reset,   //   ROM_block_reset1_reset_bridge_in_reset.reset
+		input  wire        RAM_block_reset1_reset_bridge_in_reset_reset,   //   RAM_block_reset1_reset_bridge_in_reset.reset
 		input  wire [20:0] nios2_gen2_0_data_master_address,               //                 nios2_gen2_0_data_master.address
 		output wire        nios2_gen2_0_data_master_waitrequest,           //                                         .waitrequest
 		input  wire [3:0]  nios2_gen2_0_data_master_byteenable,            //                                         .byteenable
@@ -79,14 +79,13 @@ module nios_system_mm_interconnect_0 (
 		output wire [3:0]  nios2_gen2_0_debug_mem_slave_byteenable,        //                                         .byteenable
 		input  wire        nios2_gen2_0_debug_mem_slave_waitrequest,       //                                         .waitrequest
 		output wire        nios2_gen2_0_debug_mem_slave_debugaccess,       //                                         .debugaccess
-		output wire [9:0]  ROM_block_s1_address,                           //                             ROM_block_s1.address
-		output wire        ROM_block_s1_write,                             //                                         .write
-		input  wire [31:0] ROM_block_s1_readdata,                          //                                         .readdata
-		output wire [31:0] ROM_block_s1_writedata,                         //                                         .writedata
-		output wire [3:0]  ROM_block_s1_byteenable,                        //                                         .byteenable
-		output wire        ROM_block_s1_chipselect,                        //                                         .chipselect
-		output wire        ROM_block_s1_clken,                             //                                         .clken
-		output wire        ROM_block_s1_debugaccess,                       //                                         .debugaccess
+		output wire [9:0]  RAM_block_s1_address,                           //                             RAM_block_s1.address
+		output wire        RAM_block_s1_write,                             //                                         .write
+		input  wire [31:0] RAM_block_s1_readdata,                          //                                         .readdata
+		output wire [31:0] RAM_block_s1_writedata,                         //                                         .writedata
+		output wire [3:0]  RAM_block_s1_byteenable,                        //                                         .byteenable
+		output wire        RAM_block_s1_chipselect,                        //                                         .chipselect
+		output wire        RAM_block_s1_clken,                             //                                         .clken
 		output wire [3:0]  sgdma_rx_csr_address,                           //                             sgdma_rx_csr.address
 		output wire        sgdma_rx_csr_write,                             //                                         .write
 		output wire        sgdma_rx_csr_read,                              //                                         .read
@@ -426,33 +425,33 @@ module nios_system_mm_interconnect_0 (
 	wire    [7:0] cmd_mux_006_src_channel;                                                            // cmd_mux_006:src_channel -> descriptor_memory_s1_agent:cp_channel
 	wire          cmd_mux_006_src_startofpacket;                                                      // cmd_mux_006:src_startofpacket -> descriptor_memory_s1_agent:cp_startofpacket
 	wire          cmd_mux_006_src_endofpacket;                                                        // cmd_mux_006:src_endofpacket -> descriptor_memory_s1_agent:cp_endofpacket
-	wire   [31:0] rom_block_s1_agent_m0_readdata;                                                     // ROM_block_s1_translator:uav_readdata -> ROM_block_s1_agent:m0_readdata
-	wire          rom_block_s1_agent_m0_waitrequest;                                                  // ROM_block_s1_translator:uav_waitrequest -> ROM_block_s1_agent:m0_waitrequest
-	wire          rom_block_s1_agent_m0_debugaccess;                                                  // ROM_block_s1_agent:m0_debugaccess -> ROM_block_s1_translator:uav_debugaccess
-	wire   [31:0] rom_block_s1_agent_m0_address;                                                      // ROM_block_s1_agent:m0_address -> ROM_block_s1_translator:uav_address
-	wire    [3:0] rom_block_s1_agent_m0_byteenable;                                                   // ROM_block_s1_agent:m0_byteenable -> ROM_block_s1_translator:uav_byteenable
-	wire          rom_block_s1_agent_m0_read;                                                         // ROM_block_s1_agent:m0_read -> ROM_block_s1_translator:uav_read
-	wire          rom_block_s1_agent_m0_readdatavalid;                                                // ROM_block_s1_translator:uav_readdatavalid -> ROM_block_s1_agent:m0_readdatavalid
-	wire          rom_block_s1_agent_m0_lock;                                                         // ROM_block_s1_agent:m0_lock -> ROM_block_s1_translator:uav_lock
-	wire   [31:0] rom_block_s1_agent_m0_writedata;                                                    // ROM_block_s1_agent:m0_writedata -> ROM_block_s1_translator:uav_writedata
-	wire          rom_block_s1_agent_m0_write;                                                        // ROM_block_s1_agent:m0_write -> ROM_block_s1_translator:uav_write
-	wire    [2:0] rom_block_s1_agent_m0_burstcount;                                                   // ROM_block_s1_agent:m0_burstcount -> ROM_block_s1_translator:uav_burstcount
-	wire          rom_block_s1_agent_rf_source_valid;                                                 // ROM_block_s1_agent:rf_source_valid -> ROM_block_s1_agent_rsp_fifo:in_valid
-	wire  [108:0] rom_block_s1_agent_rf_source_data;                                                  // ROM_block_s1_agent:rf_source_data -> ROM_block_s1_agent_rsp_fifo:in_data
-	wire          rom_block_s1_agent_rf_source_ready;                                                 // ROM_block_s1_agent_rsp_fifo:in_ready -> ROM_block_s1_agent:rf_source_ready
-	wire          rom_block_s1_agent_rf_source_startofpacket;                                         // ROM_block_s1_agent:rf_source_startofpacket -> ROM_block_s1_agent_rsp_fifo:in_startofpacket
-	wire          rom_block_s1_agent_rf_source_endofpacket;                                           // ROM_block_s1_agent:rf_source_endofpacket -> ROM_block_s1_agent_rsp_fifo:in_endofpacket
-	wire          rom_block_s1_agent_rsp_fifo_out_valid;                                              // ROM_block_s1_agent_rsp_fifo:out_valid -> ROM_block_s1_agent:rf_sink_valid
-	wire  [108:0] rom_block_s1_agent_rsp_fifo_out_data;                                               // ROM_block_s1_agent_rsp_fifo:out_data -> ROM_block_s1_agent:rf_sink_data
-	wire          rom_block_s1_agent_rsp_fifo_out_ready;                                              // ROM_block_s1_agent:rf_sink_ready -> ROM_block_s1_agent_rsp_fifo:out_ready
-	wire          rom_block_s1_agent_rsp_fifo_out_startofpacket;                                      // ROM_block_s1_agent_rsp_fifo:out_startofpacket -> ROM_block_s1_agent:rf_sink_startofpacket
-	wire          rom_block_s1_agent_rsp_fifo_out_endofpacket;                                        // ROM_block_s1_agent_rsp_fifo:out_endofpacket -> ROM_block_s1_agent:rf_sink_endofpacket
-	wire          cmd_mux_007_src_valid;                                                              // cmd_mux_007:src_valid -> ROM_block_s1_agent:cp_valid
-	wire  [107:0] cmd_mux_007_src_data;                                                               // cmd_mux_007:src_data -> ROM_block_s1_agent:cp_data
-	wire          cmd_mux_007_src_ready;                                                              // ROM_block_s1_agent:cp_ready -> cmd_mux_007:src_ready
-	wire    [7:0] cmd_mux_007_src_channel;                                                            // cmd_mux_007:src_channel -> ROM_block_s1_agent:cp_channel
-	wire          cmd_mux_007_src_startofpacket;                                                      // cmd_mux_007:src_startofpacket -> ROM_block_s1_agent:cp_startofpacket
-	wire          cmd_mux_007_src_endofpacket;                                                        // cmd_mux_007:src_endofpacket -> ROM_block_s1_agent:cp_endofpacket
+	wire   [31:0] ram_block_s1_agent_m0_readdata;                                                     // RAM_block_s1_translator:uav_readdata -> RAM_block_s1_agent:m0_readdata
+	wire          ram_block_s1_agent_m0_waitrequest;                                                  // RAM_block_s1_translator:uav_waitrequest -> RAM_block_s1_agent:m0_waitrequest
+	wire          ram_block_s1_agent_m0_debugaccess;                                                  // RAM_block_s1_agent:m0_debugaccess -> RAM_block_s1_translator:uav_debugaccess
+	wire   [31:0] ram_block_s1_agent_m0_address;                                                      // RAM_block_s1_agent:m0_address -> RAM_block_s1_translator:uav_address
+	wire    [3:0] ram_block_s1_agent_m0_byteenable;                                                   // RAM_block_s1_agent:m0_byteenable -> RAM_block_s1_translator:uav_byteenable
+	wire          ram_block_s1_agent_m0_read;                                                         // RAM_block_s1_agent:m0_read -> RAM_block_s1_translator:uav_read
+	wire          ram_block_s1_agent_m0_readdatavalid;                                                // RAM_block_s1_translator:uav_readdatavalid -> RAM_block_s1_agent:m0_readdatavalid
+	wire          ram_block_s1_agent_m0_lock;                                                         // RAM_block_s1_agent:m0_lock -> RAM_block_s1_translator:uav_lock
+	wire   [31:0] ram_block_s1_agent_m0_writedata;                                                    // RAM_block_s1_agent:m0_writedata -> RAM_block_s1_translator:uav_writedata
+	wire          ram_block_s1_agent_m0_write;                                                        // RAM_block_s1_agent:m0_write -> RAM_block_s1_translator:uav_write
+	wire    [2:0] ram_block_s1_agent_m0_burstcount;                                                   // RAM_block_s1_agent:m0_burstcount -> RAM_block_s1_translator:uav_burstcount
+	wire          ram_block_s1_agent_rf_source_valid;                                                 // RAM_block_s1_agent:rf_source_valid -> RAM_block_s1_agent_rsp_fifo:in_valid
+	wire  [108:0] ram_block_s1_agent_rf_source_data;                                                  // RAM_block_s1_agent:rf_source_data -> RAM_block_s1_agent_rsp_fifo:in_data
+	wire          ram_block_s1_agent_rf_source_ready;                                                 // RAM_block_s1_agent_rsp_fifo:in_ready -> RAM_block_s1_agent:rf_source_ready
+	wire          ram_block_s1_agent_rf_source_startofpacket;                                         // RAM_block_s1_agent:rf_source_startofpacket -> RAM_block_s1_agent_rsp_fifo:in_startofpacket
+	wire          ram_block_s1_agent_rf_source_endofpacket;                                           // RAM_block_s1_agent:rf_source_endofpacket -> RAM_block_s1_agent_rsp_fifo:in_endofpacket
+	wire          ram_block_s1_agent_rsp_fifo_out_valid;                                              // RAM_block_s1_agent_rsp_fifo:out_valid -> RAM_block_s1_agent:rf_sink_valid
+	wire  [108:0] ram_block_s1_agent_rsp_fifo_out_data;                                               // RAM_block_s1_agent_rsp_fifo:out_data -> RAM_block_s1_agent:rf_sink_data
+	wire          ram_block_s1_agent_rsp_fifo_out_ready;                                              // RAM_block_s1_agent:rf_sink_ready -> RAM_block_s1_agent_rsp_fifo:out_ready
+	wire          ram_block_s1_agent_rsp_fifo_out_startofpacket;                                      // RAM_block_s1_agent_rsp_fifo:out_startofpacket -> RAM_block_s1_agent:rf_sink_startofpacket
+	wire          ram_block_s1_agent_rsp_fifo_out_endofpacket;                                        // RAM_block_s1_agent_rsp_fifo:out_endofpacket -> RAM_block_s1_agent:rf_sink_endofpacket
+	wire          cmd_mux_007_src_valid;                                                              // cmd_mux_007:src_valid -> RAM_block_s1_agent:cp_valid
+	wire  [107:0] cmd_mux_007_src_data;                                                               // cmd_mux_007:src_data -> RAM_block_s1_agent:cp_data
+	wire          cmd_mux_007_src_ready;                                                              // RAM_block_s1_agent:cp_ready -> cmd_mux_007:src_ready
+	wire    [7:0] cmd_mux_007_src_channel;                                                            // cmd_mux_007:src_channel -> RAM_block_s1_agent:cp_channel
+	wire          cmd_mux_007_src_startofpacket;                                                      // cmd_mux_007:src_startofpacket -> RAM_block_s1_agent:cp_startofpacket
+	wire          cmd_mux_007_src_endofpacket;                                                        // cmd_mux_007:src_endofpacket -> RAM_block_s1_agent:cp_endofpacket
 	wire          nios2_gen2_0_data_master_agent_cp_valid;                                            // nios2_gen2_0_data_master_agent:cp_valid -> router:sink_valid
 	wire  [107:0] nios2_gen2_0_data_master_agent_cp_data;                                             // nios2_gen2_0_data_master_agent:cp_data -> router:sink_data
 	wire          nios2_gen2_0_data_master_agent_cp_ready;                                            // router:sink_ready -> nios2_gen2_0_data_master_agent:cp_ready
@@ -612,11 +611,11 @@ module nios_system_mm_interconnect_0 (
 	wire    [7:0] router_014_src_channel;                                                             // router_014:src_channel -> rsp_demux_006:sink_channel
 	wire          router_014_src_startofpacket;                                                       // router_014:src_startofpacket -> rsp_demux_006:sink_startofpacket
 	wire          router_014_src_endofpacket;                                                         // router_014:src_endofpacket -> rsp_demux_006:sink_endofpacket
-	wire          rom_block_s1_agent_rp_valid;                                                        // ROM_block_s1_agent:rp_valid -> router_015:sink_valid
-	wire  [107:0] rom_block_s1_agent_rp_data;                                                         // ROM_block_s1_agent:rp_data -> router_015:sink_data
-	wire          rom_block_s1_agent_rp_ready;                                                        // router_015:sink_ready -> ROM_block_s1_agent:rp_ready
-	wire          rom_block_s1_agent_rp_startofpacket;                                                // ROM_block_s1_agent:rp_startofpacket -> router_015:sink_startofpacket
-	wire          rom_block_s1_agent_rp_endofpacket;                                                  // ROM_block_s1_agent:rp_endofpacket -> router_015:sink_endofpacket
+	wire          ram_block_s1_agent_rp_valid;                                                        // RAM_block_s1_agent:rp_valid -> router_015:sink_valid
+	wire  [107:0] ram_block_s1_agent_rp_data;                                                         // RAM_block_s1_agent:rp_data -> router_015:sink_data
+	wire          ram_block_s1_agent_rp_ready;                                                        // router_015:sink_ready -> RAM_block_s1_agent:rp_ready
+	wire          ram_block_s1_agent_rp_startofpacket;                                                // RAM_block_s1_agent:rp_startofpacket -> router_015:sink_startofpacket
+	wire          ram_block_s1_agent_rp_endofpacket;                                                  // RAM_block_s1_agent:rp_endofpacket -> router_015:sink_endofpacket
 	wire          router_015_src_valid;                                                               // router_015:src_valid -> rsp_demux_007:sink_valid
 	wire  [107:0] router_015_src_data;                                                                // router_015:src_data -> rsp_demux_007:sink_data
 	wire          router_015_src_ready;                                                               // rsp_demux_007:sink_ready -> router_015:src_ready
@@ -900,13 +899,13 @@ module nios_system_mm_interconnect_0 (
 	wire   [33:0] avalon_st_adapter_006_out_0_data;                                                   // avalon_st_adapter_006:out_0_data -> descriptor_memory_s1_agent:rdata_fifo_sink_data
 	wire          avalon_st_adapter_006_out_0_ready;                                                  // descriptor_memory_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_006:out_0_ready
 	wire    [0:0] avalon_st_adapter_006_out_0_error;                                                  // avalon_st_adapter_006:out_0_error -> descriptor_memory_s1_agent:rdata_fifo_sink_error
-	wire          rom_block_s1_agent_rdata_fifo_src_valid;                                            // ROM_block_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_007:in_0_valid
-	wire   [33:0] rom_block_s1_agent_rdata_fifo_src_data;                                             // ROM_block_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_007:in_0_data
-	wire          rom_block_s1_agent_rdata_fifo_src_ready;                                            // avalon_st_adapter_007:in_0_ready -> ROM_block_s1_agent:rdata_fifo_src_ready
-	wire          avalon_st_adapter_007_out_0_valid;                                                  // avalon_st_adapter_007:out_0_valid -> ROM_block_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_007_out_0_data;                                                   // avalon_st_adapter_007:out_0_data -> ROM_block_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_007_out_0_ready;                                                  // ROM_block_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_007:out_0_ready
-	wire    [0:0] avalon_st_adapter_007_out_0_error;                                                  // avalon_st_adapter_007:out_0_error -> ROM_block_s1_agent:rdata_fifo_sink_error
+	wire          ram_block_s1_agent_rdata_fifo_src_valid;                                            // RAM_block_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_007:in_0_valid
+	wire   [33:0] ram_block_s1_agent_rdata_fifo_src_data;                                             // RAM_block_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_007:in_0_data
+	wire          ram_block_s1_agent_rdata_fifo_src_ready;                                            // avalon_st_adapter_007:in_0_ready -> RAM_block_s1_agent:rdata_fifo_src_ready
+	wire          avalon_st_adapter_007_out_0_valid;                                                  // avalon_st_adapter_007:out_0_valid -> RAM_block_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_007_out_0_data;                                                   // avalon_st_adapter_007:out_0_data -> RAM_block_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_007_out_0_ready;                                                  // RAM_block_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_007:out_0_ready
+	wire    [0:0] avalon_st_adapter_007_out_0_error;                                                  // avalon_st_adapter_007:out_0_error -> RAM_block_s1_agent:rdata_fifo_sink_error
 
 	altera_merlin_master_translator #(
 		.AV_ADDRESS_W                (21),
@@ -1862,28 +1861,27 @@ module nios_system_mm_interconnect_0 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) rom_block_s1_translator (
+	) ram_block_s1_translator (
 		.clk                    (sys_clk_clk_clk),                              //                      clk.clk
-		.reset                  (ROM_block_reset1_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (rom_block_s1_agent_m0_address),                // avalon_universal_slave_0.address
-		.uav_burstcount         (rom_block_s1_agent_m0_burstcount),             //                         .burstcount
-		.uav_read               (rom_block_s1_agent_m0_read),                   //                         .read
-		.uav_write              (rom_block_s1_agent_m0_write),                  //                         .write
-		.uav_waitrequest        (rom_block_s1_agent_m0_waitrequest),            //                         .waitrequest
-		.uav_readdatavalid      (rom_block_s1_agent_m0_readdatavalid),          //                         .readdatavalid
-		.uav_byteenable         (rom_block_s1_agent_m0_byteenable),             //                         .byteenable
-		.uav_readdata           (rom_block_s1_agent_m0_readdata),               //                         .readdata
-		.uav_writedata          (rom_block_s1_agent_m0_writedata),              //                         .writedata
-		.uav_lock               (rom_block_s1_agent_m0_lock),                   //                         .lock
-		.uav_debugaccess        (rom_block_s1_agent_m0_debugaccess),            //                         .debugaccess
-		.av_address             (ROM_block_s1_address),                         //      avalon_anti_slave_0.address
-		.av_write               (ROM_block_s1_write),                           //                         .write
-		.av_readdata            (ROM_block_s1_readdata),                        //                         .readdata
-		.av_writedata           (ROM_block_s1_writedata),                       //                         .writedata
-		.av_byteenable          (ROM_block_s1_byteenable),                      //                         .byteenable
-		.av_chipselect          (ROM_block_s1_chipselect),                      //                         .chipselect
-		.av_clken               (ROM_block_s1_clken),                           //                         .clken
-		.av_debugaccess         (ROM_block_s1_debugaccess),                     //                         .debugaccess
+		.reset                  (RAM_block_reset1_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (ram_block_s1_agent_m0_address),                // avalon_universal_slave_0.address
+		.uav_burstcount         (ram_block_s1_agent_m0_burstcount),             //                         .burstcount
+		.uav_read               (ram_block_s1_agent_m0_read),                   //                         .read
+		.uav_write              (ram_block_s1_agent_m0_write),                  //                         .write
+		.uav_waitrequest        (ram_block_s1_agent_m0_waitrequest),            //                         .waitrequest
+		.uav_readdatavalid      (ram_block_s1_agent_m0_readdatavalid),          //                         .readdatavalid
+		.uav_byteenable         (ram_block_s1_agent_m0_byteenable),             //                         .byteenable
+		.uav_readdata           (ram_block_s1_agent_m0_readdata),               //                         .readdata
+		.uav_writedata          (ram_block_s1_agent_m0_writedata),              //                         .writedata
+		.uav_lock               (ram_block_s1_agent_m0_lock),                   //                         .lock
+		.uav_debugaccess        (ram_block_s1_agent_m0_debugaccess),            //                         .debugaccess
+		.av_address             (RAM_block_s1_address),                         //      avalon_anti_slave_0.address
+		.av_write               (RAM_block_s1_write),                           //                         .write
+		.av_readdata            (RAM_block_s1_readdata),                        //                         .readdata
+		.av_writedata           (RAM_block_s1_writedata),                       //                         .writedata
+		.av_byteenable          (RAM_block_s1_byteenable),                      //                         .byteenable
+		.av_chipselect          (RAM_block_s1_chipselect),                      //                         .chipselect
+		.av_clken               (RAM_block_s1_clken),                           //                         .clken
 		.av_read                (),                                             //              (terminated)
 		.av_begintransfer       (),                                             //              (terminated)
 		.av_beginbursttransfer  (),                                             //              (terminated)
@@ -1893,6 +1891,7 @@ module nios_system_mm_interconnect_0 (
 		.av_writebyteenable     (),                                             //              (terminated)
 		.av_lock                (),                                             //              (terminated)
 		.uav_clken              (1'b0),                                         //              (terminated)
+		.av_debugaccess         (),                                             //              (terminated)
 		.av_outputenable        (),                                             //              (terminated)
 		.uav_response           (),                                             //              (terminated)
 		.av_response            (2'b00),                                        //              (terminated)
@@ -3461,48 +3460,48 @@ module nios_system_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) rom_block_s1_agent (
+	) ram_block_s1_agent (
 		.clk                     (sys_clk_clk_clk),                               //             clk.clk
-		.reset                   (ROM_block_reset1_reset_bridge_in_reset_reset),  //       clk_reset.reset
-		.m0_address              (rom_block_s1_agent_m0_address),                 //              m0.address
-		.m0_burstcount           (rom_block_s1_agent_m0_burstcount),              //                .burstcount
-		.m0_byteenable           (rom_block_s1_agent_m0_byteenable),              //                .byteenable
-		.m0_debugaccess          (rom_block_s1_agent_m0_debugaccess),             //                .debugaccess
-		.m0_lock                 (rom_block_s1_agent_m0_lock),                    //                .lock
-		.m0_readdata             (rom_block_s1_agent_m0_readdata),                //                .readdata
-		.m0_readdatavalid        (rom_block_s1_agent_m0_readdatavalid),           //                .readdatavalid
-		.m0_read                 (rom_block_s1_agent_m0_read),                    //                .read
-		.m0_waitrequest          (rom_block_s1_agent_m0_waitrequest),             //                .waitrequest
-		.m0_writedata            (rom_block_s1_agent_m0_writedata),               //                .writedata
-		.m0_write                (rom_block_s1_agent_m0_write),                   //                .write
-		.rp_endofpacket          (rom_block_s1_agent_rp_endofpacket),             //              rp.endofpacket
-		.rp_ready                (rom_block_s1_agent_rp_ready),                   //                .ready
-		.rp_valid                (rom_block_s1_agent_rp_valid),                   //                .valid
-		.rp_data                 (rom_block_s1_agent_rp_data),                    //                .data
-		.rp_startofpacket        (rom_block_s1_agent_rp_startofpacket),           //                .startofpacket
+		.reset                   (RAM_block_reset1_reset_bridge_in_reset_reset),  //       clk_reset.reset
+		.m0_address              (ram_block_s1_agent_m0_address),                 //              m0.address
+		.m0_burstcount           (ram_block_s1_agent_m0_burstcount),              //                .burstcount
+		.m0_byteenable           (ram_block_s1_agent_m0_byteenable),              //                .byteenable
+		.m0_debugaccess          (ram_block_s1_agent_m0_debugaccess),             //                .debugaccess
+		.m0_lock                 (ram_block_s1_agent_m0_lock),                    //                .lock
+		.m0_readdata             (ram_block_s1_agent_m0_readdata),                //                .readdata
+		.m0_readdatavalid        (ram_block_s1_agent_m0_readdatavalid),           //                .readdatavalid
+		.m0_read                 (ram_block_s1_agent_m0_read),                    //                .read
+		.m0_waitrequest          (ram_block_s1_agent_m0_waitrequest),             //                .waitrequest
+		.m0_writedata            (ram_block_s1_agent_m0_writedata),               //                .writedata
+		.m0_write                (ram_block_s1_agent_m0_write),                   //                .write
+		.rp_endofpacket          (ram_block_s1_agent_rp_endofpacket),             //              rp.endofpacket
+		.rp_ready                (ram_block_s1_agent_rp_ready),                   //                .ready
+		.rp_valid                (ram_block_s1_agent_rp_valid),                   //                .valid
+		.rp_data                 (ram_block_s1_agent_rp_data),                    //                .data
+		.rp_startofpacket        (ram_block_s1_agent_rp_startofpacket),           //                .startofpacket
 		.cp_ready                (cmd_mux_007_src_ready),                         //              cp.ready
 		.cp_valid                (cmd_mux_007_src_valid),                         //                .valid
 		.cp_data                 (cmd_mux_007_src_data),                          //                .data
 		.cp_startofpacket        (cmd_mux_007_src_startofpacket),                 //                .startofpacket
 		.cp_endofpacket          (cmd_mux_007_src_endofpacket),                   //                .endofpacket
 		.cp_channel              (cmd_mux_007_src_channel),                       //                .channel
-		.rf_sink_ready           (rom_block_s1_agent_rsp_fifo_out_ready),         //         rf_sink.ready
-		.rf_sink_valid           (rom_block_s1_agent_rsp_fifo_out_valid),         //                .valid
-		.rf_sink_startofpacket   (rom_block_s1_agent_rsp_fifo_out_startofpacket), //                .startofpacket
-		.rf_sink_endofpacket     (rom_block_s1_agent_rsp_fifo_out_endofpacket),   //                .endofpacket
-		.rf_sink_data            (rom_block_s1_agent_rsp_fifo_out_data),          //                .data
-		.rf_source_ready         (rom_block_s1_agent_rf_source_ready),            //       rf_source.ready
-		.rf_source_valid         (rom_block_s1_agent_rf_source_valid),            //                .valid
-		.rf_source_startofpacket (rom_block_s1_agent_rf_source_startofpacket),    //                .startofpacket
-		.rf_source_endofpacket   (rom_block_s1_agent_rf_source_endofpacket),      //                .endofpacket
-		.rf_source_data          (rom_block_s1_agent_rf_source_data),             //                .data
+		.rf_sink_ready           (ram_block_s1_agent_rsp_fifo_out_ready),         //         rf_sink.ready
+		.rf_sink_valid           (ram_block_s1_agent_rsp_fifo_out_valid),         //                .valid
+		.rf_sink_startofpacket   (ram_block_s1_agent_rsp_fifo_out_startofpacket), //                .startofpacket
+		.rf_sink_endofpacket     (ram_block_s1_agent_rsp_fifo_out_endofpacket),   //                .endofpacket
+		.rf_sink_data            (ram_block_s1_agent_rsp_fifo_out_data),          //                .data
+		.rf_source_ready         (ram_block_s1_agent_rf_source_ready),            //       rf_source.ready
+		.rf_source_valid         (ram_block_s1_agent_rf_source_valid),            //                .valid
+		.rf_source_startofpacket (ram_block_s1_agent_rf_source_startofpacket),    //                .startofpacket
+		.rf_source_endofpacket   (ram_block_s1_agent_rf_source_endofpacket),      //                .endofpacket
+		.rf_source_data          (ram_block_s1_agent_rf_source_data),             //                .data
 		.rdata_fifo_sink_ready   (avalon_st_adapter_007_out_0_ready),             // rdata_fifo_sink.ready
 		.rdata_fifo_sink_valid   (avalon_st_adapter_007_out_0_valid),             //                .valid
 		.rdata_fifo_sink_data    (avalon_st_adapter_007_out_0_data),              //                .data
 		.rdata_fifo_sink_error   (avalon_st_adapter_007_out_0_error),             //                .error
-		.rdata_fifo_src_ready    (rom_block_s1_agent_rdata_fifo_src_ready),       //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (rom_block_s1_agent_rdata_fifo_src_valid),       //                .valid
-		.rdata_fifo_src_data     (rom_block_s1_agent_rdata_fifo_src_data),        //                .data
+		.rdata_fifo_src_ready    (ram_block_s1_agent_rdata_fifo_src_ready),       //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (ram_block_s1_agent_rdata_fifo_src_valid),       //                .valid
+		.rdata_fifo_src_data     (ram_block_s1_agent_rdata_fifo_src_data),        //                .data
 		.m0_response             (2'b00),                                         //     (terminated)
 		.m0_writeresponsevalid   (1'b0)                                           //     (terminated)
 	);
@@ -3520,19 +3519,19 @@ module nios_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) rom_block_s1_agent_rsp_fifo (
+	) ram_block_s1_agent_rsp_fifo (
 		.clk               (sys_clk_clk_clk),                               //       clk.clk
-		.reset             (ROM_block_reset1_reset_bridge_in_reset_reset),  // clk_reset.reset
-		.in_data           (rom_block_s1_agent_rf_source_data),             //        in.data
-		.in_valid          (rom_block_s1_agent_rf_source_valid),            //          .valid
-		.in_ready          (rom_block_s1_agent_rf_source_ready),            //          .ready
-		.in_startofpacket  (rom_block_s1_agent_rf_source_startofpacket),    //          .startofpacket
-		.in_endofpacket    (rom_block_s1_agent_rf_source_endofpacket),      //          .endofpacket
-		.out_data          (rom_block_s1_agent_rsp_fifo_out_data),          //       out.data
-		.out_valid         (rom_block_s1_agent_rsp_fifo_out_valid),         //          .valid
-		.out_ready         (rom_block_s1_agent_rsp_fifo_out_ready),         //          .ready
-		.out_startofpacket (rom_block_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
-		.out_endofpacket   (rom_block_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
+		.reset             (RAM_block_reset1_reset_bridge_in_reset_reset),  // clk_reset.reset
+		.in_data           (ram_block_s1_agent_rf_source_data),             //        in.data
+		.in_valid          (ram_block_s1_agent_rf_source_valid),            //          .valid
+		.in_ready          (ram_block_s1_agent_rf_source_ready),            //          .ready
+		.in_startofpacket  (ram_block_s1_agent_rf_source_startofpacket),    //          .startofpacket
+		.in_endofpacket    (ram_block_s1_agent_rf_source_endofpacket),      //          .endofpacket
+		.out_data          (ram_block_s1_agent_rsp_fifo_out_data),          //       out.data
+		.out_valid         (ram_block_s1_agent_rsp_fifo_out_valid),         //          .valid
+		.out_ready         (ram_block_s1_agent_rsp_fifo_out_ready),         //          .ready
+		.out_startofpacket (ram_block_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
+		.out_endofpacket   (ram_block_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
 		.csr_address       (2'b00),                                         // (terminated)
 		.csr_read          (1'b0),                                          // (terminated)
 		.csr_write         (1'b0),                                          // (terminated)
@@ -3789,13 +3788,13 @@ module nios_system_mm_interconnect_0 (
 	);
 
 	nios_system_mm_interconnect_0_router_015 router_015 (
-		.sink_ready         (rom_block_s1_agent_rp_ready),                  //      sink.ready
-		.sink_valid         (rom_block_s1_agent_rp_valid),                  //          .valid
-		.sink_data          (rom_block_s1_agent_rp_data),                   //          .data
-		.sink_startofpacket (rom_block_s1_agent_rp_startofpacket),          //          .startofpacket
-		.sink_endofpacket   (rom_block_s1_agent_rp_endofpacket),            //          .endofpacket
+		.sink_ready         (ram_block_s1_agent_rp_ready),                  //      sink.ready
+		.sink_valid         (ram_block_s1_agent_rp_valid),                  //          .valid
+		.sink_data          (ram_block_s1_agent_rp_data),                   //          .data
+		.sink_startofpacket (ram_block_s1_agent_rp_startofpacket),          //          .startofpacket
+		.sink_endofpacket   (ram_block_s1_agent_rp_endofpacket),            //          .endofpacket
 		.clk                (sys_clk_clk_clk),                              //       clk.clk
-		.reset              (ROM_block_reset1_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset              (RAM_block_reset1_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_015_src_ready),                         //       src.ready
 		.src_valid          (router_015_src_valid),                         //          .valid
 		.src_data           (router_015_src_data),                          //          .data
@@ -4213,7 +4212,7 @@ module nios_system_mm_interconnect_0 (
 
 	nios_system_mm_interconnect_0_cmd_mux_004 cmd_mux_007 (
 		.clk                 (sys_clk_clk_clk),                              //       clk.clk
-		.reset               (ROM_block_reset1_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset               (RAM_block_reset1_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_007_src_ready),                        //       src.ready
 		.src_valid           (cmd_mux_007_src_valid),                        //          .valid
 		.src_data            (cmd_mux_007_src_data),                         //          .data
@@ -4403,7 +4402,7 @@ module nios_system_mm_interconnect_0 (
 
 	nios_system_mm_interconnect_0_cmd_demux_002 rsp_demux_007 (
 		.clk                (sys_clk_clk_clk),                              //       clk.clk
-		.reset              (ROM_block_reset1_reset_bridge_in_reset_reset), // clk_reset.reset
+		.reset              (RAM_block_reset1_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_015_src_ready),                         //      sink.ready
 		.sink_channel       (router_015_src_channel),                       //          .channel
 		.sink_data          (router_015_src_data),                          //          .data
@@ -4836,10 +4835,10 @@ module nios_system_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter_007 (
 		.in_clk_0_clk   (sys_clk_clk_clk),                              // in_clk_0.clk
-		.in_rst_0_reset (ROM_block_reset1_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (rom_block_s1_agent_rdata_fifo_src_data),       //     in_0.data
-		.in_0_valid     (rom_block_s1_agent_rdata_fifo_src_valid),      //         .valid
-		.in_0_ready     (rom_block_s1_agent_rdata_fifo_src_ready),      //         .ready
+		.in_rst_0_reset (RAM_block_reset1_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_0_data      (ram_block_s1_agent_rdata_fifo_src_data),       //     in_0.data
+		.in_0_valid     (ram_block_s1_agent_rdata_fifo_src_valid),      //         .valid
+		.in_0_ready     (ram_block_s1_agent_rdata_fifo_src_ready),      //         .ready
 		.out_0_data     (avalon_st_adapter_007_out_0_data),             //    out_0.data
 		.out_0_valid    (avalon_st_adapter_007_out_0_valid),            //         .valid
 		.out_0_ready    (avalon_st_adapter_007_out_0_ready),            //         .ready

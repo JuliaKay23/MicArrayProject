@@ -4,22 +4,29 @@
 
 `timescale 1 ps / 1 ps
 module nios_system (
-		input  wire       clk_clk,                             //                             clk.clk
-		input  wire       reset_reset_n,                       //                           reset.reset_n
-		output wire       tse_mac_mdio_connection_mdc,         //         tse_mac_mdio_connection.mdc
-		input  wire       tse_mac_mdio_connection_mdio_in,     //                                .mdio_in
-		output wire       tse_mac_mdio_connection_mdio_out,    //                                .mdio_out
-		output wire       tse_mac_mdio_connection_mdio_oen,    //                                .mdio_oen
-		input  wire [3:0] tse_mac_rgmii_connection_rgmii_in,   //        tse_mac_rgmii_connection.rgmii_in
-		output wire [3:0] tse_mac_rgmii_connection_rgmii_out,  //                                .rgmii_out
-		input  wire       tse_mac_rgmii_connection_rx_control, //                                .rx_control
-		output wire       tse_mac_rgmii_connection_tx_control, //                                .tx_control
-		input  wire       tse_mac_status_connection_set_10,    //       tse_mac_status_connection.set_10
-		input  wire       tse_mac_status_connection_set_1000,  //                                .set_1000
-		output wire       tse_mac_status_connection_eth_mode,  //                                .eth_mode
-		output wire       tse_mac_status_connection_ena_10,    //                                .ena_10
-		input  wire       tse_pcs_mac_rx_clock_connection_clk, // tse_pcs_mac_rx_clock_connection.clk
-		input  wire       tse_pcs_mac_tx_clock_connection_clk  // tse_pcs_mac_tx_clock_connection.clk
+		input  wire        clk_clk,                             //                             clk.clk
+		input  wire [9:0]  ram_block_s2_address,                //                    ram_block_s2.address
+		input  wire        ram_block_s2_chipselect,             //                                .chipselect
+		input  wire        ram_block_s2_clken,                  //                                .clken
+		input  wire        ram_block_s2_write,                  //                                .write
+		output wire [31:0] ram_block_s2_readdata,               //                                .readdata
+		input  wire [31:0] ram_block_s2_writedata,              //                                .writedata
+		input  wire [3:0]  ram_block_s2_byteenable,             //                                .byteenable
+		input  wire        reset_reset_n,                       //                           reset.reset_n
+		output wire        tse_mac_mdio_connection_mdc,         //         tse_mac_mdio_connection.mdc
+		input  wire        tse_mac_mdio_connection_mdio_in,     //                                .mdio_in
+		output wire        tse_mac_mdio_connection_mdio_out,    //                                .mdio_out
+		output wire        tse_mac_mdio_connection_mdio_oen,    //                                .mdio_oen
+		input  wire [3:0]  tse_mac_rgmii_connection_rgmii_in,   //        tse_mac_rgmii_connection.rgmii_in
+		output wire [3:0]  tse_mac_rgmii_connection_rgmii_out,  //                                .rgmii_out
+		input  wire        tse_mac_rgmii_connection_rx_control, //                                .rx_control
+		output wire        tse_mac_rgmii_connection_tx_control, //                                .tx_control
+		input  wire        tse_mac_status_connection_set_10,    //       tse_mac_status_connection.set_10
+		input  wire        tse_mac_status_connection_set_1000,  //                                .set_1000
+		output wire        tse_mac_status_connection_eth_mode,  //                                .eth_mode
+		output wire        tse_mac_status_connection_ena_10,    //                                .ena_10
+		input  wire        tse_pcs_mac_rx_clock_connection_clk, // tse_pcs_mac_rx_clock_connection.clk
+		input  wire        tse_pcs_mac_tx_clock_connection_clk  // tse_pcs_mac_tx_clock_connection.clk
 	);
 
 	wire         sgdma_tx_out_valid;                                         // sgdma_tx:out_valid -> tse:ff_tx_wren
@@ -116,14 +123,13 @@ module nios_system (
 	wire         mm_interconnect_0_descriptor_memory_s1_write;               // mm_interconnect_0:descriptor_memory_s1_write -> descriptor_memory:write
 	wire  [31:0] mm_interconnect_0_descriptor_memory_s1_writedata;           // mm_interconnect_0:descriptor_memory_s1_writedata -> descriptor_memory:writedata
 	wire         mm_interconnect_0_descriptor_memory_s1_clken;               // mm_interconnect_0:descriptor_memory_s1_clken -> descriptor_memory:clken
-	wire         mm_interconnect_0_rom_block_s1_chipselect;                  // mm_interconnect_0:ROM_block_s1_chipselect -> ROM_block:chipselect
-	wire  [31:0] mm_interconnect_0_rom_block_s1_readdata;                    // ROM_block:readdata -> mm_interconnect_0:ROM_block_s1_readdata
-	wire         mm_interconnect_0_rom_block_s1_debugaccess;                 // mm_interconnect_0:ROM_block_s1_debugaccess -> ROM_block:debugaccess
-	wire   [9:0] mm_interconnect_0_rom_block_s1_address;                     // mm_interconnect_0:ROM_block_s1_address -> ROM_block:address
-	wire   [3:0] mm_interconnect_0_rom_block_s1_byteenable;                  // mm_interconnect_0:ROM_block_s1_byteenable -> ROM_block:byteenable
-	wire         mm_interconnect_0_rom_block_s1_write;                       // mm_interconnect_0:ROM_block_s1_write -> ROM_block:write
-	wire  [31:0] mm_interconnect_0_rom_block_s1_writedata;                   // mm_interconnect_0:ROM_block_s1_writedata -> ROM_block:writedata
-	wire         mm_interconnect_0_rom_block_s1_clken;                       // mm_interconnect_0:ROM_block_s1_clken -> ROM_block:clken
+	wire         mm_interconnect_0_ram_block_s1_chipselect;                  // mm_interconnect_0:RAM_block_s1_chipselect -> RAM_block:chipselect
+	wire  [31:0] mm_interconnect_0_ram_block_s1_readdata;                    // RAM_block:readdata -> mm_interconnect_0:RAM_block_s1_readdata
+	wire   [9:0] mm_interconnect_0_ram_block_s1_address;                     // mm_interconnect_0:RAM_block_s1_address -> RAM_block:address
+	wire   [3:0] mm_interconnect_0_ram_block_s1_byteenable;                  // mm_interconnect_0:RAM_block_s1_byteenable -> RAM_block:byteenable
+	wire         mm_interconnect_0_ram_block_s1_write;                       // mm_interconnect_0:RAM_block_s1_write -> RAM_block:write
+	wire  [31:0] mm_interconnect_0_ram_block_s1_writedata;                   // mm_interconnect_0:RAM_block_s1_writedata -> RAM_block:writedata
+	wire         mm_interconnect_0_ram_block_s1_clken;                       // mm_interconnect_0:RAM_block_s1_clken -> RAM_block:clken
 	wire         irq_mapper_receiver0_irq;                                   // sgdma_rx:csr_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                   // sgdma_tx:csr_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                                   // jtag_uart:av_irq -> irq_mapper:receiver2_irq
@@ -142,25 +148,31 @@ module nios_system (
 	wire         avalon_st_adapter_out_0_endofpacket;                        // avalon_st_adapter:out_0_endofpacket -> sgdma_rx:in_endofpacket
 	wire   [5:0] avalon_st_adapter_out_0_error;                              // avalon_st_adapter:out_0_error -> sgdma_rx:in_error
 	wire   [1:0] avalon_st_adapter_out_0_empty;                              // avalon_st_adapter:out_0_empty -> sgdma_rx:in_empty
-	wire         rst_controller_reset_out_reset;                             // rst_controller:reset_out -> [ROM_block:reset, mm_interconnect_0:ROM_block_reset1_reset_bridge_in_reset_reset]
-	wire         rst_controller_reset_out_reset_req;                         // rst_controller:reset_req -> ROM_block:reset_req
+	wire         rst_controller_reset_out_reset;                             // rst_controller:reset_out -> [RAM_block:reset, mm_interconnect_0:RAM_block_reset1_reset_bridge_in_reset_reset]
+	wire         rst_controller_reset_out_reset_req;                         // rst_controller:reset_req -> RAM_block:reset_req
 	wire         rst_controller_001_reset_out_reset;                         // rst_controller_001:reset_out -> [avalon_st_adapter:in_rst_0_reset, descriptor_memory:reset, irq_mapper:reset, jtag_uart:rst_n, main_memory:reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, rst_translator_001:in_reset, sgdma_rx:system_reset_n, sgdma_tx:system_reset_n, tse:reset]
 	wire         rst_controller_001_reset_out_reset_req;                     // rst_controller_001:reset_req -> [descriptor_memory:reset_req, main_memory:reset_req, nios2_gen2_0:reset_req, rst_translator_001:reset_req_in]
 	wire         nios2_gen2_0_debug_reset_request_reset;                     // nios2_gen2_0:debug_reset_request -> rst_controller_001:reset_in1
 
-	nios_system_ROM_block rom_block (
-		.clk         (clk_clk),                                    //   clk1.clk
-		.address     (mm_interconnect_0_rom_block_s1_address),     //     s1.address
-		.debugaccess (mm_interconnect_0_rom_block_s1_debugaccess), //       .debugaccess
-		.clken       (mm_interconnect_0_rom_block_s1_clken),       //       .clken
-		.chipselect  (mm_interconnect_0_rom_block_s1_chipselect),  //       .chipselect
-		.write       (mm_interconnect_0_rom_block_s1_write),       //       .write
-		.readdata    (mm_interconnect_0_rom_block_s1_readdata),    //       .readdata
-		.writedata   (mm_interconnect_0_rom_block_s1_writedata),   //       .writedata
-		.byteenable  (mm_interconnect_0_rom_block_s1_byteenable),  //       .byteenable
-		.reset       (rst_controller_reset_out_reset),             // reset1.reset
-		.reset_req   (rst_controller_reset_out_reset_req),         //       .reset_req
-		.freeze      (1'b0)                                        // (terminated)
+	nios_system_RAM_block ram_block (
+		.address     (mm_interconnect_0_ram_block_s1_address),    //     s1.address
+		.clken       (mm_interconnect_0_ram_block_s1_clken),      //       .clken
+		.chipselect  (mm_interconnect_0_ram_block_s1_chipselect), //       .chipselect
+		.write       (mm_interconnect_0_ram_block_s1_write),      //       .write
+		.readdata    (mm_interconnect_0_ram_block_s1_readdata),   //       .readdata
+		.writedata   (mm_interconnect_0_ram_block_s1_writedata),  //       .writedata
+		.byteenable  (mm_interconnect_0_ram_block_s1_byteenable), //       .byteenable
+		.address2    (ram_block_s2_address),                      //     s2.address
+		.chipselect2 (ram_block_s2_chipselect),                   //       .chipselect
+		.clken2      (ram_block_s2_clken),                        //       .clken
+		.write2      (ram_block_s2_write),                        //       .write
+		.readdata2   (ram_block_s2_readdata),                     //       .readdata
+		.writedata2  (ram_block_s2_writedata),                    //       .writedata
+		.byteenable2 (ram_block_s2_byteenable),                   //       .byteenable
+		.clk         (clk_clk),                                   //   clk1.clk
+		.reset       (rst_controller_reset_out_reset),            // reset1.reset
+		.reset_req   (rst_controller_reset_out_reset_req),        //       .reset_req
+		.freeze      (1'b0)                                       // (terminated)
 	);
 
 	nios_system_descriptor_memory descriptor_memory (
@@ -355,7 +367,7 @@ module nios_system (
 	nios_system_mm_interconnect_0 mm_interconnect_0 (
 		.sys_clk_clk_clk                                (clk_clk),                                                    //                              sys_clk_clk.clk
 		.nios2_gen2_0_reset_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),                         // nios2_gen2_0_reset_reset_bridge_in_reset.reset
-		.ROM_block_reset1_reset_bridge_in_reset_reset   (rst_controller_reset_out_reset),                             //   ROM_block_reset1_reset_bridge_in_reset.reset
+		.RAM_block_reset1_reset_bridge_in_reset_reset   (rst_controller_reset_out_reset),                             //   RAM_block_reset1_reset_bridge_in_reset.reset
 		.nios2_gen2_0_data_master_address               (nios2_gen2_0_data_master_address),                           //                 nios2_gen2_0_data_master.address
 		.nios2_gen2_0_data_master_waitrequest           (nios2_gen2_0_data_master_waitrequest),                       //                                         .waitrequest
 		.nios2_gen2_0_data_master_byteenable            (nios2_gen2_0_data_master_byteenable),                        //                                         .byteenable
@@ -425,14 +437,13 @@ module nios_system (
 		.nios2_gen2_0_debug_mem_slave_byteenable        (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_byteenable),  //                                         .byteenable
 		.nios2_gen2_0_debug_mem_slave_waitrequest       (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_waitrequest), //                                         .waitrequest
 		.nios2_gen2_0_debug_mem_slave_debugaccess       (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_debugaccess), //                                         .debugaccess
-		.ROM_block_s1_address                           (mm_interconnect_0_rom_block_s1_address),                     //                             ROM_block_s1.address
-		.ROM_block_s1_write                             (mm_interconnect_0_rom_block_s1_write),                       //                                         .write
-		.ROM_block_s1_readdata                          (mm_interconnect_0_rom_block_s1_readdata),                    //                                         .readdata
-		.ROM_block_s1_writedata                         (mm_interconnect_0_rom_block_s1_writedata),                   //                                         .writedata
-		.ROM_block_s1_byteenable                        (mm_interconnect_0_rom_block_s1_byteenable),                  //                                         .byteenable
-		.ROM_block_s1_chipselect                        (mm_interconnect_0_rom_block_s1_chipselect),                  //                                         .chipselect
-		.ROM_block_s1_clken                             (mm_interconnect_0_rom_block_s1_clken),                       //                                         .clken
-		.ROM_block_s1_debugaccess                       (mm_interconnect_0_rom_block_s1_debugaccess),                 //                                         .debugaccess
+		.RAM_block_s1_address                           (mm_interconnect_0_ram_block_s1_address),                     //                             RAM_block_s1.address
+		.RAM_block_s1_write                             (mm_interconnect_0_ram_block_s1_write),                       //                                         .write
+		.RAM_block_s1_readdata                          (mm_interconnect_0_ram_block_s1_readdata),                    //                                         .readdata
+		.RAM_block_s1_writedata                         (mm_interconnect_0_ram_block_s1_writedata),                   //                                         .writedata
+		.RAM_block_s1_byteenable                        (mm_interconnect_0_ram_block_s1_byteenable),                  //                                         .byteenable
+		.RAM_block_s1_chipselect                        (mm_interconnect_0_ram_block_s1_chipselect),                  //                                         .chipselect
+		.RAM_block_s1_clken                             (mm_interconnect_0_ram_block_s1_clken),                       //                                         .clken
 		.sgdma_rx_csr_address                           (mm_interconnect_0_sgdma_rx_csr_address),                     //                             sgdma_rx_csr.address
 		.sgdma_rx_csr_write                             (mm_interconnect_0_sgdma_rx_csr_write),                       //                                         .write
 		.sgdma_rx_csr_read                              (mm_interconnect_0_sgdma_rx_csr_read),                        //                                         .read

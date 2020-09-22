@@ -170,9 +170,9 @@ NIOS2_ELF_FORMAT ?= elf32-littlenios2
 # Pre-Initialized Memory Descriptions
 #-------------------------------------
 
-# Memory: ROM_block
+# Memory: RAM_block
 MEM_0 := sine2
-$(MEM_0)_NAME := ROM_block
+$(MEM_0)_NAME := RAM_block
 $(MEM_0)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
 HEX_FILES += $(MEM_INIT_DIR)/$(MEM_0).hex
 MEM_INIT_INSTALL_FILES += $(MEM_INIT_INSTALL_DIR)/$(MEM_0).hex
@@ -180,17 +180,17 @@ DAT_FILES += $(HDL_SIM_DIR)/$(MEM_0).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_0).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).sym
-$(MEM_0)_START := 0x00000000
-$(MEM_0)_END := 0x00000fff
+$(MEM_0)_START := 0x00100000
+$(MEM_0)_END := 0x00100fff
 $(MEM_0)_SPAN := 0x00001000
-$(MEM_0)_HIERARCHICAL_PATH := ROM_block
+$(MEM_0)_HIERARCHICAL_PATH := RAM_block
 $(MEM_0)_WIDTH := 32
 $(MEM_0)_HEX_DATA_WIDTH := 32
 $(MEM_0)_ENDIANNESS := --little-endian-mem
 $(MEM_0)_CREATE_LANES := 0
 
-.PHONY: ROM_block
-ROM_block: check_elf_exists $(MEM_INIT_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
+.PHONY: RAM_block
+RAM_block: check_elf_exists $(MEM_INIT_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
 
 # Memory: descriptor_memory
 MEM_1 := nios_system_descriptor_memory
@@ -202,8 +202,8 @@ DAT_FILES += $(HDL_SIM_DIR)/$(MEM_1).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_1).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).sym
-$(MEM_1)_START := 0x00100000
-$(MEM_1)_END := 0x00100fff
+$(MEM_1)_START := 0x00101000
+$(MEM_1)_END := 0x00101fff
 $(MEM_1)_SPAN := 0x00001000
 $(MEM_1)_HIERARCHICAL_PATH := descriptor_memory
 $(MEM_1)_WIDTH := 32

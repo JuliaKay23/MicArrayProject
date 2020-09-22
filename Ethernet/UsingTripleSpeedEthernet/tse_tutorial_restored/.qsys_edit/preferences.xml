@@ -7,8 +7,8 @@
    <irq preferredWidth="79" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library,Library/DSP,Library/University Program,Library/Basic Functions/On Chip Memory,Library/Basic Functions,Library/University Program/Audio &amp; Video/Video,Project,Library/University Program/Generic IO,Library/DSP/Video and Image Processing,Library/University Program/Audio &amp; Video" />
- <window width="1936" height="1056" x="-8" y="-8" />
+ <library expandedCategories="Project,Library" />
+ <window width="1470" height="1040" x="121" y="15" />
  <generation block_symbol_file="0" />
+ <hdlexample language="VERILOG" />
 </preferences>

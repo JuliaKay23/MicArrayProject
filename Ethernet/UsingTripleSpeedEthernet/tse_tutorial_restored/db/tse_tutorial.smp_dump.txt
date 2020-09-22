@@ -48,19 +48,6 @@ state_empty 0 0 0
 state_middle 1 0 1 
 state_full 0 1 1 
 
-State Machine - |tse_tutorial|nios_system:system_inst|nios_system_tse:tse|altera_eth_tse_mac:i_tse_mac|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_rx_min_ff:U_RXFF|state
-Name state.LOC_STATE_FF_DATA_FLUSH_WAIT state.LOC_STATE_RST_DONE state.LOC_STATE_SHIFT_WAIT state.LOC_STATE_FF_FLUSH_WAIT state.LOC_STATE_FF_DATA_FLUSH state.LOC_STATE_END_FRM state.LOC_STATE_SHIFT state.LOC_STATE_WAIT state.LOC_STATE_DATA state.LOC_STATE_IDLE 
-state.LOC_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
-state.LOC_STATE_DATA 0 0 0 0 0 0 0 0 1 1 
-state.LOC_STATE_WAIT 0 0 0 0 0 0 0 1 0 1 
-state.LOC_STATE_SHIFT 0 0 0 0 0 0 1 0 0 1 
-state.LOC_STATE_END_FRM 0 0 0 0 0 1 0 0 0 1 
-state.LOC_STATE_FF_DATA_FLUSH 0 0 0 0 1 0 0 0 0 1 
-state.LOC_STATE_FF_FLUSH_WAIT 0 0 0 1 0 0 0 0 0 1 
-state.LOC_STATE_SHIFT_WAIT 0 0 1 0 0 0 0 0 0 1 
-state.LOC_STATE_RST_DONE 0 1 0 0 0 0 0 0 0 1 
-state.LOC_STATE_FF_DATA_FLUSH_WAIT 1 0 0 0 0 0 0 0 0 1 
-
 State Machine - |tse_tutorial|nios_system:system_inst|nios_system_tse:tse|altera_eth_tse_mac:i_tse_mac|altera_tse_mac_control:U_MAC_CONTROL|altera_tse_register_map:U_REG|altera_tse_tx_counter_cntl:U_TXCNT|state
 Name state.STM_TYPE_WR_CNT_DONE state.STM_TYPE_RST_DONE state.STM_TYPE_IDLE state.STM_TYPE_WR_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_RD_CNT state.STM_TYPE_RST_CNT 
 state.STM_TYPE_RST_CNT 0 0 0 0 0 0 0 
@@ -80,6 +67,19 @@ state.STM_TYPE_WR_CNT 0 0 0 1 0 0 1
 state.STM_TYPE_IDLE 0 0 1 0 0 0 1 
 state.STM_TYPE_RST_DONE 0 1 0 0 0 0 1 
 state.STM_TYPE_DELAY 1 0 0 0 0 0 1 
+
+State Machine - |tse_tutorial|nios_system:system_inst|nios_system_tse:tse|altera_eth_tse_mac:i_tse_mac|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_rx_min_ff:U_RXFF|state
+Name state.LOC_STATE_FF_DATA_FLUSH_WAIT state.LOC_STATE_RST_DONE state.LOC_STATE_SHIFT_WAIT state.LOC_STATE_FF_FLUSH_WAIT state.LOC_STATE_FF_DATA_FLUSH state.LOC_STATE_END_FRM state.LOC_STATE_SHIFT state.LOC_STATE_WAIT state.LOC_STATE_DATA state.LOC_STATE_IDLE 
+state.LOC_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.LOC_STATE_DATA 0 0 0 0 0 0 0 0 1 1 
+state.LOC_STATE_WAIT 0 0 0 0 0 0 0 1 0 1 
+state.LOC_STATE_SHIFT 0 0 0 0 0 0 1 0 0 1 
+state.LOC_STATE_END_FRM 0 0 0 0 0 1 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH 0 0 0 0 1 0 0 0 0 1 
+state.LOC_STATE_FF_FLUSH_WAIT 0 0 0 1 0 0 0 0 0 1 
+state.LOC_STATE_SHIFT_WAIT 0 0 1 0 0 0 0 0 0 1 
+state.LOC_STATE_RST_DONE 0 1 0 0 0 0 0 0 0 1 
+state.LOC_STATE_FF_DATA_FLUSH_WAIT 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |tse_tutorial|nios_system:system_inst|nios_system_tse:tse|altera_eth_tse_mac:i_tse_mac|altera_tse_top_w_fifo_10_100_1000:U_MAC_TOP|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_rx_stat_extract:U_RXSTAT|state
 Name state.stm_typ_end_frm state.stm_typ_frm state.stm_typ_sfd state.stm_typ_idle 

@@ -17,6 +17,29 @@ module tse_tutorial(
 	output        ENET0_TX_EN
 );
 
+//TO-DO
+// 1. What is byteenable? what is write? what is chipselect?
+// 2. Instatiate a RAM with n number words, begin with n=2 or use n registers
+// 3. Change size of RAM in qsys to be equal to size n
+// 4. Send all of RAM in qsys over ethernet
+
+	// MODIFIED
+	wire [3:0] byteenable = 4'b1111;
+	wire chipselect = 1'b1;
+	wire write = 1'b1;
+	wire clken = 1'b1;
+	reg [9:0] address;
+	reg [31:0] data;
+	reg [23:0] count;
+	
+	initial begin
+		address = 10'd0;
+		data = 32'd0;
+		count = 24'd0;
+	end
+	// END MODIFIED
+	
+
 	wire sys_clk, clk_125, clk_25, clk_2p5, tx_clk;
 	wire core_reset_n;
 	wire mdc, mdio_in, mdio_oen, mdio_out;
@@ -49,7 +72,16 @@ module tse_tutorial(
 		.outclock(tx_clk),
 		.dataout(ENET0_GTX_CLK)
 	);
-
+	
+	// MODIFIED
+	always @(posedge CLOCK_50) begin
+		if (count <= 24'h4C4B40) begin
+			data <= data + 1;
+			count <= 24'd0;
+		end
+		else count <= count + 1;
+	end
+	// END MODIFIED 
 	
     nios_system system_inst (
         .clk_clk                                   (sys_clk),           //                                   clk.clk
@@ -67,6 +99,16 @@ module tse_tutorial(
 
         .tse_mac_status_connection_eth_mode        (eth_mode),        	//                                      .eth_mode
         .tse_mac_status_connection_ena_10          (ena_10),          	//                                      .ena_10	  
-    );	
+		  // MODIFIED
+		  .ram_block_s2_address                (address),                //                    ram_block_s2.address
+        .ram_block_s2_chipselect             (chipselect),             //                                .chipselect
+        .ram_block_s2_clken                  (clken),                  //                                .clken
+        .ram_block_s2_write                  (write),                  //                                .write
+        .ram_block_s2_writedata              (data),              //                                .writedata
+        .ram_block_s2_byteenable             (byteenable)              //                                .byteenable
+			// END MODIFIED
+	);	
+	 
+	 
 
 endmodule 
