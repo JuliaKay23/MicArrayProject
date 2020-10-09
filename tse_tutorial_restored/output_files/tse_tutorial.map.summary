@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Sep 22 13:04:39 2020
+Analysis & Synthesis Status : Successful - Fri Oct 09 18:17:57 2020
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Standard Edition
 Revision Name : tse_tutorial
 Top-level Entity Name : tse_tutorial
 Family : Arria V
 Logic utilization (in ALMs) : N/A
 Total registers : 6584
-Total pins : 17
+Total pins : 20
 Total virtual pins : 0
 Total block memory bits : 2,689,764
 Total DSP Blocks : 0

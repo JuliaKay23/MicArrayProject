@@ -1,0 +1,231 @@
+Restore Archived Project report for sine_sweep
+Mon Jul 13 13:02:29 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Jul 13 13:02:29 2020 ;
+; Revision Name                   ; sine_sweep                            ;
+; Top-level Entity Name           ; cic_filter                            ;
+; Family                          ; Arria V                               ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'D:/Documents/shared_documents/intelFPGA/cic_filter/cic_filter_tmp_archive.qar' into the 'D:/Documents/shared_documents/intelFPGA/mic_full_filter' directory
+Info: Generated report 'sine_sweep.restore.rpt'
+
+
++---------------------------------------------------------------------------------------+
+; Files Restored                                                                        ;
++---------------------------------------------------------------------------------------+
+; File Name                                                                             ;
++---------------------------------------------------------------------------------------+
+; qar_info.json                                                                         ;
+; cic_dec_filter.qsys                                                                   ;
+; cic_dec_filter.sopcinfo                                                               ;
+; cic_dec_filter/cic_dec_filter.bsf                                                     ;
+; cic_dec_filter/cic_dec_filter.cmp                                                     ;
+; cic_dec_filter/cic_dec_filter.csv                                                     ;
+; cic_dec_filter/cic_dec_filter.html                                                    ;
+; cic_dec_filter/cic_dec_filter.ppf                                                     ;
+; cic_dec_filter/cic_dec_filter.spd                                                     ;
+; cic_dec_filter/cic_dec_filter.xml                                                     ;
+; cic_dec_filter/cic_dec_filter_bb.v                                                    ;
+; cic_dec_filter/cic_dec_filter_generation.rpt                                          ;
+; cic_dec_filter/cic_dec_filter_generation_previous.rpt                                 ;
+; cic_dec_filter/cic_dec_filter_inst.v                                                  ;
+; cic_dec_filter/cic_dec_filter_inst.vhd                                                ;
+; cic_dec_filter/simulation/aldec/rivierapro_setup.tcl                                  ;
+; cic_dec_filter/simulation/cadence/cds.lib                                             ;
+; cic_dec_filter/simulation/cadence/cds_libs/cic_ii_0.cds.lib                           ;
+; cic_dec_filter/simulation/cadence/hdl.var                                             ;
+; cic_dec_filter/simulation/cadence/ncsim_setup.sh                                      ;
+; cic_dec_filter/simulation/cic_dec_filter.sip                                          ;
+; cic_dec_filter/simulation/cic_dec_filter.v                                            ;
+; cic_dec_filter/simulation/mentor/msim_setup.tcl                                       ;
+; cic_dec_filter/simulation/submodules/aldec/alt_cic_core.sv                            ;
+; cic_dec_filter/simulation/submodules/aldec/alt_cic_dec_miso.sv                        ;
+; cic_dec_filter/simulation/submodules/aldec/alt_cic_dec_siso.sv                        ;
+; cic_dec_filter/simulation/submodules/aldec/alt_cic_int_simo.sv                        ;
+; cic_dec_filter/simulation/submodules/aldec/alt_cic_int_siso.sv                        ;
+; cic_dec_filter/simulation/submodules/aldec/alt_dsp_cic_common_pkg.sv                  ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_avalon_streaming_controller.vhd  ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_avalon_streaming_sink.vhd        ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_avalon_streaming_small_fifo.vhd  ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_avalon_streaming_source.vhd      ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_channel_buffer.vhd               ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_cic_lib_pkg.vhd                  ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_differentiator.vhd               ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_downsample.sv                    ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_integrator.vhd                   ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_upsample.vhd                     ;
+; cic_dec_filter/simulation/submodules/aldec/auk_dspip_variable_downsample.sv           ;
+; cic_dec_filter/simulation/submodules/aldec/counter_module.sv                          ;
+; cic_dec_filter/simulation/submodules/aldec/hyper_pipeline_interface.v                 ;
+; cic_dec_filter/simulation/submodules/alt_cic_core.ocp                                 ;
+; cic_dec_filter/simulation/submodules/auk_dspip_delay.vhd                              ;
+; cic_dec_filter/simulation/submodules/auk_dspip_fastadd.vhd                            ;
+; cic_dec_filter/simulation/submodules/auk_dspip_fastaddsub.vhd                         ;
+; cic_dec_filter/simulation/submodules/auk_dspip_lib_pkg.vhd                            ;
+; cic_dec_filter/simulation/submodules/auk_dspip_math_pkg.vhd                           ;
+; cic_dec_filter/simulation/submodules/auk_dspip_pipelined_adder.vhd                    ;
+; cic_dec_filter/simulation/submodules/auk_dspip_roundsat.vhd                           ;
+; cic_dec_filter/simulation/submodules/auk_dspip_text_pkg.vhd                           ;
+; cic_dec_filter/simulation/submodules/c_model/CIC.cpp                                  ;
+; cic_dec_filter/simulation/submodules/c_model/CIC.h                                    ;
+; cic_dec_filter/simulation/submodules/c_model/Example/cic_c_model_output_ref.txt       ;
+; cic_dec_filter/simulation/submodules/c_model/Example/cic_input.txt                    ;
+; cic_dec_filter/simulation/submodules/c_model/Example/cic_output_ref.txt               ;
+; cic_dec_filter/simulation/submodules/c_model/Example/commands.txt                     ;
+; cic_dec_filter/simulation/submodules/c_model/compile_mex.sh                           ;
+; cic_dec_filter/simulation/submodules/c_model/main.cpp                                 ;
+; cic_dec_filter/simulation/submodules/c_model/mexCICDirect.cpp                         ;
+; cic_dec_filter/simulation/submodules/c_model/mexCICFile.cpp                           ;
+; cic_dec_filter/simulation/submodules/c_model/mexCICFileIn.cpp                         ;
+; cic_dec_filter/simulation/submodules/cic_dec_filter_cic_ii_0.sv                       ;
+; cic_dec_filter/simulation/submodules/mentor/alt_cic_core.sv                           ;
+; cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_miso.sv                       ;
+; cic_dec_filter/simulation/submodules/mentor/alt_cic_dec_siso.sv                       ;
+; cic_dec_filter/simulation/submodules/mentor/alt_cic_int_simo.sv                       ;
+; cic_dec_filter/simulation/submodules/mentor/alt_cic_int_siso.sv                       ;
+; cic_dec_filter/simulation/submodules/mentor/alt_dsp_cic_common_pkg.sv                 ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_controller.vhd ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_sink.vhd       ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_small_fifo.vhd ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_avalon_streaming_source.vhd     ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_channel_buffer.vhd              ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_cic_lib_pkg.vhd                 ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_differentiator.vhd              ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_downsample.sv                   ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_integrator.vhd                  ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_upsample.vhd                    ;
+; cic_dec_filter/simulation/submodules/mentor/auk_dspip_variable_downsample.sv          ;
+; cic_dec_filter/simulation/submodules/mentor/counter_module.sv                         ;
+; cic_dec_filter/simulation/submodules/mentor/hyper_pipeline_interface.v                ;
+; cic_dec_filter/simulation/synopsys/vcsmx/synopsys_sim.setup                           ;
+; cic_dec_filter/simulation/synopsys/vcsmx/vcsmx_setup.sh                               ;
+; cic_dec_filter/synthesis/cic_dec_filter.debuginfo                                     ;
+; cic_dec_filter/synthesis/cic_dec_filter.qip                                           ;
+; cic_dec_filter/synthesis/cic_dec_filter.v                                             ;
+; cic_dec_filter/synthesis/submodules/alt_cic_core.ocp                                  ;
+; cic_dec_filter/synthesis/submodules/alt_cic_core.sv                                   ;
+; cic_dec_filter/synthesis/submodules/alt_cic_dec_miso.sv                               ;
+; cic_dec_filter/synthesis/submodules/alt_cic_dec_siso.sv                               ;
+; cic_dec_filter/synthesis/submodules/alt_cic_int_simo.sv                               ;
+; cic_dec_filter/synthesis/submodules/alt_cic_int_siso.sv                               ;
+; cic_dec_filter/synthesis/submodules/alt_dsp_cic_common_pkg.sv                         ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_avalon_streaming_controller.vhd         ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_avalon_streaming_sink.vhd               ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_avalon_streaming_small_fifo.vhd         ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_avalon_streaming_source.vhd             ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_channel_buffer.vhd                      ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_cic_lib_pkg.vhd                         ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_delay.vhd                               ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_differentiator.vhd                      ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_downsample.sv                           ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_fastadd.vhd                             ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_fastaddsub.vhd                          ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_integrator.vhd                          ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_lib_pkg.vhd                             ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_math_pkg.vhd                            ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_pipelined_adder.vhd                     ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_roundsat.vhd                            ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_text_pkg.vhd                            ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_upsample.vhd                            ;
+; cic_dec_filter/synthesis/submodules/auk_dspip_variable_downsample.sv                  ;
+; cic_dec_filter/synthesis/submodules/cic_dec_filter_cic_ii_0.sv                        ;
+; cic_dec_filter/synthesis/submodules/counter_module.sv                                 ;
+; cic_dec_filter/synthesis/submodules/hyper_pipeline_interface.v                        ;
+; cic_filter.qpf                                                                        ;
+; cic_filter.qsf                                                                        ;
+; cic_filter.v                                                                          ;
+; clk_divider_N.v                                                                       ;
+; db/sine_sweep.cmp.rdb                                                                 ;
+; oscillator.qsys                                                                       ;
+; oscillator.sopcinfo                                                                   ;
+; oscillator/oscillator.bsf                                                             ;
+; oscillator/oscillator.cmp                                                             ;
+; oscillator/oscillator.csv                                                             ;
+; oscillator/oscillator.html                                                            ;
+; oscillator/oscillator.ppf                                                             ;
+; oscillator/oscillator.spd                                                             ;
+; oscillator/oscillator.xml                                                             ;
+; oscillator/oscillator_bb.v                                                            ;
+; oscillator/oscillator_generation.rpt                                                  ;
+; oscillator/oscillator_inst.v                                                          ;
+; oscillator/oscillator_inst.vhd                                                        ;
+; oscillator/simulation/aldec/rivierapro_setup.tcl                                      ;
+; oscillator/simulation/cadence/cds.lib                                                 ;
+; oscillator/simulation/cadence/cds_libs/int_osc_0.cds.lib                              ;
+; oscillator/simulation/cadence/hdl.var                                                 ;
+; oscillator/simulation/cadence/ncsim_setup.sh                                          ;
+; oscillator/simulation/mentor/msim_setup.tcl                                           ;
+; oscillator/simulation/oscillator.sip                                                  ;
+; oscillator/simulation/oscillator.v                                                    ;
+; oscillator/simulation/submodules/altera_int_osc.v                                     ;
+; oscillator/simulation/synopsys/vcs/vcs_setup.sh                                       ;
+; oscillator/simulation/synopsys/vcsmx/synopsys_sim.setup                               ;
+; oscillator/simulation/synopsys/vcsmx/vcsmx_setup.sh                                   ;
+; oscillator/synthesis/oscillator.debuginfo                                             ;
+; oscillator/synthesis/oscillator.qip                                                   ;
+; oscillator/synthesis/oscillator.v                                                     ;
+; oscillator/synthesis/submodules/altera_int_osc.v                                      ;
+; pdm.v                                                                                 ;
+; sine2.hex                                                                             ;
+; sine_sweep.mif                                                                        ;
+; sine_sweep.qsf                                                                        ;
+; sine_sweep_v2.mif                                                                     ;
+; single_sine.qsf                                                                       ;
+; wave_gen.v                                                                            ;
+; wave_gen_direct_pdm.v                                                                 ;
+; wavetable.qip                                                                         ;
+; wavetable.v                                                                           ;
+; wavetable_bb.v                                                                        ;
+; wavetable_inst.v                                                                      ;
+; assignment_defaults.qdf                                                               ;
++---------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

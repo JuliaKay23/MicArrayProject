@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="79" />
+   <irq preferredWidth="34" />
+   <inputclock preferredWidth="167" />
+   <name preferredWidth="221" />
+   <description preferredWidth="319" />
+  </columns>
+ </systemtable>
+ <library expandedCategories="Library,Project" />
+ <window width="1936" height="1056" x="-8" y="-8" />
+ <generation
+   path="C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/"
+   simulation="VERILOG"
+   block_symbol_file="0" />
+</preferences>

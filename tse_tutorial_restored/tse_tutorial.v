@@ -1,9 +1,12 @@
-module tse_tutorial(
+module tse_tutorial #(parameter mic_n = 2)(
 	// Clock
 	input         CLOCK_50,
 	
 	// KEY
 	input  [0: 0] KEY,
+	
+   input wire [mic_n-1:0] pdm_mic_input, // Stereo mic input arrays
+
 	
 	// Ethernet 0
 	output        ENET0_MDC,
@@ -14,14 +17,14 @@ module tse_tutorial(
 	input  [3: 0] ENET0_RX_DATA,
 	input         ENET0_RX_DV,
 	output [3: 0] ENET0_TX_DATA,
-	output        ENET0_TX_EN
+	output        ENET0_TX_EN,
+   output wire pdm_mic_clk // Clock to drive the microphones
+
 );
 
 //TO-DO
-// 1. What is byteenable? what is write? what is chipselect?
-// 2. Instatiate a RAM with n number words, begin with n=2 or use n registers
-// 3. Change size of RAM in qsys to be equal to size n
-// 4. Send all of RAM in qsys over ethernet
+// 1. Change size of RAM in qsys to be equal to size n
+// 1. Send all of filter_out_data to nios ii then over ethernet
 
 	// MODIFIED
 	wire [3:0] byteenable = 4'b1111;
@@ -40,7 +43,7 @@ module tse_tutorial(
 	// END MODIFIED
 	
 
-	wire sys_clk, clk_125, clk_25, clk_2p5, tx_clk;
+	wire sys_clk, clk_125, clk_25, clk_2p5, clk_2, tx_clk;
 	wire core_reset_n;
 	wire mdc, mdio_in, mdio_oen, mdio_out;
 	wire eth_mode, ena_10;
@@ -58,6 +61,7 @@ module tse_tutorial(
 		.outclk_1 (clk_125), // outclk1.clk
 		.outclk_2 (clk_25), // outclk2.clk
 		.outclk_3 (clk_2p5), // outclk3.clk
+		.outclk_4 (clk_2),
 		.locked   (core_reset_n)    //  locked.export
 	);
 	 
@@ -72,6 +76,44 @@ module tse_tutorial(
 		.outclock(tx_clk),
 		.dataout(ENET0_GTX_CLK)
 	);
+	
+	wire in_ready[mic_n];
+	wire [15:0] filter_out_data[mic_n];
+	wire filter_out_valid[mic_n];
+	wire [1:0] filter_out_error[mic_n];
+	
+	reg [1:0] pdm_mic_input_2bit[mic_n];
+		integer i;
+		always @(posedge clk_2) begin
+			for (i = 0; i < mic_n; i = i + 1) begin
+				if (pdm_mic_input[i] == 1'b0) begin
+						pdm_mic_input_2bit[i] <= 2'b11; // -1
+				end
+				else begin
+						pdm_mic_input_2bit[i] <= 2'b01; // +1
+				end
+			end
+	end
+	
+	generate
+		genvar j;
+			for(j=0; j < mic_n; j=j+1) begin : mic_filter_reg
+				combined_filter combined_filter_inst(
+					.av_st_in_error	(2'b00),  					  //  av_st_in.error
+					.av_st_in_valid	(1'b1),  					  //          .valid
+					.av_st_in_ready	(in_ready[j]),  			  //          .ready
+					.av_st_in_data		(pdm_mic_input_2bit[j]),  //          .data
+					.av_st_out_data	(filter_out_data[j]),  	  // av_st_out.data
+					.av_st_out_valid	(filter_out_valid[j]),    //          .valid
+					.av_st_out_error	(filter_out_error[j]),    //          .error
+					.clk_clk				(clk_2),  					  //       clk.clk
+					.reset_reset_n		(core_reset_n)   			  //     reset.reset_n
+				);
+			end  
+	endgenerate
+	
+	
+	
 	
 	// MODIFIED
 	always @(posedge CLOCK_50) begin

@@ -1,0 +1,74 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\Users\julia\Documents\MicArrayProject\FPGA\yatian_liu\intel_projects\mic_array\ip\combined_filter.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\julia\Documents\MicArrayProject\tse_tutorial_restored\simulation --family="Arria V" --part=5AGXFB3H4F35C4
+Progress: Loading ip/combined_filter.qsys
+Progress: Reading input file
+Progress: Adding cic_ii_0 [altera_cic_ii 19.1]
+Progress: Parameterizing module cic_ii_0
+Progress: Adding clk_0 [clock_source 19.1]
+Progress: Parameterizing module clk_0
+Progress: Adding fir_compiler_ii_0 [altera_fir_compiler_ii 19.1]
+Progress: Parameterizing module fir_compiler_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: combined_filter.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 31, Bankcount 1, CoefBitWidth 10
+Info: combined_filter.cic_ii_0.av_st_out/fir_compiler_ii_0.avalon_streaming_sink: The source has a ready signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: combined_filter: Generating combined_filter "combined_filter" for SIM_VERILOG
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: cic_ii_0: "combined_filter" instantiated altera_cic_ii "cic_ii_0"
+Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 31, Bankcount 1, Latency 16, CoefBitWidth 10
+Info: fir_compiler_ii_0: "combined_filter" instantiated altera_fir_compiler_ii "fir_compiler_ii_0"
+Info: avalon_st_adapter: "combined_filter" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: rst_controller: "combined_filter" instantiated altera_reset_controller "rst_controller"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: combined_filter: Done "combined_filter" with 6 modules, 85 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\Users\julia\Documents\MicArrayProject\tse_tutorial_restored\combined_filter.spd --output-directory=C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\julia\Documents\MicArrayProject\tse_tutorial_restored\combined_filter.spd --output-directory=C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	5 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/julia/Documents/MicArrayProject/tse_tutorial_restored/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\julia\Documents\MicArrayProject\FPGA\yatian_liu\intel_projects\mic_array\ip\combined_filter.qsys --synthesis=VERILOG --output-directory=C:\Users\julia\Documents\MicArrayProject\tse_tutorial_restored\synthesis --family="Arria V" --part=5AGXFB3H4F35C4
+Progress: Loading ip/combined_filter.qsys
+Progress: Reading input file
+Progress: Adding cic_ii_0 [altera_cic_ii 19.1]
+Progress: Parameterizing module cic_ii_0
+Progress: Adding clk_0 [clock_source 19.1]
+Progress: Parameterizing module clk_0
+Progress: Adding fir_compiler_ii_0 [altera_fir_compiler_ii 19.1]
+Progress: Parameterizing module fir_compiler_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: combined_filter.fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 31, Bankcount 1, CoefBitWidth 10
+Info: combined_filter.cic_ii_0.av_st_out/fir_compiler_ii_0.avalon_streaming_sink: The source has a ready signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: combined_filter: Generating combined_filter "combined_filter" for QUARTUS_SYNTH
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: cic_ii_0: "combined_filter" instantiated altera_cic_ii "cic_ii_0"
+Info: fir_compiler_ii_0: PhysChanIn 1, PhysChanOut 1, ChansPerPhyIn 1, ChansPerPhyOut 1, OutputFullBitWidth 31, Bankcount 1, Latency 16, CoefBitWidth 10
+Info: fir_compiler_ii_0: "combined_filter" instantiated altera_fir_compiler_ii "fir_compiler_ii_0"
+Info: avalon_st_adapter: "combined_filter" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: rst_controller: "combined_filter" instantiated altera_reset_controller "rst_controller"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: combined_filter: Done "combined_filter" with 6 modules, 47 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

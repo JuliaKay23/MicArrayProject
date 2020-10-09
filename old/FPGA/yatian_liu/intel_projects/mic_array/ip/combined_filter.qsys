@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element cic_ii_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element fir_compiler_ii_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5AGXFB3H4F35C4" />
+ <parameter name="deviceFamily" value="Arria V" />
+ <parameter name="deviceSpeedGrade" value="4_H4" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="av_st_in"
+   internal="cic_ii_0.av_st_in"
+   type="avalon_streaming"
+   dir="end" />
+ <interface
+   name="av_st_out"
+   internal="fir_compiler_ii_0.avalon_streaming_source"
+   type="avalon_streaming"
+   dir="start" />
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <module name="cic_ii_0" kind="altera_cic_ii" version="19.1" enabled="1">
+  <parameter name="CH_PER_INT" value="1" />
+  <parameter name="CLK_EN_PORT" value="false" />
+  <parameter name="D_DELAY" value="1" />
+  <parameter name="FILTER_TYPE" value="decimator" />
+  <parameter name="INTERFACES" value="1" />
+  <parameter name="IN_WIDTH" value="2" />
+  <parameter name="RCF_FIX" value="40" />
+  <parameter name="RCF_LB" value="8" />
+  <parameter name="RCF_UB" value="21" />
+  <parameter name="REQ_DIF_MEM" value="logic_element" />
+  <parameter name="REQ_INT_MEM" value="logic_element" />
+  <parameter name="REQ_OUT_WIDTH" value="16" />
+  <parameter name="REQ_PIPELINE" value="0" />
+  <parameter name="ROUND_TYPE" value="H_PRUNE" />
+  <parameter name="STAGES" value="4" />
+  <parameter name="VRC_EN" value="0" />
+  <parameter name="design_env" value="QSYS" />
+  <parameter name="hyper_opt_select" value="0" />
+  <parameter name="selected_device_family" value="Arria V" />
+ </module>
+ <module name="clk_0" kind="clock_source" version="19.1" enabled="1">
+  <parameter name="clockFrequency" value="2000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="BOTH" />
+ </module>
+ <module
+   name="fir_compiler_ii_0"
+   kind="altera_fir_compiler_ii"
+   version="19.1"
+   enabled="1">
+  <parameter name="L_bandsFilter" value="1" />
+  <parameter name="MODE_STRING" value="None Set" />
+  <parameter name="backPressure" value="false" />
+  <parameter name="bankCount" value="1" />
+  <parameter name="bankDisplay" value="0" />
+  <parameter name="baseAddress" value="0" />
+  <parameter name="channelModes" value="0,1,2,3" />
+  <parameter name="clockRate" value="2" />
+  <parameter name="clockSlack" value="0" />
+  <parameter name="coeffBitWidth" value="10" />
+  <parameter name="coeffComplex" value="false" />
+  <parameter name="coeffFracBitWidth" value="0" />
+  <parameter name="coeffReload" value="false" />
+  <parameter name="coeffScaling" value="auto" />
+  <parameter name="coeffSetRealValue">2.25E-4,-0.00323,0.007065,-0.010256,0.008725,0.002111,-0.023088,0.047261,-0.059417,0.04086,0.020719,-0.119997,0.22287,-0.252293,0.029634,1.0,0.029634,-0.252293,0.22287,-0.119997,0.020719,0.04086,-0.059417,0.047261,-0.023088,0.002111,0.008725,-0.010256,0.007065,-0.00323,2.25E-4</parameter>
+  <parameter name="coeffSetRealValueImag">0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.0530093, -0.04498, 0.0, 0.0749693, 0.159034, 0.224907, 0.249809, 0.224907, 0.159034, 0.0749693, 0.0, -0.04498, -0.0530093, -0.0321283, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0</parameter>
+  <parameter name="coeffType" value="int" />
+  <parameter name="decimFactor" value="1" />
+  <parameter name="delayRAMBlockThreshold" value="20" />
+  <parameter name="deviceFamily" value="Arria V" />
+  <parameter name="dualMemDistRAMThreshold" value="1280" />
+  <parameter name="filterType" value="single" />
+  <parameter name="hardMultiplierThreshold" value="-1" />
+  <parameter name="inputBitWidth" value="16" />
+  <parameter name="inputChannelNum" value="1" />
+  <parameter name="inputFracBitWidth" value="0" />
+  <parameter name="inputRate" value="0.05" />
+  <parameter name="inputType" value="int" />
+  <parameter name="interpFactor" value="1" />
+  <parameter name="karatsuba" value="false" />
+  <parameter name="mRAMThreshold" value="1000000" />
+  <parameter name="num_modes" value="2" />
+  <parameter name="outLSBRound" value="trunc" />
+  <parameter name="outLsbBitRem" value="6" />
+  <parameter name="outMSBRound" value="sat" />
+  <parameter name="outMsbBitRem" value="9" />
+  <parameter name="outType" value="int" />
+  <parameter name="readWriteMode" value="read_write" />
+  <parameter name="reconfigurable" value="false" />
+  <parameter name="reconfigurable_list" value="0" />
+  <parameter name="speedGrade" value="medium" />
+  <parameter name="symmetryMode" value="nsym" />
+ </module>
+ <connection
+   kind="avalon_streaming"
+   version="19.1"
+   start="cic_ii_0.av_st_out"
+   end="fir_compiler_ii_0.avalon_streaming_sink" />
+ <connection
+   kind="clock"
+   version="19.1"
+   start="clk_0.clk"
+   end="fir_compiler_ii_0.clk" />
+ <connection kind="clock" version="19.1" start="clk_0.clk" end="cic_ii_0.clock" />
+ <connection
+   kind="reset"
+   version="19.1"
+   start="clk_0.clk_reset"
+   end="cic_ii_0.reset" />
+ <connection
+   kind="reset"
+   version="19.1"
+   start="clk_0.clk_reset"
+   end="fir_compiler_ii_0.rst" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>
