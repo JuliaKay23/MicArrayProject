@@ -202,7 +202,7 @@
  <module
    name="RAM_block"
    kind="altera_avalon_onchip_memory2"
-   version="19.1"
+   version="18.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
   <parameter name="autoInitializationFileName">$${FILENAME}_RAM_block</parameter>
@@ -234,7 +234,7 @@
  <module
    name="descriptor_memory"
    kind="altera_avalon_onchip_memory2"
-   version="19.1"
+   version="18.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
   <parameter name="autoInitializationFileName">$${FILENAME}_descriptor_memory</parameter>
@@ -266,7 +266,7 @@
  <module
    name="jtag_uart"
    kind="altera_avalon_jtag_uart"
-   version="19.1"
+   version="18.1"
    enabled="1">
   <parameter name="allowMultipleConnections" value="false" />
   <parameter name="avalonSpec" value="2.0" />
@@ -285,7 +285,7 @@
  <module
    name="main_memory"
    kind="altera_avalon_onchip_memory2"
-   version="19.1"
+   version="18.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
   <parameter name="autoInitializationFileName">$${FILENAME}_main_memory</parameter>
@@ -317,7 +317,7 @@
  <module
    name="nios2_gen2_0"
    kind="altera_nios2_gen2"
-   version="19.1"
+   version="18.1"
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
@@ -496,7 +496,7 @@
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
  </module>
- <module name="sgdma_rx" kind="altera_avalon_sgdma" version="19.1" enabled="1">
+ <module name="sgdma_rx" kind="altera_avalon_sgdma" version="18.1" enabled="1">
   <parameter name="addressWidth" value="32" />
   <parameter name="alwaysDoMaxBurst" value="true" />
   <parameter name="avalonMMByteReorderMode" value="0" />
@@ -513,7 +513,7 @@
   <parameter name="transferMode" value="STREAM_TO_MEMORY" />
   <parameter name="writeBurstcountWidth" value="4" />
  </module>
- <module name="sgdma_tx" kind="altera_avalon_sgdma" version="19.1" enabled="1">
+ <module name="sgdma_tx" kind="altera_avalon_sgdma" version="18.1" enabled="1">
   <parameter name="addressWidth" value="32" />
   <parameter name="alwaysDoMaxBurst" value="true" />
   <parameter name="avalonMMByteReorderMode" value="0" />
@@ -530,13 +530,13 @@
   <parameter name="transferMode" value="MEMORY_TO_STREAM" />
   <parameter name="writeBurstcountWidth" value="4" />
  </module>
- <module name="sys_clk" kind="clock_source" version="19.1" enabled="1">
+ <module name="sys_clk" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
- <module name="tse" kind="altera_eth_tse" version="19.1" enabled="1">
+ <module name="tse" kind="altera_eth_tse" version="18.1" enabled="1">
   <parameter name="AUTO_DEVICE" value="5AGXFB3H4F35C4" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="4_H4" />
   <parameter name="XCVR_RCFG_JTAG_ENABLE" value="0" />
@@ -584,7 +584,7 @@
  </module>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -593,7 +593,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="tse.control_port">
   <parameter name="arbitrationPriority" value="1" />
@@ -602,7 +602,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="sgdma_rx.csr">
   <parameter name="arbitrationPriority" value="1" />
@@ -611,7 +611,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="sgdma_tx.csr">
   <parameter name="arbitrationPriority" value="1" />
@@ -620,7 +620,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -629,7 +629,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="main_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -638,7 +638,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="descriptor_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -647,7 +647,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.data_master"
    end="RAM_block.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -656,7 +656,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_rx.descriptor_read"
    end="descriptor_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -665,7 +665,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_tx.descriptor_read"
    end="descriptor_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -674,7 +674,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_rx.descriptor_write"
    end="descriptor_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -683,7 +683,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_tx.descriptor_write"
    end="descriptor_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -692,7 +692,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.instruction_master"
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -701,7 +701,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.instruction_master"
    end="main_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -710,7 +710,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_tx.m_read"
    end="main_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -719,7 +719,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_tx.m_read"
    end="RAM_block.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -728,7 +728,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="19.1"
+   version="18.1"
    start="sgdma_rx.m_write"
    end="main_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -737,142 +737,142 @@
  </connection>
  <connection
    kind="avalon_streaming"
-   version="19.1"
+   version="18.1"
    start="sgdma_tx.out"
    end="tse.transmit" />
  <connection
    kind="avalon_streaming"
-   version="19.1"
+   version="18.1"
    start="tse.receive"
    end="sgdma_rx.in" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk"
    end="nios2_gen2_0.clk" />
- <connection kind="clock" version="19.1" start="sys_clk.clk" end="jtag_uart.clk" />
- <connection kind="clock" version="19.1" start="sys_clk.clk" end="sgdma_rx.clk" />
- <connection kind="clock" version="19.1" start="sys_clk.clk" end="sgdma_tx.clk" />
+ <connection kind="clock" version="18.1" start="sys_clk.clk" end="jtag_uart.clk" />
+ <connection kind="clock" version="18.1" start="sys_clk.clk" end="sgdma_rx.clk" />
+ <connection kind="clock" version="18.1" start="sys_clk.clk" end="sgdma_tx.clk" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk"
    end="main_memory.clk1" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk"
    end="descriptor_memory.clk1" />
- <connection kind="clock" version="19.1" start="sys_clk.clk" end="RAM_block.clk1" />
+ <connection kind="clock" version="18.1" start="sys_clk.clk" end="RAM_block.clk1" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk"
    end="tse.control_port_clock_connection" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk"
    end="tse.receive_clock_connection" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk"
    end="tse.transmit_clock_connection" />
  <connection
    kind="interrupt"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.irq"
    end="sgdma_rx.csr_irq">
   <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="interrupt"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.irq"
    end="sgdma_tx.csr_irq">
   <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="interrupt"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.irq"
    end="jtag_uart.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="nios2_gen2_0.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="jtag_uart.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="sgdma_rx.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="sgdma_tx.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="main_memory.reset1" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="descriptor_memory.reset1" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="RAM_block.reset1" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="sys_clk.clk_reset"
    end="tse.reset_connection" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="nios2_gen2_0.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="jtag_uart.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="sgdma_rx.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="sgdma_tx.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="main_memory.reset1" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="descriptor_memory.reset1" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="tse.reset_connection" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

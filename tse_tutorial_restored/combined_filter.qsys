@@ -47,7 +47,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="tse_tutorial.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -66,7 +66,7 @@
    dir="start" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <module name="cic_ii_0" kind="altera_cic_ii" version="19.1" enabled="1">
+ <module name="cic_ii_0" kind="altera_cic_ii" version="18.1" enabled="1">
   <parameter name="CH_PER_INT" value="1" />
   <parameter name="CLK_EN_PORT" value="false" />
   <parameter name="D_DELAY" value="1" />
@@ -87,7 +87,7 @@
   <parameter name="hyper_opt_select" value="0" />
   <parameter name="selected_device_family" value="Arria V" />
  </module>
- <module name="clk_0" kind="clock_source" version="19.1" enabled="1">
+ <module name="clk_0" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="2000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
@@ -96,7 +96,7 @@
  <module
    name="fir_compiler_ii_0"
    kind="altera_fir_compiler_ii"
-   version="19.1"
+   version="18.1"
    enabled="1">
   <parameter name="L_bandsFilter" value="1" />
   <parameter name="MODE_STRING" value="None Set" />
@@ -143,23 +143,23 @@
  </module>
  <connection
    kind="avalon_streaming"
-   version="19.1"
+   version="18.1"
    start="cic_ii_0.av_st_out"
    end="fir_compiler_ii_0.avalon_streaming_sink" />
  <connection
    kind="clock"
-   version="19.1"
+   version="18.1"
    start="clk_0.clk"
    end="fir_compiler_ii_0.clk" />
- <connection kind="clock" version="19.1" start="clk_0.clk" end="cic_ii_0.clock" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="cic_ii_0.clock" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="clk_0.clk_reset"
    end="cic_ii_0.reset" />
  <connection
    kind="reset"
-   version="19.1"
+   version="18.1"
    start="clk_0.clk_reset"
    end="fir_compiler_ii_0.rst" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

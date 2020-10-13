@@ -1,6 +1,13 @@
 	component nios_system is
 		port (
 			clk_clk                             : in  std_logic                     := 'X';             -- clk
+			ram_block_s2_address                : in  std_logic_vector(9 downto 0)  := (others => 'X'); -- address
+			ram_block_s2_chipselect             : in  std_logic                     := 'X';             -- chipselect
+			ram_block_s2_clken                  : in  std_logic                     := 'X';             -- clken
+			ram_block_s2_write                  : in  std_logic                     := 'X';             -- write
+			ram_block_s2_readdata               : out std_logic_vector(31 downto 0);                    -- readdata
+			ram_block_s2_writedata              : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			ram_block_s2_byteenable             : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
 			reset_reset_n                       : in  std_logic                     := 'X';             -- reset_n
 			tse_mac_mdio_connection_mdc         : out std_logic;                                        -- mdc
 			tse_mac_mdio_connection_mdio_in     : in  std_logic                     := 'X';             -- mdio_in
@@ -15,20 +22,20 @@
 			tse_mac_status_connection_eth_mode  : out std_logic;                                        -- eth_mode
 			tse_mac_status_connection_ena_10    : out std_logic;                                        -- ena_10
 			tse_pcs_mac_rx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
-			tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
-			ram_block_s2_address                : in  std_logic_vector(9 downto 0)  := (others => 'X'); -- address
-			ram_block_s2_chipselect             : in  std_logic                     := 'X';             -- chipselect
-			ram_block_s2_clken                  : in  std_logic                     := 'X';             -- clken
-			ram_block_s2_write                  : in  std_logic                     := 'X';             -- write
-			ram_block_s2_readdata               : out std_logic_vector(31 downto 0);                    -- readdata
-			ram_block_s2_writedata              : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			ram_block_s2_byteenable             : in  std_logic_vector(3 downto 0)  := (others => 'X')  -- byteenable
+			tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X'              -- clk
 		);
 	end component nios_system;
 
 	u0 : component nios_system
 		port map (
 			clk_clk                             => CONNECTED_TO_clk_clk,                             --                             clk.clk
+			ram_block_s2_address                => CONNECTED_TO_ram_block_s2_address,                --                    ram_block_s2.address
+			ram_block_s2_chipselect             => CONNECTED_TO_ram_block_s2_chipselect,             --                                .chipselect
+			ram_block_s2_clken                  => CONNECTED_TO_ram_block_s2_clken,                  --                                .clken
+			ram_block_s2_write                  => CONNECTED_TO_ram_block_s2_write,                  --                                .write
+			ram_block_s2_readdata               => CONNECTED_TO_ram_block_s2_readdata,               --                                .readdata
+			ram_block_s2_writedata              => CONNECTED_TO_ram_block_s2_writedata,              --                                .writedata
+			ram_block_s2_byteenable             => CONNECTED_TO_ram_block_s2_byteenable,             --                                .byteenable
 			reset_reset_n                       => CONNECTED_TO_reset_reset_n,                       --                           reset.reset_n
 			tse_mac_mdio_connection_mdc         => CONNECTED_TO_tse_mac_mdio_connection_mdc,         --         tse_mac_mdio_connection.mdc
 			tse_mac_mdio_connection_mdio_in     => CONNECTED_TO_tse_mac_mdio_connection_mdio_in,     --                                .mdio_in
@@ -43,13 +50,6 @@
 			tse_mac_status_connection_eth_mode  => CONNECTED_TO_tse_mac_status_connection_eth_mode,  --                                .eth_mode
 			tse_mac_status_connection_ena_10    => CONNECTED_TO_tse_mac_status_connection_ena_10,    --                                .ena_10
 			tse_pcs_mac_rx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_rx_clock_connection_clk, -- tse_pcs_mac_rx_clock_connection.clk
-			tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_tx_clock_connection_clk, -- tse_pcs_mac_tx_clock_connection.clk
-			ram_block_s2_address                => CONNECTED_TO_ram_block_s2_address,                --                    ram_block_s2.address
-			ram_block_s2_chipselect             => CONNECTED_TO_ram_block_s2_chipselect,             --                                .chipselect
-			ram_block_s2_clken                  => CONNECTED_TO_ram_block_s2_clken,                  --                                .clken
-			ram_block_s2_write                  => CONNECTED_TO_ram_block_s2_write,                  --                                .write
-			ram_block_s2_readdata               => CONNECTED_TO_ram_block_s2_readdata,               --                                .readdata
-			ram_block_s2_writedata              => CONNECTED_TO_ram_block_s2_writedata,              --                                .writedata
-			ram_block_s2_byteenable             => CONNECTED_TO_ram_block_s2_byteenable              --                                .byteenable
+			tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_tx_clock_connection_clk  -- tse_pcs_mac_tx_clock_connection.clk
 		);
 

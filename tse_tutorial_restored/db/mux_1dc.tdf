@@ -1,5 +1,5 @@
 --lpm_mux CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="Arria V" IGNORE_CASCADE_BUFFERS="OFF" LPM_SIZE=2 LPM_WIDTH=7 LPM_WIDTHS=1 data result sel
---VERSION_BEGIN 19.1 cbx_lpm_mux 2019:09:22:11:00:28:SJ cbx_mgl 2019:09:22:11:02:15:SJ  VERSION_END
+--VERSION_BEGIN 18.1 cbx_lpm_mux 2019:04:11:16:04:12:SJ cbx_mgl 2019:04:11:16:07:46:SJ  VERSION_END
 
 
 -- Copyright (C) 2019  Intel Corporation. All rights reserved.
