@@ -46,6 +46,14 @@
          type = "String";
       }
    }
+   element ext_irq_adapter_0
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
    element jtag_uart
    {
       datum _sortIndex
@@ -172,6 +180,11 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="sys_clk.clk_in" type="clock" dir="end" />
+ <interface
+   name="ext_irq_adapter"
+   internal="ext_irq_adapter_0.conduit_end"
+   type="conduit"
+   dir="end" />
  <interface name="ram_block_s2" internal="RAM_block.s2" type="avalon" dir="end" />
  <interface name="reset" internal="sys_clk.clk_in_reset" type="reset" dir="end" />
  <interface
@@ -263,6 +276,11 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
+ <module
+   name="ext_irq_adapter_0"
+   kind="ext_irq_adapter"
+   version="1.0"
+   enabled="1" />
  <module
    name="jtag_uart"
    kind="altera_avalon_jtag_uart"
@@ -384,7 +402,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="7" />
+  <parameter name="internalIrqMaskSystemInfo" value="15" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -768,6 +786,11 @@
    kind="clock"
    version="18.1"
    start="sys_clk.clk"
+   end="ext_irq_adapter_0.clock_sink" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="sys_clk.clk"
    end="tse.control_port_clock_connection" />
  <connection
    kind="clock"
@@ -784,21 +807,28 @@
    version="18.1"
    start="nios2_gen2_0.irq"
    end="sgdma_rx.csr_irq">
-  <parameter name="irqNumber" value="1" />
+  <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="interrupt"
    version="18.1"
    start="nios2_gen2_0.irq"
    end="sgdma_tx.csr_irq">
-  <parameter name="irqNumber" value="2" />
+  <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="nios2_gen2_0.irq"
+   end="ext_irq_adapter_0.interrupt_sender">
+  <parameter name="irqNumber" value="3" />
  </connection>
  <connection
    kind="interrupt"
    version="18.1"
    start="nios2_gen2_0.irq"
    end="jtag_uart.irq">
-  <parameter name="irqNumber" value="0" />
+  <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="reset"
@@ -843,6 +873,11 @@
  <connection
    kind="reset"
    version="18.1"
+   start="sys_clk.clk_reset"
+   end="ext_irq_adapter_0.reset_sink" />
+ <connection
+   kind="reset"
+   version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="nios2_gen2_0.reset" />
  <connection
@@ -874,7 +909,17 @@
    kind="reset"
    version="18.1"
    start="nios2_gen2_0.debug_reset_request"
+   end="RAM_block.reset1" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_gen2_0.debug_reset_request"
    end="tse.reset_connection" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_gen2_0.debug_reset_request"
+   end="ext_irq_adapter_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

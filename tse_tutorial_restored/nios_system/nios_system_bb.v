@@ -22,7 +22,8 @@ module nios_system (
 	tse_mac_status_connection_eth_mode,
 	tse_mac_status_connection_ena_10,
 	tse_pcs_mac_rx_clock_connection_clk,
-	tse_pcs_mac_tx_clock_connection_clk);	
+	tse_pcs_mac_tx_clock_connection_clk,
+	ext_irq_adapter_new_signal);	
 
 	input		clk_clk;
 	input	[9:0]	ram_block_s2_address;
@@ -47,4 +48,5 @@ module nios_system (
 	output		tse_mac_status_connection_ena_10;
 	input		tse_pcs_mac_rx_clock_connection_clk;
 	input		tse_pcs_mac_tx_clock_connection_clk;
+	input		ext_irq_adapter_new_signal;
 endmodule

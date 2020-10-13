@@ -22,7 +22,8 @@
 			tse_mac_status_connection_eth_mode  : out std_logic;                                        -- eth_mode
 			tse_mac_status_connection_ena_10    : out std_logic;                                        -- ena_10
 			tse_pcs_mac_rx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
-			tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X'              -- clk
+			tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
+			ext_irq_adapter_new_signal          : in  std_logic                     := 'X'              -- new_signal
 		);
 	end component nios_system;
 
@@ -50,6 +51,7 @@
 			tse_mac_status_connection_eth_mode  => CONNECTED_TO_tse_mac_status_connection_eth_mode,  --                                .eth_mode
 			tse_mac_status_connection_ena_10    => CONNECTED_TO_tse_mac_status_connection_ena_10,    --                                .ena_10
 			tse_pcs_mac_rx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_rx_clock_connection_clk, -- tse_pcs_mac_rx_clock_connection.clk
-			tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_tx_clock_connection_clk  -- tse_pcs_mac_tx_clock_connection.clk
+			tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_tx_clock_connection_clk, -- tse_pcs_mac_tx_clock_connection.clk
+			ext_irq_adapter_new_signal          => CONNECTED_TO_ext_irq_adapter_new_signal           --                 ext_irq_adapter.new_signal
 		);
 

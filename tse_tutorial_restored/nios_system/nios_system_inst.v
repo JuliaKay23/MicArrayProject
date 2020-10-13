@@ -21,6 +21,7 @@
 		.tse_mac_status_connection_eth_mode  (<connected-to-tse_mac_status_connection_eth_mode>),  //                                .eth_mode
 		.tse_mac_status_connection_ena_10    (<connected-to-tse_mac_status_connection_ena_10>),    //                                .ena_10
 		.tse_pcs_mac_rx_clock_connection_clk (<connected-to-tse_pcs_mac_rx_clock_connection_clk>), // tse_pcs_mac_rx_clock_connection.clk
-		.tse_pcs_mac_tx_clock_connection_clk (<connected-to-tse_pcs_mac_tx_clock_connection_clk>)  // tse_pcs_mac_tx_clock_connection.clk
+		.tse_pcs_mac_tx_clock_connection_clk (<connected-to-tse_pcs_mac_tx_clock_connection_clk>), // tse_pcs_mac_tx_clock_connection.clk
+		.ext_irq_adapter_new_signal          (<connected-to-ext_irq_adapter_new_signal>)           //                 ext_irq_adapter.new_signal
 	);
 

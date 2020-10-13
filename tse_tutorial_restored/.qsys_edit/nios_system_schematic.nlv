@@ -1,32 +1,32 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst nios_system.nios2_gen2_0 -pg 1 -lvl 2 -y 120
-preplace inst nios_system.sys_clk -pg 1 -lvl 1 -y 280
-preplace inst nios_system.sgdma_rx -pg 1 -lvl 5 -y 130
+preplace inst nios_system.nios2_gen2_0 -pg 1 -lvl 2 -y 100
+preplace inst nios_system.sys_clk -pg 1 -lvl 1 -y 290
+preplace inst nios_system.sgdma_rx -pg 1 -lvl 5 -y 140
 preplace inst nios_system.nios2_gen2_0.clock_bridge -pg 1
-preplace inst nios_system.main_memory -pg 1 -lvl 6 -y 250
+preplace inst nios_system.main_memory -pg 1 -lvl 6 -y 260
 preplace inst nios_system -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst nios_system.tse.i_tse_mac -pg 1
 preplace inst nios_system.nios2_gen2_0.cpu -pg 1
-preplace inst nios_system.descriptor_memory -pg 1 -lvl 6 -y 170
-preplace inst nios_system.tse -pg 1 -lvl 4 -y 140
-preplace inst nios_system.sgdma_tx -pg 1 -lvl 3 -y 80
+preplace inst nios_system.descriptor_memory -pg 1 -lvl 6 -y 180
+preplace inst nios_system.tse -pg 1 -lvl 4 -y 150
+preplace inst nios_system.sgdma_tx -pg 1 -lvl 3 -y 130
 preplace inst nios_system.nios2_gen2_0.reset_bridge -pg 1
-preplace inst nios_system.jtag_uart -pg 1 -lvl 6 -y 70
-preplace inst nios_system.RAM_block -pg 1 -lvl 3 -y 240
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)tse.mac_status_connection,(SLAVE)nios_system.tse_mac_status_connection) 1 0 4 NJ 250 NJ 320 NJ 230 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_pcs_mac_tx_clock_connection,(SLAVE)tse.pcs_mac_tx_clock_connection) 1 0 4 NJ 370 NJ 370 NJ 370 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)tse.mac_mdio_connection,(SLAVE)nios_system.tse_mac_mdio_connection) 1 0 4 NJ 60 NJ 60 NJ 30 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_pcs_mac_rx_clock_connection,(SLAVE)tse.pcs_mac_rx_clock_connection) 1 0 4 NJ 390 NJ 390 NJ 390 NJ
+preplace inst nios_system.jtag_uart -pg 1 -lvl 6 -y 80
+preplace inst nios_system.RAM_block -pg 1 -lvl 3 -y 270
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_pcs_mac_tx_clock_connection,(SLAVE)tse.pcs_mac_tx_clock_connection) 1 0 4 NJ 400 NJ 400 NJ 400 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.ram_block_s2,(SLAVE)RAM_block.s2) 1 0 3 NJ 280 NJ 340 NJ
 preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)sys_clk.clk_in_reset,(SLAVE)nios_system.reset) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(MASTER)sgdma_tx.out,(SLAVE)tse.transmit) 1 3 1 1200
-preplace netloc FAN_OUT<net_container>nios_system</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart.irq,(SLAVE)sgdma_tx.csr_irq,(SLAVE)sgdma_rx.csr_irq) 1 2 4 890 70 NJ 60 1630 120 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_mac_rgmii_connection,(SLAVE)tse.mac_rgmii_connection) 1 0 4 NJ 80 NJ 80 NJ 50 NJ
-preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)sgdma_rx.in,(MASTER)tse.receive) 1 4 1 1630
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)sys_clk.clk_in,(SLAVE)nios_system.clk) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>nios_system</net_container>(MASTER)sgdma_rx.m_write,(SLAVE)tse.control_port,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)sgdma_rx.descriptor_write,(MASTER)sgdma_tx.descriptor_write,(SLAVE)sgdma_rx.csr,(MASTER)sgdma_tx.descriptor_read,(MASTER)sgdma_rx.descriptor_read,(SLAVE)sgdma_tx.csr,(SLAVE)main_memory.s1,(SLAVE)descriptor_memory.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)RAM_block.s1,(MASTER)sgdma_tx.m_read) 1 1 5 490 280 910 210 1220 100 1670 80 1890
-preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)main_memory.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)tse.control_port_clock_connection,(SLAVE)tse.receive_clock_connection,(SLAVE)RAM_block.clk1,(MASTER)sys_clk.clk,(SLAVE)jtag_uart.clk,(SLAVE)sgdma_tx.clk,(SLAVE)descriptor_memory.clk1,(SLAVE)sgdma_rx.clk,(SLAVE)tse.transmit_clock_connection) 1 1 5 450 260 930 190 1280 80 1650 100 1930
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)RAM_block.s2,(SLAVE)nios_system.ram_block_s2) 1 0 3 NJ 270 NJ 340 NJ
-preplace netloc INTERCONNECT<net_container>nios_system</net_container>(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)sgdma_tx.reset,(MASTER)sys_clk.clk_reset,(SLAVE)descriptor_memory.reset1,(SLAVE)nios2_gen2_0.reset,(SLAVE)jtag_uart.reset,(SLAVE)RAM_block.reset1,(SLAVE)tse.reset_connection,(SLAVE)sgdma_rx.reset,(SLAVE)main_memory.reset1) 1 1 5 470 300 970 350 1180 420 1650 260 1910
-levelinfo -pg 1 0 200 2160
-levelinfo -hier nios_system 210 240 610 1020 1500 1700 2010 2150
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_mac_rgmii_connection,(SLAVE)tse.mac_rgmii_connection) 1 0 4 NJ 60 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)sgdma_tx.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)tse.transmit_clock_connection,(SLAVE)tse.receive_clock_connection,(SLAVE)tse.control_port_clock_connection,(MASTER)sys_clk.clk,(SLAVE)main_memory.clk1,(SLAVE)descriptor_memory.clk1,(SLAVE)RAM_block.clk1,(SLAVE)jtag_uart.clk,(SLAVE)sgdma_rx.clk) 1 1 5 410 240 910 80 1280 90 1690 110 1990
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_mac_mdio_connection,(SLAVE)tse.mac_mdio_connection) 1 0 4 NJ 40 NJ 40 NJ 40 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)sgdma_tx.csr_irq,(MASTER)nios2_gen2_0.irq,(SLAVE)sgdma_rx.csr_irq,(SLAVE)jtag_uart.irq) 1 2 4 890 120 NJ 50 1730 130 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)tse.transmit,(MASTER)sgdma_tx.out) 1 3 1 1180
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)tse.pcs_mac_rx_clock_connection,(SLAVE)nios_system.tse_pcs_mac_rx_clock_connection) 1 0 4 NJ 360 NJ 360 NJ 380 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)jtag_uart.reset,(SLAVE)sgdma_rx.reset,(SLAVE)main_memory.reset1,(SLAVE)RAM_block.reset1,(MASTER)nios2_gen2_0.debug_reset_request,(MASTER)sys_clk.clk_reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)descriptor_memory.reset1,(SLAVE)tse.reset_connection,(SLAVE)sgdma_tx.reset) 1 1 5 450 280 850 260 1320 110 1670 270 1970
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(MASTER)sgdma_tx.m_read,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)sgdma_rx.descriptor_write,(SLAVE)sgdma_tx.csr,(MASTER)sgdma_tx.descriptor_read,(SLAVE)main_memory.s1,(SLAVE)RAM_block.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)sgdma_rx.csr,(MASTER)sgdma_tx.descriptor_write,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)descriptor_memory.s1,(MASTER)sgdma_rx.m_write,(SLAVE)tse.control_port,(MASTER)sgdma_rx.descriptor_read) 1 1 5 470 300 870 100 1300 70 1710 90 1950
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk,(SLAVE)sys_clk.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.tse_mac_status_connection,(SLAVE)tse.mac_status_connection) 1 0 4 NJ 260 NJ 260 NJ 240 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(MASTER)tse.receive,(SLAVE)sgdma_rx.in) 1 4 1 1650
+levelinfo -pg 1 0 200 2200
+levelinfo -hier nios_system 210 240 610 1020 1520 1760 2050 2190
