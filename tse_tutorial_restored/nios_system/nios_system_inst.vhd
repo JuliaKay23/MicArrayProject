@@ -1,6 +1,7 @@
 	component nios_system is
 		port (
 			clk_clk                             : in  std_logic                     := 'X';             -- clk
+			ext_irq_adapter_new_signal          : in  std_logic                     := 'X';             -- new_signal
 			ram_block_s2_address                : in  std_logic_vector(9 downto 0)  := (others => 'X'); -- address
 			ram_block_s2_chipselect             : in  std_logic                     := 'X';             -- chipselect
 			ram_block_s2_clken                  : in  std_logic                     := 'X';             -- clken
@@ -22,14 +23,14 @@
 			tse_mac_status_connection_eth_mode  : out std_logic;                                        -- eth_mode
 			tse_mac_status_connection_ena_10    : out std_logic;                                        -- ena_10
 			tse_pcs_mac_rx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
-			tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X';             -- clk
-			ext_irq_adapter_new_signal          : in  std_logic                     := 'X'              -- new_signal
+			tse_pcs_mac_tx_clock_connection_clk : in  std_logic                     := 'X'              -- clk
 		);
 	end component nios_system;
 
 	u0 : component nios_system
 		port map (
 			clk_clk                             => CONNECTED_TO_clk_clk,                             --                             clk.clk
+			ext_irq_adapter_new_signal          => CONNECTED_TO_ext_irq_adapter_new_signal,          --                 ext_irq_adapter.new_signal
 			ram_block_s2_address                => CONNECTED_TO_ram_block_s2_address,                --                    ram_block_s2.address
 			ram_block_s2_chipselect             => CONNECTED_TO_ram_block_s2_chipselect,             --                                .chipselect
 			ram_block_s2_clken                  => CONNECTED_TO_ram_block_s2_clken,                  --                                .clken
@@ -51,7 +52,6 @@
 			tse_mac_status_connection_eth_mode  => CONNECTED_TO_tse_mac_status_connection_eth_mode,  --                                .eth_mode
 			tse_mac_status_connection_ena_10    => CONNECTED_TO_tse_mac_status_connection_ena_10,    --                                .ena_10
 			tse_pcs_mac_rx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_rx_clock_connection_clk, -- tse_pcs_mac_rx_clock_connection.clk
-			tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_tx_clock_connection_clk, -- tse_pcs_mac_tx_clock_connection.clk
-			ext_irq_adapter_new_signal          => CONNECTED_TO_ext_irq_adapter_new_signal           --                 ext_irq_adapter.new_signal
+			tse_pcs_mac_tx_clock_connection_clk => CONNECTED_TO_tse_pcs_mac_tx_clock_connection_clk  -- tse_pcs_mac_tx_clock_connection.clk
 		);
 

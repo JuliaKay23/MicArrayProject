@@ -2,7 +2,7 @@ set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TOOL
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nios_system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../nios_system.sopcinfo"]
-set_global_assignment -entity "nios_system" -library "nios_system" -name SLD_INFO "QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1602604354"
+set_global_assignment -entity "nios_system" -library "nios_system" -name SLD_INFO "QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1602637012"
 set_global_assignment -library "nios_system" -name MISC_FILE [file join $::quartus(qip_path) "../nios_system.cmp"]
 set_global_assignment -library "nios_system" -name SLD_FILE [file join $::quartus(qip_path) "nios_system.regmap"]
 set_global_assignment -library "nios_system" -name SLD_FILE [file join $::quartus(qip_path) "nios_system.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMP
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwMjYwNDM1NA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwMjYzNzAxMg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QXJyaWEgVg==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUFHWEZCM0g0RjM1QzQ=::QXV0byBERVZJQ0U="
 set_global_assignment -entity "nios_system" -library "nios_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::NF9INA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -1550,18 +1550,16 @@ set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -na
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZW5hYmxlRGlmZldpZHRo::ZmFsc2U=::RW5hYmxlIGRpZmZlcmVudCB3aWR0aCBmb3IgRHVhbC1wb3J0IGFjY2Vzcw=="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9lbmFibGVEaWZmV2lkdGg=::ZmFsc2U=::ZGVyaXZlZF9lbmFibGVEaWZmV2lkdGg="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "aW5pdE1lbUNvbnRlbnQ=::dHJ1ZQ==::SW5pdGlhbGl6ZSBtZW1vcnkgY29udGVudA=="
-set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "aW5pdGlhbGl6YXRpb25GaWxlTmFtZQ==::QzovVXNlcnMvanVsaWEvRG9jdW1lbnRzL01pY0FycmF5UHJvamVjdC9FdGhlcm5ldC9Vc2luZ1RyaXBsZVNwZWVkRXRoZXJuZXQvdHNlX3R1dG9yaWFsX3Jlc3RvcmVkL3NpbmUyLmhleA==::VXNlciBjcmVhdGVkIGluaXRpYWxpemF0aW9uIGZpbGU="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZW5QUkluaXRNb2Rl::ZmFsc2U=::RW5hYmxlIFBhcnRpYWwgUmVjb25maWd1cmF0aW9uIEluaXRpYWxpemF0aW9uIE1vZGU="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "bWVtb3J5U2l6ZQ==::NDA5Ng==::VG90YWwgbWVtb3J5IHNpemU="
-set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "cmVhZER1cmluZ1dyaXRlTW9kZQ==::RE9OVF9DQVJF::UmVhZCBEdXJpbmcgV3JpdGUgTW9kZQ=="
+set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "cmVhZER1cmluZ1dyaXRlTW9kZQ==::T0xEX0RBVEE=::UmVhZCBEdXJpbmcgV3JpdGUgTW9kZQ=="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "c2ltQWxsb3dNUkFNQ29udGVudHNGaWxl::ZmFsc2U=::QWxsb3cgTVJBTSBjb250ZW50cyBmaWxlIGZvciBzaW11bGF0aW9u"
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "c2ltTWVtSW5pdE9ubHlGaWxlbmFtZQ==::MA==::U2ltdWxhdGlvbiBtZW1pbml0IG9ubHkgaGFzIGZpbGVuYW1l"
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "c2luZ2xlQ2xvY2tPcGVyYXRpb24=::dHJ1ZQ==::U2luZ2xlIGNsb2NrIG9wZXJhdGlvbg=="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9zaW5nbGVDbG9ja09wZXJhdGlvbg==::dHJ1ZQ==::ZGVyaXZlZF9zaW5nbGVDbG9ja09wZXJhdGlvbg=="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "c2xhdmUxTGF0ZW5jeQ==::MQ==::U2xhdmUgczEgTGF0ZW5jeQ=="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "c2xhdmUyTGF0ZW5jeQ==::MQ==::U2xhdmUgczIgTGF0ZW5jeQ=="
-set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "dXNlTm9uRGVmYXVsdEluaXRGaWxl::dHJ1ZQ==::RW5hYmxlIG5vbi1kZWZhdWx0IGluaXRpYWxpemF0aW9uIGZpbGU="
-set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "Y29weUluaXRGaWxl::ZmFsc2U=::Q29weSBub24tZGVmYXVsdCBpbml0aWFsaXphdGlvbiBmaWxlIHRvIGdlbmVyYXRlZCBmb2xkZXI="
+set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "dXNlTm9uRGVmYXVsdEluaXRGaWxl::ZmFsc2U=::RW5hYmxlIG5vbi1kZWZhdWx0IGluaXRpYWxpemF0aW9uIGZpbGU="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "d3JpdGFibGU=::dHJ1ZQ==::VHlwZQ=="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZWNjX2VuYWJsZWQ=::ZmFsc2U=::RXh0ZW5kIHRoZSBkYXRhIHdpZHRoIHRvIHN1cHBvcnQgRUNDIGJpdHM="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "cmVzZXRyZXF1ZXN0X2VuYWJsZWQ=::dHJ1ZQ==::UmVzZXQgUmVxdWVzdA=="
@@ -1574,7 +1572,7 @@ set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -na
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9zZXRfZGF0YV93aWR0aDI=::MzI=::U2xhdmUgMiBkYXRhIHdpZHRo"
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9ndWlfcmFtX2Jsb2NrX3R5cGU=::QXV0b21hdGlj::ZGVyaXZlZF9ndWlfcmFtX2Jsb2NrX3R5cGU="
 set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pc19oYXJkY29weQ==::ZmFsc2U=::ZGVyaXZlZF9pc19oYXJkY29weQ=="
-set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ==::QzovVXNlcnMvanVsaWEvRG9jdW1lbnRzL01pY0FycmF5UHJvamVjdC9FdGhlcm5ldC9Vc2luZ1RyaXBsZVNwZWVkRXRoZXJuZXQvdHNlX3R1dG9yaWFsX3Jlc3RvcmVkL3NpbmUyLmhleA==::ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ=="
+set_global_assignment -entity "nios_system_RAM_block" -library "nios_system" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ==::bmlvc19zeXN0ZW1fUkFNX2Jsb2NrLmhleA==::ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ=="
 
 set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "nios_system.v"]
 set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
@@ -1755,6 +1753,7 @@ set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::qu
 set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ext_irq_adapter.v"]
 set_global_assignment -library "nios_system" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/nios_system_descriptor_memory.hex"]
 set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_system_descriptor_memory.v"]
+set_global_assignment -library "nios_system" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/nios_system_RAM_block.hex"]
 set_global_assignment -library "nios_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_system_RAM_block.v"]
 
 set_global_assignment -entity "altera_reset_controller" -library "nios_system" -name IP_TOOL_NAME "altera_reset_controller"

@@ -43,7 +43,7 @@ module nios_system_RAM_block (
                              )
 ;
 
-  parameter INIT_FILE = "C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/sine2.hex";
+  parameter INIT_FILE = "nios_system_RAM_block.hex";
 
 
   output  [ 31: 0] readdata;
@@ -109,7 +109,7 @@ wire             wren2;
            the_altsyncram.outdata_reg_a = "UNREGISTERED",
            the_altsyncram.outdata_reg_b = "UNREGISTERED",
            the_altsyncram.ram_block_type = "AUTO",
-           the_altsyncram.read_during_write_mode_mixed_ports = "DONT_CARE",
+           the_altsyncram.read_during_write_mode_mixed_ports = "OLD_DATA",
            the_altsyncram.width_a = 32,
            the_altsyncram.width_b = 32,
            the_altsyncram.width_byteena_a = 4,

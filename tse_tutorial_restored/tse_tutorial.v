@@ -6,7 +6,7 @@ module tse_tutorial #(parameter mic_n = 2)(
         input  [1: 0] KEY,
         
         input wire [mic_n-1:0] pdm_mic_input, // Stereo mic input arrays
-        output wire pdm_mic_clk // Clock to drive the microphones
+        output wire pdm_mic_clk, // Clock to drive the microphones
         
         // Ethernet 0
         output        ENET0_MDC,
@@ -17,30 +17,12 @@ module tse_tutorial #(parameter mic_n = 2)(
         input  [3: 0] ENET0_RX_DATA,
         input         ENET0_RX_DV,
         output [3: 0] ENET0_TX_DATA,
-        output        ENET0_TX_EN,
-
+        output        ENET0_TX_EN
 );
 
         //TO-DO
         // 1. Change size of RAM in qsys to be equal to size n
         // 1. Send all of filter_out_data to nios ii then over ethernet
-
-        // MODIFIED
-        wire [3:0] byteenable = 4'b1111;
-        reg chipselect;
-        reg write;
-        wire clken = 1'b1;
-        reg [9:0] address;
-        reg [31:0] data;
-        
-        initial begin
-                chipselect = 1'b0;
-                write = 1'b0;
-                address = 10'd0;
-                data = 32'd0;
-        end
-        // END MODIFIED
-        
 
         wire sys_clk, clk_125, clk_25, clk_2p5, clk_2, tx_clk;
         wire core_reset_n;
@@ -63,7 +45,8 @@ module tse_tutorial #(parameter mic_n = 2)(
                 .outclk_4 (clk_2),
                 .locked   (core_reset_n)    //  locked.export
         );
-         
+
+        assign pdm_mic_clk = clk_2;
         
         assign tx_clk = eth_mode ? clk_125 :       // GbE Mode   = 125MHz clock
                         ena_10   ? clk_2p5 :       // 10Mb Mode  = 2.5MHz clock
@@ -99,7 +82,7 @@ module tse_tutorial #(parameter mic_n = 2)(
         // First debounce the input signal. KEY[1] is the button for flipping
         // in_valid. The button is active low so the output has "_n".
         wire in_valid_flip_n_db;
-        button_debouncer #(clk_freq = 2) in_valid_flip_db(
+        button_debouncer #(.clk_freq(2)) db(
                 .clk(clk_2),
                 .pb_in(KEY[1]),
                 .pb_out(in_valid_flip_n_db)
@@ -134,13 +117,169 @@ module tse_tutorial #(parameter mic_n = 2)(
                         );
                 end  
         endgenerate
-        // END MODIFIED 
         
+        // Save the output valid state of the microphones.
+        reg out_valid_flag;
+        wire out_valid_flag_clear; // Combinational logic, will be controlled by FSM.
+        reg [2:0] out_valid_hist;
+        initial begin
+                out_valid_flag = 1'b0;
+                out_valid_hist = 3'd0;
+        end
+        always @(posedge sys_clk) begin
+                // Since the out_valid signals from each microphone should be
+                // synchronous, we only save the signal from the first mic.
+                out_valid_hist[2:0] <= {out_valid_hist[1:0], filter_out_valid[0]};
+                if (~core_reset_n || out_valid_flag_clear) begin
+                        out_valid_flag <= 0;
+                end
+                else if (~out_valid_hist[2] && out_valid_hist[1]) begin
+                        // out_valid changed from 0 to 1.
+                        out_valid_flag <= 1;
+                end
+                else begin
+                        out_valid_flag <= out_valid_flag;
+                end
+        end
+
+        // RAM-module related nets.
+        wire [3:0] byteenable = 4'b1111;
+        wire chipselect;
+        wire write;
+        wire clken = 1'b1;
+        reg [9:0] address;
+        reg [31:0] writedata;
+        wire [31:0] readdata;
+        localparam addr_last = 10'd1023; // last address
+        
+        initial begin
+                address = 10'd0;
+                writedata = 32'd0;
+        end
+
+        // Wire for outputing IRQ to Nios core.
+        wire irq_line;
+
+        // Logic for the FSM to write output of the filters to memory.
+        // State encodings.
+        localparam S_init = 4'd0,
+                   S_wait = 4'd1,
+                   S_write1 = 4'd2,
+                   S_write_wait = 4'd3,
+                   S_write2 = 4'd4,
+                   S_irq_raise = 4'd5,
+                   S_irq_raise_wait = 4'd6,
+                   S_irq_wait1 = 4'd7,
+                   S_irq_wait2 = 4'd8,
+                   S_irq_wait3 = 4'd9,
+                   S_irq_release = 4'd10;
+
+        reg [3:0] curr_state;
+        reg [3:0] next_state;
+        initial begin
+                curr_state = S_init;
+        end
+
+        // State transition logic.
+        always @(posedge sys_clk) begin
+                if (~core_reset_n) begin
+                        curr_state <= S_init;
+                end
+                else begin
+                        curr_state <= next_state;
+                end
+        end
+        always @(*) begin
+                next_state = curr_state; // Default case
+                case (curr_state)
+                        S_init: begin
+                                next_state = S_wait;
+                        end
+                        S_wait: begin
+                                if (out_valid_flag) begin
+                                        next_state = S_write1;
+                                end
+                        end
+                        S_write1: begin
+                                next_state = S_write_wait;
+                        end
+                        S_write_wait: begin
+                                // One mic output uses 2 bytes, and
+                                // address is in words.
+                                if (address*4+4 == mic_n*2) begin
+                                        next_state = S_irq_raise;
+                                end
+                                else begin
+                                        next_state = S_write2;
+                                end
+                        end
+                        S_write2: begin
+                                next_state = S_write1;
+                        end
+                        S_irq_raise: begin
+                                next_state = S_irq_raise_wait;
+                        end
+                        S_irq_raise_wait: begin
+                                next_state = S_irq_wait1;
+                        end
+                        S_irq_wait1: begin
+                                next_state = S_irq_wait2;
+                        end
+                        S_irq_wait2: begin
+                                next_state = S_irq_wait3;
+                        end
+                        S_irq_wait3: begin
+                                if (readdata == 32'd0) begin
+                                        next_state = S_irq_release;
+                                end
+                                else begin
+                                        next_state = S_irq_wait1;
+                                end
+                        end
+                        S_irq_release: begin
+                                next_state = S_init;
+                        end
+                endcase
+        end
+
+        // Sequential output logic.
+        always @(posedge sys_clk) begin
+                // Logic for address.
+                case (curr_state)
+                        S_init: address <= 10'd0;
+                        S_write2: address <= address + 10'd1;
+                        S_irq_raise: address <= addr_last;
+                        default: address <= address;
+                endcase
+                // Logic for writedata.
+                case (curr_state)
+                        S_init: writedata <= 32'd0;
+                        S_write1: writedata <=
+                                {filter_out_data[address*2+1], filter_out_data[address*2]};
+                        S_irq_raise: writedata <= 32'd1;
+                        default: writedata <= writedata;
+                endcase
+        end
+
+        // Combinational output logic.
+        assign out_valid_flag_clear = (curr_state == S_init);
+        assign irq_line = (curr_state == S_irq_wait1)
+                       || (curr_state == S_irq_wait2)
+                       || (curr_state == S_irq_wait3);
+        assign chipselect = (curr_state == S_write_wait)
+                         || (curr_state == S_irq_raise_wait)
+                         || (curr_state == S_irq_wait2);
+        assign write = (curr_state == S_write_wait)
+                    || (curr_state == S_irq_raise_wait);
+
+        // END MODIFIED
+        
+
         nios_system system_inst (
                 .clk_clk                                   (sys_clk),           // clk.clk
                 .reset_reset_n                             (core_reset_n),      // reset.reset_n
-                .tse_pcs_mac_tx_clock_connection_clk            (tx_clk),       // eth_tse_0_pcs_mac_tx_clock_connection.clk
-                .tse_pcs_mac_rx_clock_connection_clk            (ENET0_RX_CLK), // eth_tse_0_pcs_mac_rx_clock_connection.clk
+                .tse_pcs_mac_tx_clock_connection_clk       (tx_clk),            // eth_tse_0_pcs_mac_tx_clock_connection.clk
+                .tse_pcs_mac_rx_clock_connection_clk       (ENET0_RX_CLK),      // eth_tse_0_pcs_mac_rx_clock_connection.clk
                 .tse_mac_mdio_connection_mdc               (mdc),               // tse_mac_mdio_connection.mdc
                 .tse_mac_mdio_connection_mdio_in           (mdio_in),           //                        .mdio_in
                 .tse_mac_mdio_connection_mdio_out          (mdio_out),          //                        .mdio_out
@@ -157,11 +296,11 @@ module tse_tutorial #(parameter mic_n = 2)(
                 .ram_block_s2_chipselect             (chipselect),              //             .chipselect
                 .ram_block_s2_clken                  (clken),                   //             .clken
                 .ram_block_s2_write                  (write),                   //             .write
-                .ram_block_s2_writedata              (data),                    //             .writedata
-                .ram_block_s2_byteenable             (byteenable)               //             .byteenable
+                .ram_block_s2_writedata              (writedata),               //             .writedata
+                .ram_block_s2_readdata               (readdata),                //             .readdata
+                .ram_block_s2_byteenable             (byteenable),              //             .byteenable
+                .ext_irq_adapter_new_signal          (irq_line)                 // external interrupt adapter input
                 // END MODIFIED
         );      
-         
-         
 
 endmodule 

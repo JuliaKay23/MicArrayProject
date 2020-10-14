@@ -233,14 +233,14 @@
   <parameter name="initializationFileName">C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/sine2.hex</parameter>
   <parameter name="instanceID" value="NONE" />
   <parameter name="memorySize" value="4096" />
-  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter name="readDuringWriteMode" value="OLD_DATA" />
   <parameter name="resetrequest_enabled" value="true" />
   <parameter name="simAllowMRAMContentsFile" value="false" />
   <parameter name="simMemInitOnlyFilename" value="0" />
   <parameter name="singleClockOperation" value="true" />
   <parameter name="slave1Latency" value="1" />
   <parameter name="slave2Latency" value="1" />
-  <parameter name="useNonDefaultInitFile" value="true" />
+  <parameter name="useNonDefaultInitFile" value="false" />
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>

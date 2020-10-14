@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios_system" kind="system" version="18.1" fabric="QSYS">
  <!-- Format version 18.1 646 (Future versions may contain additional information.) -->
- <!-- 2020.10.13.11:53:09 -->
+ <!-- 2020.10.13.20:57:32 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1602604354</value>
+  <value>1602637012</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -176,7 +176,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.INIT_CONTENTS_FILE</name>
-   <value>sine2</value>
+   <value>nios_system_RAM_block</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.INIT_MEM_CONTENT</name>
@@ -188,7 +188,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.NON_DEFAULT_INIT_FILE_ENABLED</name>
-   <value>1</value>
+   <value>0</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.RAM_BLOCK_TYPE</name>
@@ -196,7 +196,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.READ_DURING_WRITE_MODE</name>
-   <value>DONT_CARE</value>
+   <value>OLD_DATA</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.SINGLE_CLOCK_OP</name>
@@ -240,7 +240,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.memoryInfo.MEM_INIT_FILENAME</name>
-   <value>sine2</value>
+   <value>nios_system_RAM_block</value>
   </assignment>
   <assignment>
    <name>postgeneration.simulation.init_file.param_name</name>
@@ -318,7 +318,7 @@ the requested settings for a module instance. -->
    <type>java.lang.String</type>
    <value>C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/sine2.hex</value>
    <derived>false</derived>
-   <enabled>true</enabled>
+   <enabled>false</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -348,7 +348,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="readDuringWriteMode">
    <type>java.lang.String</type>
-   <value>DONT_CARE</value>
+   <value>OLD_DATA</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -404,7 +404,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="useNonDefaultInitFile">
    <type>boolean</type>
-   <value>true</value>
+   <value>false</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -414,7 +414,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>false</value>
    <derived>false</derived>
-   <enabled>true</enabled>
+   <enabled>false</enabled>
    <visible>false</visible>
    <valid>true</valid>
   </parameter>
@@ -527,7 +527,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_init_file_name">
    <type>java.lang.String</type>
-   <value>C:/Users/julia/Documents/MicArrayProject/Ethernet/UsingTripleSpeedEthernet/tse_tutorial_restored/sine2.hex</value>
+   <value>nios_system_RAM_block.hex</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -23774,5 +23774,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <reportVersion>18.1 646</reportVersion>
- <uniqueIdentifier>00FF2D482ACB0000017522A9DF0E</uniqueIdentifier>
+ <uniqueIdentifier>00FF2D482ACB00000175249C36D6</uniqueIdentifier>
 </EnsembleReport>
