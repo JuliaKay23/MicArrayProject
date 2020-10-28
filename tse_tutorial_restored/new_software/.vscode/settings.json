@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "alt_irq.h": "c",
+        "alt_stdio.h": "c"
+    }
+}

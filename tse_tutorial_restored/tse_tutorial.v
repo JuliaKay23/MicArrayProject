@@ -17,7 +17,11 @@ module tse_tutorial #(parameter mic_n = 2)(
         input  [3: 0] ENET0_RX_DATA,
         input         ENET0_RX_DV,
         output [3: 0] ENET0_TX_DATA,
-        output        ENET0_TX_EN
+        output        ENET0_TX_EN,
+
+        // Output for debug purposes
+        output        in_valid_led,  // Active low LED for in_valid
+        output        irq_gpio_out   // Output irq signal to GPIO
 );
 
         //TO-DO
@@ -303,4 +307,8 @@ module tse_tutorial #(parameter mic_n = 2)(
                 // END MODIFIED
         );      
 
+        // Debug outputs.
+        assign in_valid_led = ~in_valid;
+        assign irq_gpio_out = irq_line;
 endmodule 
+
