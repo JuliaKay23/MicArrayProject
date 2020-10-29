@@ -1,0 +1,47 @@
+VHDL Notes
+------------
+
+
+Library
+------------------------------
+library ieee;
+	use ieee.std_logic_1164.all;
+
+library altera_mf;
+	use altera_mf.altera_mf_components.all;
+
+library lib_en_udp_ip_eth_rgmii_alt_c5_eval;
+
+
+
+Entity
+The interface between a design and its external environment
+Includes the ports for data IO
+------------------------------
+entity __1_ is
+    generic();
+    port();
+end;
+
+1. 
+
+
+Architecture
+The logic/implementation of a design. 
+------------------------------
+architecture ___1__ of __2__ is
+    signal ...  [DECLARATIONS]
+
+begin
+    ... logic .... [USES]
+end
+
+1. One of 
+    struct
+    behave
+    rtl
+    ...many more?
+
+
+
+

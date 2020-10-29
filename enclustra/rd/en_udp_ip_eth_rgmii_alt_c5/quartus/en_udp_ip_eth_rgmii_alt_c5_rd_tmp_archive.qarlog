@@ -1,0 +1,50 @@
+Quartus Prime Archive log --	C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd_tmp_archive.qarlog
+
+Archive:	C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd_tmp_archive.qar
+Date:		Fri Oct 16 11:14:40 2020
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_arbiter.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_base_pkg.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_checksum_udp.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_conv_from_gray.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_crc.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_dpram.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_fifo_async.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_fifo_sync.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_gmii_framer.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_gray_incrementer.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_loadable_crc.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_mdio.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_mdio_config.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_rgmii_gmii_trispeed.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_rom_fifo.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_arp_core.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_buffer.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_eth_core.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_ip_core.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_pipeline_stage.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_core.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_eth_core.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_txheader.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cs/en_cs_pipeline_stage.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/lic/en_udp_ip_eth_rgmii_alt_c5_eval.dat
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/vhdl/en_udp_ip_eth_pkg.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/vhdl/en_udp_ip_eth_rgmii.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/ip/hdl/vhdl/en_udp_ip_eth_rgmii_alt_c5.vhd
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.qpf
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.qsf
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.sdc
+C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/vhdl/en_udp_ip_eth_rgmii_alt_c5_rd.vhd
+c:/intelfpga/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 33 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Oct 16 11:14:43 2020
+Source archive file:	C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd_tmp_archive.qar
+Archive was extracted into	C:/Users/ianfm/Source/Gateware/Enclustra/
+		 - successfully.

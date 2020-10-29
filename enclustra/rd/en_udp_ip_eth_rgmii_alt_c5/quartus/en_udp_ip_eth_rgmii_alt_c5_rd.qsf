@@ -1,0 +1,103 @@
+
+
+set_global_assignment -name FAMILY "Arria V"
+set_global_assignment -name DEVICE 5AGXFB3H4F35C5
+set_global_assignment -name TOP_LEVEL_ENTITY en_udp_ip_eth_rgmii_alt_c5_rd
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:41:26  MARCH 23, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+
+
+set_location_assignment PIN_AH17 -to Clk125
+set_location_assignment PIN_A14 -to RstIn_N
+set_location_assignment PIN_AL11 -to Eth_Rst_N
+set_location_assignment PIN_AD12 -to Rgmii_TxClk
+set_location_assignment PIN_AB12 -to Rgmii_TxCtl
+set_location_assignment PIN_AC11 -to Rgmii_TxD[0]
+set_location_assignment PIN_AC12 -to Rgmii_TxD[1]
+set_location_assignment PIN_AC13 -to Rgmii_TxD[2]
+set_location_assignment PIN_AB11 -to Rgmii_TxD[3]
+set_location_assignment PIN_AL4 -to Rgmii_RxClk
+set_location_assignment PIN_AB13 -to Rgmii_RxCtl
+set_location_assignment PIN_AF11 -to Rgmii_RxD[0]
+set_location_assignment PIN_AF13 -to Rgmii_RxD[1]
+set_location_assignment PIN_AE12 -to Rgmii_RxD[2]
+set_location_assignment PIN_AE13 -to Rgmii_RxD[3]
+set_location_assignment PIN_C16 -to Led_N[0]
+set_location_assignment PIN_C14 -to Led_N[1]
+
+
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_TxD[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_TxD[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_TxD[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_TxCtl
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Led_N[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Led_N[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Clk125
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Eth_Rst_N
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_RxClk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_RxCtl
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_RxD[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_RxD[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_RxD[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_RxD[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_TxClk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to Rgmii_TxD[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to RstIn_N
+
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to Rgmii_RxCtl
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to Rgmii_RxD[0]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to Rgmii_RxD[1]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to Rgmii_RxD[2]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to Rgmii_RxD[3]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Rgmii_TxCtl
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Rgmii_TxD[0]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Rgmii_TxD[1]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Rgmii_TxD[2]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to Rgmii_TxD[3]
+
+
+
+set_global_assignment -name LICENSE_FILE ../../../ip/hdl/lic/en_udp_ip_eth_rgmii_alt_c5_eval.dat
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/vhdl/en_udp_ip_eth_rgmii_alt_c5.vhd -library lib_en_udp_ip_eth_rgmii_alt_c5_eval
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/vhdl/en_udp_ip_eth_rgmii.vhd -library lib_en_udp_ip_eth_rgmii_alt_c5_eval
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/vhdl/en_udp_ip_eth_pkg.vhd -library lib_en_udp_ip_eth_rgmii_alt_c5_eval
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cs/en_cs_pipeline_stage.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cs
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_eth_core.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_core.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_pipeline_stage.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_ip_core.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_eth_core.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_buffer.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_arp_core.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_txheader.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cn
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_rgmii_gmii_trispeed.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_loadable_crc.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_gray_incrementer.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_gmii_framer.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_fifo_sync.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_fifo_async.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_dpram.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_crc.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_conv_from_gray.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_checksum_udp.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_base_pkg.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_arbiter.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_rom_fifo.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_mdio.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../../../ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_mdio_config.vhd -library en_udp_ip_eth_rgmii_alt_c5_eval_cl
+set_global_assignment -name VHDL_FILE ../vhdl/en_udp_ip_eth_rgmii_alt_c5_rd.vhd
+set_global_assignment -name SDC_FILE en_udp_ip_eth_rgmii_alt_c5_rd.sdc
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

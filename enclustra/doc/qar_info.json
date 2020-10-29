@@ -1,0 +1,7 @@
+{
+	"common_dir" : "C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/",
+	"acds_version" : "Version 18.1.0",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.qpf"
+}
