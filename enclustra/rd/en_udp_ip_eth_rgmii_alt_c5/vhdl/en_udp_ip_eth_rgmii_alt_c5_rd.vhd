@@ -15,6 +15,7 @@
 library ieee;
 	use ieee.std_logic_1164.all;
 	use ieee.numeric_std.all;
+	use ieee.std_logic_unsigned.all;
 
 library lib_en_udp_ip_eth_rgmii_alt_c5_eval;
 
@@ -84,7 +85,7 @@ architecture struct of en_udp_ip_eth_rgmii_alt_c5_rd is
 	-----------------------------------------------------------------------------------------------
 	-- types
 	-----------------------------------------------------------------------------------------------
-	type myTxState_t is (Idle_s, TxHdr_s, Tx_Payload_s);
+
 	type LbFsmState_t is (Idle_s, RxHdr_s, TxHdrFetch_s, TxHdr_s, Payload_s);
 	type NaturalArray_t is array (natural range <>) of natural;
 	type HdrRamArray_t is array (63 downto 0) of std_logic_vector (7 downto 0);
@@ -96,10 +97,10 @@ architecture struct of en_udp_ip_eth_rgmii_alt_c5_rd is
 	constant UdpPortCount_c			: positive					:= 1;
 	constant MaxPayloadSize_c		: positive					:= 8000;
 	constant RxBufferCount_c		: natural					:= 4;
-	constant EnableRawEth_c			: boolean					:= false;
-	-- constant RawEthRxBufferCnt_c	: natural					:= 2;
-	-- constant RawEthTxBufferCnt_c	: natural					:= 2;
-	-- constant RawEthPayloadSize_c	: positive					:= 2048;
+	constant EnableRawEth_c			: boolean					:= true;
+	constant RawEthRxBufferCnt_c	: natural					:= 2;
+	constant RawEthTxBufferCnt_c	: natural					:= 2;
+	constant RawEthPayloadSize_c	: positive					:= 2048;
 	constant TimeoutWidth_c			: positive					:= 12;
 	constant RoundRobin_c			: boolean					:= true;
 	constant ArpReply_c				: boolean					:= true;
@@ -153,13 +154,6 @@ architecture struct of en_udp_ip_eth_rgmii_alt_c5_rd is
 	-- internal constants
 	-----------------------------------------------------------------------------------------------
 
-	-- ticks per second on clk125
-	constant COUNTS_IN_1_SEC 	: std_logic_vector(0 to 27)	:=	125000000;
-	constant TxDataByteLength_c	: std_logic_vector(0 to 31)	:=	4;
-
-	-- The & operator performs concatenation... not AND
-	-- the bits of HdrMasks correspond to enable bits for each field of the header
-	-- e.g. UdpHdrMask(2) is the enable bit for the length field of a UDP header
 	constant RxHdrByteMaskFull_c	: std_logic_vector (0 to 39)	:=
 		EthRxHdrMask_c (0)	& EthRxHdrMask_c (0)&
 		EthRxHdrMask_c (0)	& EthRxHdrMask_c (0)&
@@ -246,9 +240,36 @@ architecture struct of en_udp_ip_eth_rgmii_alt_c5_rd is
 	signal Rx_Rdy				: std_logic_vector (UdpPortCount_c-1 downto 0);
 	signal Rx_Lst				: std_logic_vector (UdpPortCount_c-1 downto 0);
 	
-	-- Ian's second_delay
-	signal counter				: std_logic_vector (UdpPortCount_c*8-1 downto 0);
-	signal second_tick			: std_logic;
+	-- Raw Ethernet transmit interface
+	signal EthTx_Data			: std_logic_vector (7 downto 0);
+	signal EthTx_Vld			: std_logic;
+	signal EthTx_Rdy			: std_logic;
+	signal EthTx_Lst			: std_logic;
+
+	-- Raw Ethernet receive interface
+	signal EthRx_Data			: std_logic_vector (7 downto 0);
+	signal EthRx_Vld			: std_logic;
+	signal EthRx_Rdy			: std_logic;
+	signal EthRx_Lst			: std_logic;
+	
+	-- loopback
+	signal LbFsmState			: LbFsmState_t;
+	signal LbFsmState_Next		: LbFsmState_t;
+	signal HdrRamAddr			: std_logic_vector (5 downto 0);
+	signal HdrRamQ				: std_logic_vector (7 downto 0);
+	signal HdrRamWen			: std_logic;
+	signal HdrRamArray			: HdrRamArray_t := (others => (others => '0'));
+	signal ByteCountClr			: std_logic;
+	signal ByteCountCen			: std_logic;
+	signal ByteCount			: std_logic_vector (5 downto 0);
+	
+	-- receive/transmit packet led
+	signal PktDetected			: std_logic;
+	signal RxTxPktLed			: std_logic;
+	signal RxTxPktLedCtrQ		: std_logic_vector (toLedCtrWidth (Simulation_g)-1 downto 0);
+
+	-- blinking led
+	signal BlinkingLedCtrQ		: std_logic_vector (toLedCtrWidth (Simulation_g)+1 downto 0);
 	
 begin
 	
@@ -284,23 +305,23 @@ begin
 		-------------------------------------------------------------------------------------------
 
 		generic map (
-			UdpPortCount_g			=> UdpPortCount_c,
-			MaxPayloadSize_g		=> MaxPayloadSize_c,
-			RxBufferCount_g			=> RxBufferCount_c,
-			EnableRawEth_g			=> EnableRawEth_c,
-			RawEthRxBufferCnt_g		=> RawEthRxBufferCnt_c,
-			RawEthTxBufferCnt_g		=> RawEthTxBufferCnt_c,
-			RawEthPayloadSize_g		=> RawEthPayloadSize_c,
-			TimeoutWidth_g			=> TimeoutWidth_c,
-			RoundRobin_g			=> RoundRobin_c,
-			ArpReply_g				=> ArpReply_c,
-			UseStreamingMode_g		=> UseStreamingMode_c,
-			UdpRxHdrMask_g			=> UdpRxHdrMask_c,
-			UdpTxHdrMask_g			=> UdpTxHdrMask_c,
-			IpRxHdrMask_g			=> IpRxHdrMask_c,
-			IpTxHdrMask_g			=> IpTxHdrMask_c,
-			EthRxHdrMask_g			=> EthRxHdrMask_c,
-			EthTxHdrMask_g			=> EthTxHdrMask_c
+			UdpPortCount_g		=> UdpPortCount_c,
+			MaxPayloadSize_g	=> MaxPayloadSize_c,
+			RxBufferCount_g		=> RxBufferCount_c,
+			EnableRawEth_g		=> EnableRawEth_c,
+			RawEthRxBufferCnt_g	=> RawEthRxBufferCnt_c,
+			RawEthTxBufferCnt_g	=> RawEthTxBufferCnt_c,
+			RawEthPayloadSize_g	=> RawEthPayloadSize_c,
+			TimeoutWidth_g		=> TimeoutWidth_c,
+			RoundRobin_g		=> RoundRobin_c,
+			ArpReply_g			=> ArpReply_c,
+			UseStreamingMode_g	=> UseStreamingMode_c,
+			UdpRxHdrMask_g		=> UdpRxHdrMask_c,
+			UdpTxHdrMask_g		=> UdpTxHdrMask_c,
+			IpRxHdrMask_g		=> IpRxHdrMask_c,
+			IpTxHdrMask_g		=> IpTxHdrMask_c,
+			EthRxHdrMask_g		=> EthRxHdrMask_c,
+			EthTxHdrMask_g		=> EthTxHdrMask_c
 		)
 
 		-------------------------------------------------------------------------------------------
@@ -308,8 +329,6 @@ begin
 		-------------------------------------------------------------------------------------------
 
 		port map (
-
-			--! See User Manual Section 2.2 for details on each of the ports below
 
 			---------------------------------------------------------------------------------------
 			-- user clock and reset ports
@@ -369,8 +388,8 @@ begin
 			Hdr_UdpRxPortMask	=> X"FFFF",
 			Hdr_IpSrc			=> X"10_00_00_01", -- 16.0.0.1
 			Hdr_IpDst			=> X"10_00_00_C8", -- 16.0.0.200 * try broadcast ip (look it up)
-			-- Hdr_IpSrc			=> X"C0_A8_56_4D",  -- 192.168.86.77
-			-- Hdr_IpDst			=> X"C0_A8_56_A7",  -- 192.168.86.167
+--			Hdr_IpSrc			=> X"C0_A8_56_4D",  -- 192.168.86.77
+--			Hdr_IpDst			=> X"C0_A8_56_A7",  -- 192.168.86.167
 			Hdr_IpDscp			=> X"00",
 			Hdr_IpId				=> X"0000",
 			Hdr_IpFlags			=> "010",
@@ -383,14 +402,14 @@ begin
 			-- user configuration interface ports
 			---------------------------------------------------------------------------------------
 
-			Cfg_TxEn					=> '1',
-			Cfg_RxEn					=> '1',
+			Cfg_TxEn			=> '1',
+			Cfg_RxEn			=> '1',
 			Cfg_CheckRawEthMac	=> '1',
-			Cfg_CheckMac			=> '1',
-			Cfg_CheckIp				=> '1',
-			Cfg_CheckUdp			=> '1',
-			Cfg_MTU					=> std_logic_vector (to_unsigned (0, 14)), -- not used because of packet mode
-			Cfg_Timeout				=> std_logic_vector (to_unsigned (0, 12)), -- not used because of packet mode
+			Cfg_CheckMac		=> '1',
+			Cfg_CheckIp			=> '1',
+			Cfg_CheckUdp		=> '1',
+			Cfg_MTU				=> std_logic_vector (to_unsigned (0, 14)), -- not used because of packet mode
+			Cfg_Timeout			=> std_logic_vector (to_unsigned (0, 12)), -- not used because of packet mode
 
 			---------------------------------------------------------------------------------------
 			-- MII ports
@@ -410,31 +429,132 @@ begin
 			Version				=> open
 		);
 
-
-	
-	
-
-
+		EthTx_Data			<= EthRx_Data;
+		EthTx_Vld			<= EthRx_Vld;
+		EthRx_Rdy			<= EthTx_Rdy;
+		EthTx_Lst			<= EthRx_Lst;
 
 	-----------------------------------------------------------------------------------------------
-	-- seconds timer -- Ian 
-	-- based on https://stackoverflow.com/questions/29948476/creating-a-real-time-delay-in-vhdl
+	-- udp loopback fsm
 	-----------------------------------------------------------------------------------------------
-
-	second_delay : process (Clk125) is
+	
+	process (LbFsmState, Rx_Vld, Rx_Lst, Tx_Rdy, ByteCount, HdrRamQ, Rx_Data)
 	begin
-		if (rising_edge(I_CLK)) then
-			second_tick <= '0';
-			-- if (counter < COUNTS_IN_1_SEC-1) then
-			if (counter < 125000000-1) then
-				counter <= counter + 1;
+	
+		-------------------------------------------------------------------------------------------
+		-- default assignments
+		-------------------------------------------------------------------------------------------
+	
+		LbFsmState_Next <= LbFsmState;
+		Rx_Rdy (0) <= '0';
+		HdrRamAddr <= (others => '0');
+		HdrRamWen <= '0';
+		Tx_Vld (0) <= '0';
+		Tx_Lst (0) <= '0';
+		Tx_Data <= HdrRamQ;
+		ByteCountClr <= '0';
+		ByteCountCen <= '0';
+		
+		-------------------------------------------------------------------------------------------
+		-- conditional assignments
+		-------------------------------------------------------------------------------------------
+		
+		case LbFsmState is 
+
+			---------------------------------------------------------------------------------------
+			when Idle_s =>
+			---------------------------------------------------------------------------------------
+
+				if Rx_Vld (0) = '1' then
+					if RxHdrByteLength_c > 0 then
+						LbFsmState_Next <= RxHdr_s;
+					elsif TxHdrByteLength_c > 0 then
+						LbFsmState_Next <= TxHdrFetch_s;
+					else
+						LbFsmState_Next <= Payload_s;
+					end if;
+				end if;
+
+			---------------------------------------------------------------------------------------
+			when RxHdr_s =>
+			---------------------------------------------------------------------------------------
+			
+				Rx_Rdy (0) <= '1';
+				if Rx_Vld (0) = '1' then
+					if Rx_Lst (0) = '1' then
+						ByteCountClr <= '1';
+						LbFsmState_Next <= Idle_s;
+					else
+						HdrRamAddr <= std_logic_vector (to_unsigned (RxHdrByteAddr_c (to_integer (unsigned (ByteCount))),HdrRamAddr'length));
+						HdrRamWen <= '1';
+						if unsigned (ByteCount) = RxHdrByteLength_c-1 then
+							ByteCountClr <= '1';
+							if TxHdrByteLength_c > 0 then
+								LbFsmState_Next <= TxHdrFetch_s;
+							else
+								LbFsmState_Next <= Payload_s;
+							end if;
+						else
+							ByteCountCen <= '1';
+						end if;
+					end if;
+				end if;				
+			
+			---------------------------------------------------------------------------------------
+			when TxHdrFetch_s =>
+			---------------------------------------------------------------------------------------
+			
+				HdrRamAddr <= std_logic_vector (to_unsigned (TxHdrByteAddr_c (to_integer (unsigned (ByteCount))),HdrRamAddr'length));
+				LbFsmState_Next <= TxHdr_s;
+			
+			---------------------------------------------------------------------------------------
+			when TxHdr_s =>
+			---------------------------------------------------------------------------------------
+			
+				Tx_Vld (0) <= '1';
+				HdrRamAddr <= std_logic_vector (to_unsigned (TxHdrByteAddr_c (to_integer (unsigned (ByteCount))),HdrRamAddr'length));
+				if Tx_Rdy (0) = '1' then
+					if unsigned (ByteCount) = TxHdrByteLength_c-1 then
+						ByteCountClr <= '1';
+						LbFsmState_Next <= Payload_s;
+					else
+						ByteCountCen <= '1';
+						LbFsmState_Next <= TxHdrFetch_s;
+					end if;
+				end if;
+			
+			---------------------------------------------------------------------------------------
+			when Payload_s =>
+			---------------------------------------------------------------------------------------
+			
+				Tx_Vld (0) <= Rx_Vld (0);
+				Rx_Rdy (0) <= Tx_Rdy (0);
+				Tx_Lst (0) <= Rx_Lst (0);
+				Tx_Data <= Rx_Data;
+				if Rx_Vld (0) = '1' and Tx_Rdy (0) = '1' and Rx_Lst (0) = '1' then
+					LbFsmState_Next <= Idle_s;
+				end if;
+			
+			---------------------------------------------------------------------------------------
+			when others =>
+			---------------------------------------------------------------------------------------
+			
+				LbFsmState_Next <= Idle_s;
+
+		end case;
+		
+	end process;
+	
+	process (Clk125)
+	begin
+		if rising_edge (Clk125) then
+			if Rst_Clk125 = '1' then
+				LbFsmState <= Idle_s;
 			else
-				second_tick <= '1';
-				counter         <= (others => '0');
+				LbFsmState <= LbFsmState_Next;
 			end if;
 		end if;
-	end process second_delay;
-
+	end process;
 
 	-----------------------------------------------------------------------------------------------
 	-- udp loopback byte counter
@@ -455,7 +575,71 @@ begin
 		end if;
 	end process;
 
+	-----------------------------------------------------------------------------------------------
+	-- udp loopback header ram
+	-----------------------------------------------------------------------------------------------
 
+	process(Clk125)
+	begin
+		if rising_edge(Clk125) then
+			HdrRamQ <= HdrRamArray (to_integer (unsigned (HdrRamAddr)));			
+			if HdrRamWen = '1' then
+				HdrRamArray (to_integer (unsigned (HdrRamAddr))) <= Rx_Data;
+			end if;
+		end if;
+	end process;
+
+	-----------------------------------------------------------------------------------------------
+	-- udp packet receive / transmit led
+	-----------------------------------------------------------------------------------------------
+	
+	-- packet detector
+	PktDetected <= '1' when (Tx_Vld = "1" and Tx_Lst = "1" and Tx_Rdy = "1") else '0';
+	
+	-- ~1/8 second pulse
+	process (Clk125)
+	begin
+		if rising_edge (Clk125) then
+			if Rst_Clk125 = '1' then
+				RxTxPktLedCtrQ <= (others => '0');
+				RxTxPktLed <= '0';		
+			else
+				RxTxPktLed <= '0';
+				if PktDetected = '1' then
+					RxTxPktLedCtrQ <= (others => '0');
+					RxTxPktLedCtrQ (0) <= '1';
+					RxTxPktLed <= '1';
+				elsif unsigned (RxTxPktLedCtrQ) > 0 then
+					RxTxPktLedCtrQ <= std_logic_vector (unsigned (RxTxPktLedCtrQ) + 1);
+					RxTxPktLed <= '1';
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	-- output
+	Led_N (0) <= not RxTxPktLed;
+
+	-----------------------------------------------------------------------------------------------
+	-- blinking led
+	-----------------------------------------------------------------------------------------------
+	
+	-- ~1/4 second pulses
+	process (Clk125)
+	begin
+		if rising_edge (Clk125) then
+			if Rst_Clk125 = '1' then
+				BlinkingLedCtrQ <= (others => '0');
+			else
+				BlinkingLedCtrQ <= std_logic_vector (unsigned (BlinkingLedCtrQ) + 1);
+			end if;
+		end if;
+	end process;
+	
+	-- output
+	Led_N (1) <= not BlinkingLedCtrQ (BlinkingLedCtrQ'left);
+	
+end;
 
 ---------------------------------------------------------------------------------------------------
 -- eof
