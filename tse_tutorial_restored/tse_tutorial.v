@@ -3,7 +3,7 @@ module tse_tutorial #(parameter mic_n = 2)(
         input         CLOCK_50,
         
         // button keys
-        input  [1: 0] KEY,
+        input  [2: 0] KEY,
         
         input wire [mic_n-1:0] pdm_mic_input, // Stereo mic input arrays
         output wire pdm_mic_clk, // Clock to drive the microphones
@@ -23,10 +23,6 @@ module tse_tutorial #(parameter mic_n = 2)(
         output        in_valid_led,  // Active low LED for in_valid
         output        irq_gpio_out   // Output irq signal to GPIO
 );
-
-        //TO-DO
-        // 1. Change size of RAM in qsys to be equal to size n
-        // 1. Send all of filter_out_data to nios ii then over ethernet
 
         wire sys_clk, clk_125, clk_25, clk_2p5, clk_2, tx_clk;
         wire core_reset_n;
@@ -64,6 +60,15 @@ module tse_tutorial #(parameter mic_n = 2)(
         );
         
         // MODIFIED
+
+        // Use KEY[2] to trigger the SignalTap logic analyzer.
+        wire logic_analyzer_trig;
+        button_debouncer #(.clk_freq(2)) db0(
+                .clk(clk_2),
+                .pb_in(KEY[2]),
+                .pb_out(logic_analyzer_trig)
+        );
+
         wire in_ready[mic_n]; // for backpressure, unused
         wire [15:0] filter_out_data[mic_n];
         wire filter_out_valid[mic_n];
@@ -86,7 +91,7 @@ module tse_tutorial #(parameter mic_n = 2)(
         // First debounce the input signal. KEY[1] is the button for flipping
         // in_valid. The button is active low so the output has "_n".
         wire in_valid_flip_n_db;
-        button_debouncer #(.clk_freq(2)) db(
+        button_debouncer #(.clk_freq(2)) db1(
                 .clk(clk_2),
                 .pb_in(KEY[1]),
                 .pb_out(in_valid_flip_n_db)
@@ -97,7 +102,10 @@ module tse_tutorial #(parameter mic_n = 2)(
         always @(posedge clk_2) begin
                 in_valid_flip_hist[1] <= in_valid_flip_hist[0];
                 in_valid_flip_hist[0] <= ~in_valid_flip_n_db; // Negate active low
-                if (~in_valid_flip_hist[1] && in_valid_flip_hist[0]) begin
+                if (~core_reset_n) begin
+                        in_valid = 1'b0;
+                end
+                else if (~in_valid_flip_hist[1] && in_valid_flip_hist[0]) begin
                         in_valid <= ~in_valid;
                 end
                 else begin
@@ -151,13 +159,13 @@ module tse_tutorial #(parameter mic_n = 2)(
         wire chipselect;
         wire write;
         wire clken = 1'b1;
-        reg [9:0] address;
+        reg [6:0] address;
         reg [31:0] writedata;
         wire [31:0] readdata;
-        localparam addr_last = 10'd1023; // last address
+        localparam addr_last = 7'd127; // last address
         
         initial begin
-                address = 10'd0;
+                address = 7'd0;
                 writedata = 32'd0;
         end
 

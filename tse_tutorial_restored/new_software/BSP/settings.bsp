@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 27, 2020 6:05:54 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1603836354658</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Nov 10, 2020 4:16:47 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1605043007194</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
-        <BspSettingsFile>.\BSP\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>BSP\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
@@ -942,8 +942,8 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>RAM_block</slaveDescriptor>
-                <addressRange>0x00100000 - 0x00100FFF</addressRange>
-                <addressSpan>4096</addressSpan>
+                <addressRange>0x00100000 - 0x001001FF</addressRange>
+                <addressSpan>512</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>

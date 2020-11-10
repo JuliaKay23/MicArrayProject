@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Tue Oct 27 10:09:09 EDT 2020
+ * Generated: Tue Nov 03 21:46:52 EST 2020
  */
 
 /*
@@ -163,8 +163,8 @@
 #define RAM_BLOCK_READ_DURING_WRITE_MODE "OLD_DATA"
 #define RAM_BLOCK_SINGLE_CLOCK_OP 1
 #define RAM_BLOCK_SIZE_MULTIPLE 1
-#define RAM_BLOCK_SIZE_VALUE 4096
-#define RAM_BLOCK_SPAN 4096
+#define RAM_BLOCK_SIZE_VALUE 512
+#define RAM_BLOCK_SPAN 512
 #define RAM_BLOCK_TYPE "altera_avalon_onchip_memory2"
 #define RAM_BLOCK_WRITABLE 1
 
@@ -191,8 +191,8 @@
 #define SGDMA_TX_M_READ_RAM_BLOCK_READ_DURING_WRITE_MODE "OLD_DATA"
 #define SGDMA_TX_M_READ_RAM_BLOCK_SINGLE_CLOCK_OP 1
 #define SGDMA_TX_M_READ_RAM_BLOCK_SIZE_MULTIPLE 1
-#define SGDMA_TX_M_READ_RAM_BLOCK_SIZE_VALUE 4096
-#define SGDMA_TX_M_READ_RAM_BLOCK_SPAN 4096
+#define SGDMA_TX_M_READ_RAM_BLOCK_SIZE_VALUE 512
+#define SGDMA_TX_M_READ_RAM_BLOCK_SPAN 512
 #define SGDMA_TX_M_READ_RAM_BLOCK_TYPE "altera_avalon_onchip_memory2"
 #define SGDMA_TX_M_READ_RAM_BLOCK_WRITABLE 1
 

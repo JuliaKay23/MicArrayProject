@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios_system" kind="nios_system" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 646 (Future versions may contain additional information.) -->
- <!-- 2020.10.27.16:06:16 -->
+ <!-- 2020.11.10.15:12:32 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1603829176</value>
+  <value>1605039152</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -216,7 +216,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.SIZE_VALUE</name>
-   <value>4096</value>
+   <value>512</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.WRITABLE</name>
@@ -348,7 +348,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="memorySize">
    <type>long</type>
-   <value>4096</value>
+   <value>512</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -487,7 +487,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_set_addr_width">
    <type>int</type>
-   <value>10</value>
+   <value>7</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -495,7 +495,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_set_addr_width2">
    <type>int</type>
-   <value>10</value>
+   <value>7</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -587,7 +587,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>4096</value>
+    <value>512</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -675,7 +675,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="explicitAddressSpan">
     <type>java.math.BigInteger</type>
-    <value>4096</value>
+    <value>512</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -886,7 +886,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>address</name>
     <direction>Input</direction>
-    <width>10</width>
+    <width>7</width>
     <role>address</role>
    </port>
    <port>
@@ -964,7 +964,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>4096</value>
+    <value>512</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1052,7 +1052,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="explicitAddressSpan">
     <type>java.math.BigInteger</type>
-    <value>4096</value>
+    <value>512</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -1263,7 +1263,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>address2</name>
     <direction>Input</direction>
-    <width>10</width>
+    <width>7</width>
     <role>address</role>
    </port>
    <port>
@@ -5734,7 +5734,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='main_memory.s1' start='0x80000' end='0xCB000' type='altera_avalon_onchip_memory2.s1' /><slave name='RAM_block.s1' start='0x100000' end='0x101000' type='altera_avalon_onchip_memory2.s1' /><slave name='descriptor_memory.s1' start='0x101000' end='0x102000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x102800' end='0x103000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='tse.control_port' start='0x103000' end='0x103400' type='altera_eth_tse.control_port' /><slave name='sgdma_tx.csr' start='0x103400' end='0x103440' type='altera_avalon_sgdma.csr' /><slave name='sgdma_rx.csr' start='0x103440' end='0x103480' type='altera_avalon_sgdma.csr' /><slave name='jtag_uart.avalon_jtag_slave' start='0x103480' end='0x103488' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='main_memory.s1' start='0x80000' end='0xCB000' type='altera_avalon_onchip_memory2.s1' /><slave name='RAM_block.s1' start='0x100000' end='0x100200' type='altera_avalon_onchip_memory2.s1' /><slave name='descriptor_memory.s1' start='0x101000' end='0x102000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x102800' end='0x103000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='tse.control_port' start='0x103000' end='0x103400' type='altera_eth_tse.control_port' /><slave name='sgdma_tx.csr' start='0x103400' end='0x103440' type='altera_avalon_sgdma.csr' /><slave name='sgdma_rx.csr' start='0x103440' end='0x103480' type='altera_avalon_sgdma.csr' /><slave name='jtag_uart.avalon_jtag_slave' start='0x103480' end='0x103488' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6462,7 +6462,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>RAM_block.s1</name>
     <baseAddress>1048576</baseAddress>
-    <span>4096</span>
+    <span>512</span>
    </memoryBlock>
   </interface>
   <interface name="instruction_master" kind="avalon_master" version="18.1">
@@ -11043,7 +11043,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>RAM_block.s1</name>
     <baseAddress>1048576</baseAddress>
-    <span>4096</span>
+    <span>512</span>
    </memoryBlock>
   </interface>
   <interface name="out" kind="avalon_streaming_source" version="18.1">

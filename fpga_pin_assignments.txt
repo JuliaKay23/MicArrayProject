@@ -8,6 +8,7 @@ HSMC - GPIO board pin number to FPGA board pin number conversion:
 Pin assignments:
 KEY[0] (reset button) -> USER_PB0 -> A14.
 KEY[1] (in_valid flip button) -> USER_PB1 -> B15.
+KEY[2] (trigger logic analyzer) -> USER_PB2 -> B14.
 
 in_valid_led -> USER_LED0 (D20) -> C16.
 irq_gpio_out -> J2 GPIO[5] -> HSMC_TX_N16 -> B8.

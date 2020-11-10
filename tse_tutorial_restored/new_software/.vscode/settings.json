@@ -2,5 +2,9 @@
     "files.associations": {
         "alt_irq.h": "c",
         "alt_stdio.h": "c"
-    }
+    },
+    "rewrap.wrappingColumn": 90,
+    "vim.textwidth": 90,
+    "editor.wordWrapColumn": 90,
+    "editor.rulers": [90]
 }

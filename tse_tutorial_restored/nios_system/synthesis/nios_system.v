@@ -6,7 +6,7 @@
 module nios_system (
 		input  wire        clk_clk,                             //                             clk.clk
 		input  wire        ext_irq_adapter_new_signal,          //                 ext_irq_adapter.new_signal
-		input  wire [9:0]  ram_block_s2_address,                //                    ram_block_s2.address
+		input  wire [6:0]  ram_block_s2_address,                //                    ram_block_s2.address
 		input  wire        ram_block_s2_chipselect,             //                                .chipselect
 		input  wire        ram_block_s2_clken,                  //                                .clken
 		input  wire        ram_block_s2_write,                  //                                .write
@@ -126,7 +126,7 @@ module nios_system (
 	wire         mm_interconnect_0_descriptor_memory_s1_clken;               // mm_interconnect_0:descriptor_memory_s1_clken -> descriptor_memory:clken
 	wire         mm_interconnect_0_ram_block_s1_chipselect;                  // mm_interconnect_0:RAM_block_s1_chipselect -> RAM_block:chipselect
 	wire  [31:0] mm_interconnect_0_ram_block_s1_readdata;                    // RAM_block:readdata -> mm_interconnect_0:RAM_block_s1_readdata
-	wire   [9:0] mm_interconnect_0_ram_block_s1_address;                     // mm_interconnect_0:RAM_block_s1_address -> RAM_block:address
+	wire   [6:0] mm_interconnect_0_ram_block_s1_address;                     // mm_interconnect_0:RAM_block_s1_address -> RAM_block:address
 	wire   [3:0] mm_interconnect_0_ram_block_s1_byteenable;                  // mm_interconnect_0:RAM_block_s1_byteenable -> RAM_block:byteenable
 	wire         mm_interconnect_0_ram_block_s1_write;                       // mm_interconnect_0:RAM_block_s1_write -> RAM_block:write
 	wire  [31:0] mm_interconnect_0_ram_block_s1_writedata;                   // mm_interconnect_0:RAM_block_s1_writedata -> RAM_block:writedata

@@ -135,7 +135,7 @@ module nios_system_mm_interconnect_0_router
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h100000 - 64'h80000); 
-    localparam PAD1 = log2ceil(64'h101000 - 64'h100000); 
+    localparam PAD1 = log2ceil(64'h100200 - 64'h100000); 
     localparam PAD2 = log2ceil(64'h102000 - 64'h101000); 
     localparam PAD3 = log2ceil(64'h103000 - 64'h102800); 
     localparam PAD4 = log2ceil(64'h103400 - 64'h103000); 
@@ -201,7 +201,7 @@ module nios_system_mm_interconnect_0_router
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
-    // ( 0x100000 .. 0x101000 )
+    // ( 0x100000 .. 0x100200 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 21'h100000   ) begin
             src_channel = 8'b10000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;

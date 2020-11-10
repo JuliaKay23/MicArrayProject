@@ -16,15 +16,32 @@ void mic_filter_isr (void *context);
 unsigned int text_length;
 volatile unsigned long mic_isr_cnt = 0;  // counter for number of mic filter isrs fired
 #define MIC_NUM 2  // number of mics
-volatile alt_u32 * ram_block = (alt_u32 *) 0x00100000;  // RAM_block base address
-const unsigned int ram_block_size = 1024;  // 1024 * u32 (4 bytes)
+volatile alt_u32 *ram_block = (alt_u32 *) 0x00100000;  // RAM_block base address
+const unsigned int ram_block_size = 128;  // 128 * u32 (4 bytes)
+
+#define CHUNK_SAMPLE 10  // Number of sample points per chunk.
+// Num of bytes for CHUNK_SAMPLE sample points. one mic sample is 16 bits.
+#define DATA_CHUNK_SIZE  (MIC_NUM*2 * CHUNK_SAMPLE)
+// We set the data buffer size to be twice the data chunk size. The reason is explained in
+// the main function.
+#define DATA_BUFFER_SIZE (2 * DATA_CHUNK_SIZE)
+volatile unsigned char data_buffer[DATA_BUFFER_SIZE];
+
+// Math summary for the numbers: One sample point of 1 mic has 16 bits of data; one sample
+// point of MIC_NUM mics has (16*MIC_NUM) bits of data, which is (MIC_NUM*2) bytes and
+// (MIC_NUM/2) 32-bit words. All the memory pointers are u32 pointers so address is count
+// in 32-bit words. One data chunk has CHUNK_SAMPLE sample points of MIC_NUM mics, which
+// is (MIC_NUM*2 * CHUNK_SAMPLE) 32-bit words. The length of the data buffer is twice the
+// length of a data chunk. Only one data chunk is copied to tx_frame and send using
+// Ethernet at a time.
 
 // Create a transmit frame
+#define frame_len (DATA_CHUNK_SIZE < 46) ? 46 : DATA_CHUNK_SIZE
 unsigned char tx_frame[1024] = {	
-	0x00,0x00, 						// for 32-bit alignment
+	0x00,0x00, 			// for 32-bit alignment
 	0xFF,0xFF,0xFF,0xFF,0xFF,0xFF, 	// destination address (broadcast)
 	0x01,0x60,0x6E,0x11,0x02,0x0F, 	// source address
-	0x00,0x2E, 						// length or type of the payload data
+	frame_len>>8,frame_len%256,		// length or type of the payload data
 	'\0' 							// payload data (ended with termination character)
 };
 // Minimum payload length is 46 (0x2E) bytes.
@@ -37,7 +54,7 @@ alt_sgdma_dev * sgdma_tx_dev;
 alt_sgdma_dev * sgdma_rx_dev;
 
 // Allocate descriptors in the descriptor_memory (onchip memory)
-alt_sgdma_descriptor tx_descriptor		__attribute__ (( section ( ".descriptor_memory" )));
+alt_sgdma_descriptor tx_descriptor	__attribute__ (( section ( ".descriptor_memory" )));
 alt_sgdma_descriptor tx_descriptor_end	__attribute__ (( section ( ".descriptor_memory" )));
 
 alt_sgdma_descriptor rx_descriptor  	__attribute__ (( section ( ".descriptor_memory" )));
@@ -159,9 +176,26 @@ int main(void)
 		*/
 
 		// NEW MODIFIED
-		const unsigned sampling_rate = 50000;
-		if (mic_isr_cnt % sampling_rate == 0) {
-			alt_printf("50000 packets sent\n");
+		if (mic_isr_cnt % CHUNK_SAMPLE == 0) {
+			// We only copy and send half of the data buffer at a time, so the isr will
+			// only update the other half of data buffer and we will not read and write
+			// the same half of data buffer concurrently.
+
+			// First copy the volatile int to a local variable.
+			unsigned long isr_cnt_backup = mic_isr_cnt;
+			// Account for the potential problem that isr_cnt increases between the if
+			// statement check and the assignment.
+			isr_cnt_backup = (isr_cnt_backup / CHUNK_SAMPLE) * CHUNK_SAMPLE;
+			// Copy the half of the data buffer which is not currently being updated.
+			unsigned long chunk_start_addr =
+				MIC_NUM*2 * ((isr_cnt_backup == 0) ? CHUNK_SAMPLE : 0);
+			// Copy one data chunk from data buffe to the tx frame.
+			memcpy(tx_frame+16, data_buffer+chunk_start_addr, DATA_CHUNK_SIZE);
+            // Create transmit sgdma descriptor
+            alt_avalon_sgdma_construct_mem_to_stream_desc(
+                &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
+            // Set up non-blocking transfer of sgdma transmit descriptor
+            alt_avalon_sgdma_do_async_transfer( sgdma_tx_dev, &tx_descriptor );
 		}
 		// END MODIFIED
 		
@@ -202,13 +236,10 @@ void rx_ethernet_isr (void *context)
 // ISR for sending mic filters' data from the ram block.
 void mic_filter_isr (void *context)
 {
-	++mic_isr_cnt;
 	// Copy mic data from ram_block to tx_frame
-	memcpy(tx_frame + 16, ram_block, MIC_NUM * 2);
-    // Create transmit sgdma descriptor
-    alt_avalon_sgdma_construct_mem_to_stream_desc( &tx_descriptor, &tx_descriptor_end, (alt_u32 *)tx_frame, 62, 0, 1, 1, 0 );
-    // Set up non-blocking transfer of sgdma transmit descriptor
-    alt_avalon_sgdma_do_async_transfer( sgdma_tx_dev, &tx_descriptor );
+	memcpy(data_buffer + mic_isr_cnt * (MIC_NUM * 2), ram_block, MIC_NUM * 2);
+	// Increment isr_cnt with modulus.
+	mic_isr_cnt = (mic_isr_cnt+1) % (2*CHUNK_SAMPLE);
 	// Clear the last word of ram_block
 	*(ram_block+ram_block_size-1) = 0;
 }

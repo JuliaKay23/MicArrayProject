@@ -145,15 +145,15 @@ ELF := tse_tutorial.elf
 C_SRCS :=
 CXX_SRCS :=
 ASM_SRCS :=
+SRC_DIR_01 := $(call adjust-path,.)
+SDIR_C_SRCS := $(SRC_DIR_01)/tse_tutorial.c
+SDIR_CXX_SRCS :=
+SDIR_ASM_SRCS :=
 
 # Variables for source paths as specified by --src-dir and 
 # --src-rdir commands.  Source files found in those directories as listed below 
 # using those SRC_DIR variables.
-SRC_DIR_01 := $(call adjust-path,.)
 
-SDIR_C_SRCS += $(SRC_DIR_01)/tse_tutorial.c
-SDIR_CXX_SRCS :=
-SDIR_ASM_SRCS :=
 
 # Path to root of object file tree.
 OBJ_ROOT_DIR := obj
