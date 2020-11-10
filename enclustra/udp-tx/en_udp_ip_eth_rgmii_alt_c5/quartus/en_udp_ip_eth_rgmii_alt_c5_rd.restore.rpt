@@ -1,0 +1,101 @@
+Restore Archived Project report for en_udp_ip_eth_rgmii_alt_c5_rd
+Fri Oct 16 11:14:43 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Oct 16 11:14:43 2020 ;
+; Revision Name                   ; en_udp_ip_eth_rgmii_alt_c5_rd         ;
+; Top-level Entity Name           ; en_udp_ip_eth_rgmii_alt_c5_rd         ;
+; Family                          ; Arria V                               ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/ianfm/Source/Gateware/en_udp_ip_eth_rgmii_alt_c5_eval/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd_tmp_archive.qar' into the 'C:/Users/ianfm/Source/Gateware/Enclustra' directory
+Info: Generated report 'en_udp_ip_eth_rgmii_alt_c5_rd.restore.rpt'
+
+
++-----------------------------------------------------------------------------+
+; Files Restored                                                              ;
++-----------------------------------------------------------------------------+
+; File Name                                                                   ;
++-----------------------------------------------------------------------------+
+; qar_info.json                                                               ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_arbiter.vhd             ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_base_pkg.vhd            ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_checksum_udp.vhd        ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_conv_from_gray.vhd      ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_crc.vhd                 ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_dpram.vhd               ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_fifo_async.vhd          ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_fifo_sync.vhd           ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_gmii_framer.vhd         ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_gray_incrementer.vhd    ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_loadable_crc.vhd        ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_mdio.vhd                ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_mdio_config.vhd         ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_rgmii_gmii_trispeed.vhd ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cl/en_cl_rom_fifo.vhd            ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_arp_core.vhd            ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_buffer.vhd              ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_eth_core.vhd            ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_ip_core.vhd             ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_pipeline_stage.vhd      ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_core.vhd            ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_eth_core.vhd        ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cn/en_cn_udp_txheader.vhd        ;
+; ip/hdl/lib/en_udp_ip_eth_rgmii_alt_c5_eval_cs/en_cs_pipeline_stage.vhd      ;
+; ip/hdl/lic/en_udp_ip_eth_rgmii_alt_c5_eval.dat                              ;
+; ip/hdl/vhdl/en_udp_ip_eth_pkg.vhd                                           ;
+; ip/hdl/vhdl/en_udp_ip_eth_rgmii.vhd                                         ;
+; ip/hdl/vhdl/en_udp_ip_eth_rgmii_alt_c5.vhd                                  ;
+; rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.qpf     ;
+; rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.qsf     ;
+; rd/en_udp_ip_eth_rgmii_alt_c5/quartus/en_udp_ip_eth_rgmii_alt_c5_rd.sdc     ;
+; rd/en_udp_ip_eth_rgmii_alt_c5/vhdl/en_udp_ip_eth_rgmii_alt_c5_rd.vhd        ;
+; rd/en_udp_ip_eth_rgmii_alt_c5/quartus/assignment_defaults.qdf               ;
++-----------------------------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

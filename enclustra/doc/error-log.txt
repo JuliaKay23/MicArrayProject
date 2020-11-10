@@ -1,0 +1,42 @@
+
+Analysis and Synthesis Errors
+
+1.
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(285): object "EthTx_Data" is used but not declared
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(286): object "EthTx_Vld" is used but not declared
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(287): object "EthTx_Rdy" is used but not declared
+Error (10558): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(287): cannot associate formal port "EthTx_Rdy" of mode "out" with an expression
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(288): object "EthTx_Lst" is used but not declared
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(295): object "EthRx_Data" is used but not declared
+Error (10558): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(295): cannot associate formal port "EthRx_Data" of mode "out" with an expression
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(296): object "EthRx_Vld" is used but not declared
+Error (10558): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(296): cannot associate formal port "EthRx_Vld" of mode "out" with an expression
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(297): object "EthRx_Rdy" is used but not declared
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(298): object "EthRx_Lst" is used but not declared
+Error (10558): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(298): cannot associate formal port "EthRx_Lst" of mode "out" with an expression
+
+--> Added EthRx_Data and Tx version to the Signals declaration section of architecture
+
+
+2. 	
+Error (10482): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(385): object "ByteCountCen" is used but not declared
+
+--> Added ByteCount vars to same as above
+
+
+
+3. 
+Error (10476): VHDL error at en_udp_ip_eth_rgmii_alt_c5_rd.vhd(394): type of identifier "ByteCount" does not agree with its usage as "natural" type
+
+--> Was doing
+        Tx_Data_c(ByteCount);
+-- but needed to do this
+        Tx_Data_c(to_integer (unsigned (ByteCount)));
+
+
+4. 
+VHDL can't determine definition of operator "+"
+
+--> Included header 
+	use ieee.std_logic_unsigned.all;
+-- which provides the + operator definition for std_logic_vector()

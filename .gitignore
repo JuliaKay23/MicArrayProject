@@ -3,3 +3,11 @@ db/
 incremental_db/
 output_files/
 simulation/
+enclustra/udp-tx/en_udp_ip_eth_rgmii_alt_c5/quartus/db/
+enclustra/udp-tx/en_udp_ip_eth_rgmii_alt_c5/quartus/incremental_db/
+enclustra/udp-tx/en_udp_ip_eth_rgmii_alt_c5/quartus/output_files/
+enclustra/udp-tx/en_udp_ip_eth_rgmii_alt_c5/quartus/simulation/
+enclustra/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/db/
+enclustra/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/incremental_db/
+enclustra/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/output_files/
+enclustra/rd/en_udp_ip_eth_rgmii_alt_c5/quartus/simulation/

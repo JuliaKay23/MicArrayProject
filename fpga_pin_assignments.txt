@@ -1,21 +1,40 @@
+set_global_assignment -name DEVICE 5AGXFB3H4F35C5
+
 HSMC - GPIO board pin number to FPGA board pin number conversion:
 119 - 41;
 120 - 42;
 61  - 99;
 62  - 100.
 
-
 Pin assignments:
-KEY[0] (reset button) -> USER_PB0 -> A14.
+KEY[0] (reset button)         -> USER_PB0 -> A14.
 KEY[1] (in_valid flip button) -> USER_PB1 -> B15.
 KEY[2] (trigger logic analyzer) -> USER_PB2 -> B14.
 
-in_valid_led -> USER_LED0 (D20) -> C16.
+in_valid_led -> USER_LED0 (D20)           -> C16.
 irq_gpio_out -> J2 GPIO[5] -> HSMC_TX_N16 -> B8.
 
-pdm_mic_input[0] -> J3 GPIO[23] -> HSMC_RX_N2 -> AL8.
-pdm_mic_input[1] -> J3 GPIO[24] -> HSMC_TX_N4 -> AH6.
-pdm_mic_clk -> J3 GPIO[21] -> HSMC_CLKOUT_P1 -> AD8.
+pdm_mic_input[0] -> J3 GPIO[23] -> HSMC_RX_N2     -> AL8.
+pdm_mic_input[1] -> J3 GPIO[24] -> HSMC_TX_N4     -> AH6.
+pdm_mic_clk      -> J3 GPIO[21] -> HSMC_CLKOUT_P1 -> AD8.
 
 3V3 -> J2 GPIO[29].
 GND -> J2 GPIO[30].
+
+Enclustra: 
+
+Clk125          ->      ->    AH17  
+RstIn_N         ->      ->    A14   
+Eth_Rst_N       ->      ->    AL11  
+Rgmii_TxClk     ->      ->    AD12  
+Rgmii_TxCtl     ->      ->    AB12  
+Rgmii_TxD[0]    ->      ->    AC11  
+Rgmii_TxD[1]    ->      ->    AC12  
+Rgmii_TxD[2]    ->      ->    AC13  
+Rgmii_TxD[3]    ->      ->    AB11  
+Rgmii_RxClk     ->      ->    AL4   
+Rgmii_RxCtl     ->      ->    AB13  
+Rgmii_RxD[0]    ->      ->    AF11  
+Rgmii_RxD[1]    ->      ->    AF13  
+Rgmii_RxD[2]    ->      ->    AE12  
+Rgmii_RxD[3]    ->      ->    AE13  
