@@ -50,8 +50,10 @@ unsigned char tx_frame[ETH_MAX_FRAME_LEN] = {
     0x00,0x00,                      // Fragment bits not set
     0x80,0x11,                      // TTL: 128; IP payload type: UDP
     0x00,0x00,                      // Header checksum (to be filled in main())
-    10,0,0,1,                       // Source IP address: 10.0.0.1
-    0xFF,0xFF,0xFF,0xFF,            // Dest IP address: 255.255.255.255 (local broadcast)
+    192,168,137,10,                 // Source IP address: 10.0.0.1
+    //0xFF,0xFF,0xFF,0xFF,            // Dest IP address: 255.255.255.255 (local
+    //broadcast)
+    192,168,137,1,                  // Hard-coded computer IP
     0x10,0x00,0x20,0x00,            // UDP header, source port: 4096; dest port: 8192
     0x00,0x00,0x00,0x00             // Length to be filled in main(), no checksum
 };
@@ -143,12 +145,6 @@ int main(void)
     // Enable read and write transfers, gigabit Ethernet operation, and CRC forwarding
     *(tse + 2) = *(tse + 2) | 0x0000004B;
     
-    // Set interrupts for the mic filter interrupt
-    alt_printf ("Setting up interrupt...\n");
-    alt_ic_isr_register ( 0, 2, mic_filter_isr, NULL, NULL );
-    alt_ic_irq_enable ( 0, 2 );
-    alt_printf ("Mic filter IRQ enabled\n");
-
     // Set up IPv4 checksum and length field.
     alt_u16 ip_total_len = IP_HEADER_LEN + UDP_HEADER_LEN + DATA_CHUNK_SIZE;
     tx_frame[ETH_HEADER_LEN+IP_LEN_OFFSET] = ip_total_len >> 8;  // Big endian
@@ -160,6 +156,12 @@ int main(void)
     tx_frame[ETH_HEADER_LEN+IP_HEADER_LEN+UDP_LEN_OFFSET] = udp_total_len >> 8;
     tx_frame[ETH_HEADER_LEN+IP_HEADER_LEN+UDP_LEN_OFFSET+1] = udp_total_len & 0x00ff;
     
+    // Set interrupts for the mic filter interrupt
+    alt_printf ("Setting up interrupt...\n");
+    alt_ic_isr_register ( 0, 2, mic_filter_isr, NULL, NULL );
+    alt_ic_irq_enable ( 0, 2 );
+    alt_printf ("Mic filter IRQ enabled\n");
+
     // alt_printf( "send> " );
     // text_length = 0;
     
@@ -287,8 +289,11 @@ void fill_ipv4_checksum (unsigned char *header_start, int header_len)
     alt_u16 *header_u16 = (alt_u16 *)header_start;
     header_len >>= 1;  // Assume header_len is even
     alt_u32 sum = 0;
+    alt_u16 reverse_temp;  // Need to reverse byte order before addition
     while (header_len > 0) {
-        sum += *(header_u16++);
+        reverse_temp = *(header_u16++);
+        reverse_temp = (reverse_temp >> 8) + ((reverse_temp & 0x00ff) << 8);
+        sum += reverse_temp;
         --header_len;
     }
     alt_u32 carry;
