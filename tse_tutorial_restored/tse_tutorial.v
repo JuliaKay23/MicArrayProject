@@ -159,10 +159,10 @@ module tse_tutorial #(parameter mic_n = 2)(
         wire chipselect;
         wire write;
         wire clken = 1'b1;
-        reg [6:0] address;
+        reg [8:0] address;
         reg [31:0] writedata;
         wire [31:0] readdata;
-        localparam addr_last = 7'd127; // last address
+        localparam addr_last = 9'h1ff; // last address
         
         initial begin
                 address = 7'd0;

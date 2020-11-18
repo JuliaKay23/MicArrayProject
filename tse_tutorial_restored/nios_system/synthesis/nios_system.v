@@ -6,7 +6,7 @@
 module nios_system (
 		input  wire        clk_clk,                             //                             clk.clk
 		input  wire        ext_irq_adapter_new_signal,          //                 ext_irq_adapter.new_signal
-		input  wire [6:0]  ram_block_s2_address,                //                    ram_block_s2.address
+		input  wire [8:0]  ram_block_s2_address,                //                    ram_block_s2.address
 		input  wire        ram_block_s2_chipselect,             //                                .chipselect
 		input  wire        ram_block_s2_clken,                  //                                .clken
 		input  wire        ram_block_s2_write,                  //                                .write
@@ -54,6 +54,7 @@ module nios_system (
 	wire         nios2_gen2_0_instruction_master_waitrequest;                // mm_interconnect_0:nios2_gen2_0_instruction_master_waitrequest -> nios2_gen2_0:i_waitrequest
 	wire  [20:0] nios2_gen2_0_instruction_master_address;                    // nios2_gen2_0:i_address -> mm_interconnect_0:nios2_gen2_0_instruction_master_address
 	wire         nios2_gen2_0_instruction_master_read;                       // nios2_gen2_0:i_read -> mm_interconnect_0:nios2_gen2_0_instruction_master_read
+	wire         nios2_gen2_0_instruction_master_readdatavalid;              // mm_interconnect_0:nios2_gen2_0_instruction_master_readdatavalid -> nios2_gen2_0:i_readdatavalid
 	wire         sgdma_rx_m_write_waitrequest;                               // mm_interconnect_0:sgdma_rx_m_write_waitrequest -> sgdma_rx:m_write_waitrequest
 	wire  [31:0] sgdma_rx_m_write_address;                                   // sgdma_rx:m_write_address -> mm_interconnect_0:sgdma_rx_m_write_address
 	wire   [3:0] sgdma_rx_m_write_byteenable;                                // sgdma_rx:m_write_byteenable -> mm_interconnect_0:sgdma_rx_m_write_byteenable
@@ -126,7 +127,7 @@ module nios_system (
 	wire         mm_interconnect_0_descriptor_memory_s1_clken;               // mm_interconnect_0:descriptor_memory_s1_clken -> descriptor_memory:clken
 	wire         mm_interconnect_0_ram_block_s1_chipselect;                  // mm_interconnect_0:RAM_block_s1_chipselect -> RAM_block:chipselect
 	wire  [31:0] mm_interconnect_0_ram_block_s1_readdata;                    // RAM_block:readdata -> mm_interconnect_0:RAM_block_s1_readdata
-	wire   [6:0] mm_interconnect_0_ram_block_s1_address;                     // mm_interconnect_0:RAM_block_s1_address -> RAM_block:address
+	wire   [8:0] mm_interconnect_0_ram_block_s1_address;                     // mm_interconnect_0:RAM_block_s1_address -> RAM_block:address
 	wire   [3:0] mm_interconnect_0_ram_block_s1_byteenable;                  // mm_interconnect_0:RAM_block_s1_byteenable -> RAM_block:byteenable
 	wire         mm_interconnect_0_ram_block_s1_write;                       // mm_interconnect_0:RAM_block_s1_write -> RAM_block:write
 	wire  [31:0] mm_interconnect_0_ram_block_s1_writedata;                   // mm_interconnect_0:RAM_block_s1_writedata -> RAM_block:writedata
@@ -240,6 +241,7 @@ module nios_system (
 		.i_read                              (nios2_gen2_0_instruction_master_read),                       //                          .read
 		.i_readdata                          (nios2_gen2_0_instruction_master_readdata),                   //                          .readdata
 		.i_waitrequest                       (nios2_gen2_0_instruction_master_waitrequest),                //                          .waitrequest
+		.i_readdatavalid                     (nios2_gen2_0_instruction_master_readdatavalid),              //                          .readdatavalid
 		.irq                                 (nios2_gen2_0_irq_irq),                                       //                       irq.irq
 		.debug_reset_request                 (nios2_gen2_0_debug_reset_request_reset),                     //       debug_reset_request.reset
 		.debug_mem_slave_address             (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_address),     //           debug_mem_slave.address
@@ -387,6 +389,7 @@ module nios_system (
 		.nios2_gen2_0_instruction_master_waitrequest    (nios2_gen2_0_instruction_master_waitrequest),                //                                         .waitrequest
 		.nios2_gen2_0_instruction_master_read           (nios2_gen2_0_instruction_master_read),                       //                                         .read
 		.nios2_gen2_0_instruction_master_readdata       (nios2_gen2_0_instruction_master_readdata),                   //                                         .readdata
+		.nios2_gen2_0_instruction_master_readdatavalid  (nios2_gen2_0_instruction_master_readdatavalid),              //                                         .readdatavalid
 		.sgdma_rx_descriptor_read_address               (sgdma_rx_descriptor_read_address),                           //                 sgdma_rx_descriptor_read.address
 		.sgdma_rx_descriptor_read_waitrequest           (sgdma_rx_descriptor_read_waitrequest),                       //                                         .waitrequest
 		.sgdma_rx_descriptor_read_read                  (sgdma_rx_descriptor_read_read),                              //                                         .read

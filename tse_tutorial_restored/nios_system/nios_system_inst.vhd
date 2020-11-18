@@ -2,7 +2,7 @@
 		port (
 			clk_clk                             : in  std_logic                     := 'X';             -- clk
 			ext_irq_adapter_new_signal          : in  std_logic                     := 'X';             -- new_signal
-			ram_block_s2_address                : in  std_logic_vector(6 downto 0)  := (others => 'X'); -- address
+			ram_block_s2_address                : in  std_logic_vector(8 downto 0)  := (others => 'X'); -- address
 			ram_block_s2_chipselect             : in  std_logic                     := 'X';             -- chipselect
 			ram_block_s2_clken                  : in  std_logic                     := 'X';             -- clken
 			ram_block_s2_write                  : in  std_logic                     := 'X';             -- write

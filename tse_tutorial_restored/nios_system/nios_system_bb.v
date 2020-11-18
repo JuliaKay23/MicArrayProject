@@ -27,7 +27,7 @@ module nios_system (
 
 	input		clk_clk;
 	input		ext_irq_adapter_new_signal;
-	input	[6:0]	ram_block_s2_address;
+	input	[8:0]	ram_block_s2_address;
 	input		ram_block_s2_chipselect;
 	input		ram_block_s2_clken;
 	input		ram_block_s2_write;

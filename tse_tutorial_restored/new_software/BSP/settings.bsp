@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 10, 2020 4:16:47 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1605043007194</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Nov 17, 2020 5:36:15 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1605652575937</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
         <BspSettingsFile>BSP\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>
@@ -941,38 +941,38 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>RAM_block</slaveDescriptor>
-                <addressRange>0x00100000 - 0x001001FF</addressRange>
-                <addressSpan>512</addressSpan>
-                <attributes>memory</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>descriptor_memory</slaveDescriptor>
-                <addressRange>0x00101000 - 0x00101FFF</addressRange>
+                <addressRange>0x00100000 - 0x00100FFF</addressRange>
                 <addressSpan>4096</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>RAM_block</slaveDescriptor>
+                <addressRange>0x00101800 - 0x00101FFF</addressRange>
+                <addressSpan>2048</addressSpan>
+                <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>tse</slaveDescriptor>
-                <addressRange>0x00103000 - 0x001033FF</addressRange>
+                <addressRange>0x00102800 - 0x00102BFF</addressRange>
                 <addressSpan>1024</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sgdma_tx</slaveDescriptor>
-                <addressRange>0x00103400 - 0x0010343F</addressRange>
+                <addressRange>0x00102C00 - 0x00102C3F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sgdma_rx</slaveDescriptor>
-                <addressRange>0x00103440 - 0x0010347F</addressRange>
+                <addressRange>0x00102C40 - 0x00102C7F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x00103480 - 0x00103487</addressRange>
+                <addressRange>0x00102C80 - 0x00102C87</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

@@ -41,8 +41,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 152)
 		(input)
-		(text "ram_block_s2_address[6..0]" (rect 0 0 115 12)(font "Arial" (font_size 8)))
-		(text "ram_block_s2_address[6..0]" (rect 4 141 160 152)(font "Arial" (font_size 8)))
+		(text "ram_block_s2_address[8..0]" (rect 0 0 115 12)(font "Arial" (font_size 8)))
+		(text "ram_block_s2_address[8..0]" (rect 4 141 160 152)(font "Arial" (font_size 8)))
 		(line (pt 0 152)(pt 224 152)(line_width 3))
 	)
 	(port
